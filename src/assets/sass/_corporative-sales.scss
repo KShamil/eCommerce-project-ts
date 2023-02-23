@@ -1,0 +1,63 @@
+.light-mode {
+    .corporative-sales-page {
+        // background: #F9FBFC;
+
+        .content {
+            .top-link {
+                .title-link {
+                    .link {
+                        color: grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dark-mode {
+    .corporative-sales-page {
+        .content {
+            .top-link {
+                .title-link {
+                    .link {
+                        color: white;
+                    }
+
+                    i {
+                        color: white;
+                    }
+                }
+
+                h4 {
+                    color: white;
+                }
+            }
+
+            .title {
+                h1 {
+                    color: white;
+                }
+            }
+
+            .info {
+                p {
+                    color: white;
+                }
+
+                ol {
+                    li {
+                        color: white;
+                    }
+                }
+
+                ul {
+                    li {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

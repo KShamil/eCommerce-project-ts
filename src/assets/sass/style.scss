@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+@import 'accordion';
+@import 'allproducts';
+@import 'banner';
+@import 'card';
+@import 'corporative-sales';
+@import 'details';
+@import 'faqs';
+@import 'footer';
+@import 'header';
+@import 'home';
+@import 'reset-page';
+@import 'shopping-cart';
+@import 'shops';
+@import 'special-offers';
+@import 'wishlist';
+
+
+
+
+
+
+
+body {
+    padding-top: 150px;
+}
+
+.light-mode {
+    font-family: 'Poppins', sans-serif;
+    background: #FFFBEB;
+}
+
+.dark-mode {
+    font-family: 'Poppins', sans-serif;
+    background:rgb(101, 61, 101);
+}
+
+@media only screen and (max-width: 990px) {
+    body {
+        padding-top: 70px;
+    }
+}

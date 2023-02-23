@@ -1,0 +1,190 @@
+.light-mode {
+    .shopping-cart {
+        .cartlist {
+            .back-btn {
+                display: none;
+            }
+
+            .table {
+                .t-body {
+                    .price {
+                        font-family: 'Cinzel', serif;
+                        font-weight: 900;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .card-body {
+        max-width: 414px;
+    }
+}
+
+.dark-mode {
+    .shopping-cart {
+
+        .top-title {
+            color: white;
+        }
+
+        .subtitle {
+            color: white;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .light-mode {
+        .shopping-cart {
+            .cartlist {
+                .back-btn {
+                    display: none;
+                }
+
+                .table {
+                    .t-body {
+                        .price {
+                            font-family: 'Cinzel', serif;
+                            font-weight: 900;
+                        }
+
+                        .quantitu {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .light-mode {
+        .shopping-cart {
+            .cartlist {
+                tr {
+                    th {
+                        font-size: 10px;
+                    }
+                }
+
+                .back-btn {
+                    display: none;
+                }
+
+                .table {
+                    .t-body {
+                        .title {
+                            font-size: 10px;
+                        }
+
+                        .price {
+                            font-family: 'Cinzel', serif;
+                            font-weight: 900;
+                            font-size: 10px;
+                        }
+
+                        .badge {
+                            font-size: 10px;
+                        }
+
+                        .quantitu {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            .decrement {
+                                width: 30px;
+                                height: 35px;
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            .increment {
+                                width: 30px;
+                                height: 35px;
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                        }
+
+                        .buy-btn {
+                            font-size: 10px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .dark-mode {
+        .shopping-cart {
+            .cartlist {
+                tr {
+                    th {
+                        font-size: 10px;
+                    }
+                }
+
+                .back-btn {
+                    display: none;
+                }
+
+                .table {
+                    .t-body {
+                        .title {
+                            font-size: 10px;
+                        }
+
+                        .price {
+                            font-family: 'Cinzel', serif;
+                            font-weight: 900;
+                            font-size: 10px;
+                        }
+
+                        .badge {
+                            font-size: 10px;
+                        }
+
+                        .quantitu {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            .decrement {
+                                width: 30px;
+                                height: 35px;
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            .increment {
+                                width: 30px;
+                                height: 35px;
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                        }
+
+                        .buy-btn {
+                            font-size: 10px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

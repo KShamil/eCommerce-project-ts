@@ -1,0 +1,188 @@
+.light-mode {
+    .card {
+        width: 259px;
+        min-height: 448px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            box-shadow: -5px 0px 36px -12px rgba(0,0,0,0.75);
+            overflow: hidden;
+            border:1px solid red;
+            .card_title {
+                color: red;
+            }
+        }
+        .card-body {
+        img {
+            transition: 0.5s;
+        }
+            .card_title {
+                font-size: 14px;
+                font-weight: 600;
+                transition: 0.5s;
+            }
+            .card-price {
+                font-family: 'Cinzel', serif;
+            }
+            .add-btn {
+                width: 88px;
+                font-size: 13px;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+            }
+            .wishlist_btn {
+                width: 30px;
+                height: 30px;
+                background: antiquewhite;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+.dark-mode {
+    .card {
+        width: 259px;
+        min-height: 448px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            box-shadow: -5px 0px 36px -12px rgba(0,0,0,0.75);
+            overflow: hidden;
+            border:1px solid red;
+            .card_title {
+                color: red;
+            }
+        }
+        .card-body {
+        img {
+            transition: 0.5s;
+        }
+            .card_title {
+                font-size: 14px;
+                font-weight: 600;
+                transition: 0.5s;
+            }
+            .card-price {
+                font-family: 'Cinzel', serif;
+            }
+            .add-btn {
+                width: 88px;
+                font-size: 13px;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+            }
+            .wishlist_btn {
+                width: 30px;
+                height: 30px;
+                background: rgb(225, 216, 216);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .light-mode {
+        .card {
+            width: calc(150px + 600 * (100vw / 1296));
+            min-height: 400px;
+            cursor: pointer;
+            transition: 0.5s;
+            .card-body {
+            img {
+                transition: 0.5s;
+            }
+                .card_title {
+                    font-size: 14px;
+                    font-weight: 600;
+                    transition: 0.5s;
+                }
+                .card-price {
+                    font-family: 'Cinzel', serif;
+                }
+                .add-btn {
+                    width: 88px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    margin: 0;
+                }
+                .wishlist_btn {
+                    width: 30px;
+                    height: 30px;
+                    background: rgb(225, 216, 216);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .dark-mode {
+        .card {
+            width: calc(150px + 600 * (100vw / 1296));
+            min-height: 400px;
+            cursor: pointer;
+            transition: 0.5s;
+            .card-body {
+            img {
+                transition: 0.5s;
+            }
+                .card_title {
+                    font-size: 14px;
+                    font-weight: 600;
+                    transition: 0.5s;
+                }
+                .card-price {
+                    font-family: 'Cinzel', serif;
+                }
+                .add-btn {
+                    width: 88px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    margin: 0;
+                }
+                .wishlist_btn {
+                    width: 30px;
+                    height: 30px;
+                    background: rgb(225, 216, 216);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    
+    }

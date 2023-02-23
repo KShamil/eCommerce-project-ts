@@ -1,0 +1,51 @@
+.light-mode {
+    .footer {
+        background: #FFE7CC;
+
+        .footer-title {
+            color: black;
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .subscribe_title {
+            color: black;
+        }
+
+        .subscribe_descr {
+            color: black;
+        }
+
+        .copyright {
+            color: black;
+        }
+    }
+}
+
+.dark-mode {
+    .footer {
+        background-image: linear-gradient(to bottom, #171c1a, rgb(102, 75, 103));
+
+        .footer-title {
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #fff;
+        }
+
+        .subscribe_title {
+            color: #fff;
+        }
+
+        .subscribe_descr {
+            color: #fff;
+        }
+
+        .copyright {
+            color: #fff;
+        }
+    }
+}

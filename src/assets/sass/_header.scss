@@ -1,0 +1,238 @@
+.light-mode {
+    .header {
+        background: #FFE7CC;
+        margin-bottom: 150px;
+
+        .navbar {
+            .navbar-brand {
+                color: black;
+                font-family: 'Cinzel', serif;
+                transition: 0.5s;
+
+                &:hover {
+                    color: red;
+                }
+            }
+
+            .flag {
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+
+            .dropdown-menu {
+                display: block;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s;
+                transform: translateX(-16px);
+            }
+
+            .dropdown:hover .dropdown-menu {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .mode-btn-container {
+                position: relative;
+                width: 50px;
+                height: 25px;
+                border-radius: 100px;
+                background: #fff;
+                transition: 0.5s;
+                box-shadow: inset 0 2px 60px rgba(228, 215, 231, 0.921),
+                    inset 0 2px 8px rgba(239, 235, 237, 0.975),
+                    inset 0 -4px 4px rgb(238, 232, 236);
+
+                .mode-btn {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 25px;
+                    height: 25px;
+                    // background: linear-gradient(to bottom, #f00707, #920404);
+                    border-radius: 50%;
+                    transform: scale(0.9);
+                    // box-shadow: 0 8px 20px rgba(38, 69, 224, 0.962), inset 0 4px 4px rgb(22, 38, 180), inset 0 4px 4px rgb(44, 84, 176);
+                    transition: 0.5s;
+                    cursor: pointer;
+                    background: red;
+                }
+
+            }
+
+            .totalItem {
+                transform: translateY(-40px) translateX(18px);
+                font-size: 12px;
+            }
+
+            .nav-item {
+                .nav-link {
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #777777;
+                }
+            }
+        }
+    }
+}
+
+.dark-mode {
+    .header {
+        background-image: linear-gradient(to bottom, #171c1a, rgb(102, 75, 103));
+
+        .navbar {
+            .navbar-brand {
+                color: white;
+                font-family: 'Cinzel', serif;
+                transition: 0.5s;
+
+                &:hover {
+                    color: red;
+                }
+            }
+
+            .contact-number {
+                color: white;
+            }
+
+            .flag {
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .dropdown-menu {
+                display: none;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: block;
+                opacity: 1;
+                transform: translateX(-16px);
+            }
+
+            .mode-btn-container {
+                position: relative;
+                width: 50px;
+                height: 25px;
+                border-radius: 100px;
+                background: #fff;
+                transition: 0.5s;
+                box-shadow: inset 0 2px 60px rgba(245, 239, 246, 0.921),
+                    inset 0 2px 8px rgba(239, 235, 237, 0.975),
+                    inset 0 -4px 4px rgb(238, 232, 236);
+
+                .mode-btn {
+                    position: absolute;
+                    top: 0;
+                    left: 25px;
+                    width: 25px;
+                    height: 25px;
+                    // background: linear-gradient(to bottom, #f00707, #920404);
+                    border-radius: 50%;
+                    transform: scale(0.9);
+                    // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgb(180, 22, 22), inset 0 4px 4px rgb(176, 44, 57);
+                    transition: 0.5s;
+                    cursor: pointer;
+                    background: rgb(102, 75, 103);
+                }
+
+            }
+
+            .totalItem {
+                transform: translateY(-40px) translateX(18px);
+                font-size: 12px;
+            }
+
+            .nav-item {
+                .nav-link {
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: white;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .light-mode {
+        .header {
+            .navbar {
+                .navbar-toggler-icon {
+                    color: black;
+                }
+
+                .navbar-brand {
+                    &:hover {
+                        color: red;
+                    }
+                }
+
+                .flag {
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+
+
+                .dropdown-menu {
+                    display: none;
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+
+                .dropdown:hover .dropdown-menu {
+                    display: none;
+                    opacity: 1;
+                }
+
+                .mode-btn-container {
+                    position: relative;
+                    width: 60px;
+                    height: 30px;
+                    border-radius: 100px;
+                    background: #fff;
+                    transition: 0.5s;
+                    box-shadow: inset 0 2px 60px rgba(228, 215, 231, 0.921),
+                        inset 0 2px 8px rgba(239, 235, 237, 0.975),
+                        inset 0 -4px 4px rgb(238, 232, 236);
+
+                    .mode-btn {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 30px;
+                        height: 30px;
+                        // background: linear-gradient(to bottom, #f00707, #920404);
+                        border-radius: 50%;
+                        transform: scale(0.9);
+                        // box-shadow: 0 8px 20px rgba(38, 69, 224, 0.962), inset 0 4px 4px rgb(22, 38, 180), inset 0 4px 4px rgb(44, 84, 176);
+                        transition: 0.5s;
+                        cursor: pointer;
+                        background: red;
+                    }
+
+                }
+
+                .totalItem {
+                    transform: translateY(-40px) translateX(20px);
+                    font-size: 16px;
+                }
+
+                .nav-item {
+                    .nav-link {
+                        font-size: 13px;
+                        color: #777777;
+                    }
+                }
+            }
+        }
+    }
+
+}

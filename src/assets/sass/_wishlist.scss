@@ -1,0 +1,89 @@
+.light-mode {
+    .wishlist {
+        .title {
+            text-decoration: none;
+            color: black;
+        }
+
+        .price {
+            font-family: 'Cinzel', serif;
+        }
+
+    }
+}
+
+.dark-mode {
+    .wishlist {
+        .top-title {
+            color: white;
+        }
+
+        .subtitle {
+            color: white;
+        }
+
+        .title {
+            text-decoration: none;
+            color: black;
+        }
+
+        .price {
+            font-family: 'Cinzel', serif;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .light-mode {
+        .wishlist {
+            tr {
+                th {
+                    font-size: 10px;
+                }
+            }
+
+            .title {
+                font-size: 10px;
+            }
+
+            .price {
+                font-size: 10px;
+            }
+
+            .add-btn {
+                font-size: 10px;
+            }
+
+            .badge {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .dark-mode {
+        .wishlist {
+            tr {
+                th {
+                    font-size: 10px;
+                }
+            }
+
+            .title {
+                font-size: 10px;
+            }
+
+            .price {
+                font-size: 10px;
+            }
+
+            .add-btn {
+                font-size: 10px;
+            }
+
+            .badge {
+                font-size: 10px;
+            }
+        }
+    }
+}

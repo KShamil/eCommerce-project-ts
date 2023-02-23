@@ -1,0 +1,52 @@
+.light-mode {
+    .shops {
+        // background: #F9FBFC;
+
+        .content {
+            .top-link {
+                .title-link {
+                    .link {
+                        color: grey;
+                    }
+                }
+            }
+
+            .map {
+                iframe {
+                    width: 100%;
+                    height: 480px;
+                }
+            }
+        }
+    }
+}
+
+.dark-mode {
+    .shops {
+
+        .content {
+            .top-link {
+                .title-link {
+                    .link {
+                        color: white;
+                    }
+
+                    i {
+                        color: white;
+                    }
+                }
+
+                .title {
+                    color: white;
+                }
+            }
+
+            .map {
+                iframe {
+                    width: 100%;
+                    height: 480px;
+                }
+            }
+        }
+    }
+}
