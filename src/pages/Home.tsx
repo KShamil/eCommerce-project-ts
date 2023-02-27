@@ -8,6 +8,7 @@ import BestSeller from "../components/Sliders/BestSeller";
 import OfferOfTheWeekSlider from "../components/Sliders/OfferOfTheWeekSlider";
 import { useEffect } from "react";
 
+
 const Home = (props:any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,7 +25,7 @@ const Home = (props:any) => {
       <Slider />
       <section className="products container">
         <div className="products-blog w-100">
-          <h3 className="title fw-bold mt-5">All Products</h3>
+          <h3 className="title fw-bold mt-5">Our Products</h3>
           <div className="products-list mt-3">
             <div className="product-items mt-2">
               {products
@@ -62,7 +63,6 @@ const Home = (props:any) => {
       <BestSeller />
       <SpecialOffersSlider/>
       <OfferOfTheWeekSlider/>
-      
     </>
   );
 };

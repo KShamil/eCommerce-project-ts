@@ -5,7 +5,7 @@ const Services = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>Services</div>
+    <div className='container mt-5'>Services</div>
   )
 }
 

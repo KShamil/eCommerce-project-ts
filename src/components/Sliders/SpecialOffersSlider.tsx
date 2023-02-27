@@ -1,7 +1,7 @@
 import React from 'react'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import specialOffersData from '../../data/specialOffersData';
+import products from '../../data/productsData';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import SaleCard from '../Cards/SaleCard';
@@ -47,9 +47,9 @@ const SpecialOffersSlider = () => {
     <div className='special-offers container mt-5'>
         <h3 className='title fw-bold' style={{fontFamily:'Cinzel'}}>Special Offers</h3>
         <Slider {...settings}>
-        {specialOffersData.map((item,i)=>(
+        {products.map((item)=>(
             <SaleCard
-            key={i}
+            id={item.id}
             img={item.photo}
             title={item.title}
             price={item.price}

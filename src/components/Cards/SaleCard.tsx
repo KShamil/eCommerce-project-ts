@@ -8,17 +8,18 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 interface SaleCardType {
+    id:string,
     img: string;
     title: string;
-    price: number;
+    price: string;
     salePrice:string;
-    rating: number;
+    rating: string;
     addProduct?: any;
     addWishlist?: any;
 }
 
 
-const SaleCard:React.FC<SaleCardType> = ({ img, title, price, rating, salePrice, addProduct,addWishlist }) => {
+const SaleCard:React.FC<SaleCardType> = ({ id,img, title, price, rating, salePrice, addProduct,addWishlist }) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
   const notify = () => toast("Cart added!");
@@ -58,11 +59,13 @@ const SaleCard:React.FC<SaleCardType> = ({ img, title, price, rating, salePrice,
           <div className=" position-absolute top-0 start-0">
             <span className="badge bg-danger text-white">Sale</span>
           </div>
+          <Link to={`/${id}`}>
           <img
             src={img}
             alt="Grocery Ecommerce Template"
             className="mb-3 img-fluid p-4"
           />
+          </Link>
           <div className="product-action-btn">
             <a
               href="#!"

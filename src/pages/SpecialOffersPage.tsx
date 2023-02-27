@@ -1,25 +1,28 @@
-import React, { useState } from "react";
-import specialOffersData,{specialOffersProduct} from "../data/specialOffersData";
+import React, { useState,useContext } from "react";
+import {ProductType} from "../data/productsData";
 import { Link } from "react-router-dom";
 import AddProductButton from "../components/Buttons/AddProductButton";
 import AddWishlistButton from "../components/Buttons/AddWishlistButton";
 import { Pagination } from "@mui/material";
 import { useEffect } from "react";
+import { ProductContext } from "../context/ProductContext";
+
 
 
 const SpecialOffersPage = (props:any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [products] = useContext(ProductContext);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage: number = 5;
 
   const totalPages: number = Math.ceil(
-    Object.keys(specialOffersData).length / itemsPerPage
+    Object.keys(products).length / itemsPerPage
   );
   const startIndex: number = (currentPage - 1) * itemsPerPage;
   const endIndex: number = startIndex + itemsPerPage;
-  const currentData: specialOffersProduct[] = Object.values(specialOffersData).slice(
+  const currentData: ProductType[] = Object.values(products).slice(
     startIndex,
     endIndex
   );

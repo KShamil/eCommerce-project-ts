@@ -1,12 +1,16 @@
-import React from "react";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+
 
 const ShoppingCartPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const isLogged = () => {
+    alert('please log in')
+  }
 
   interface CartProps {
     isEmpty: boolean;
@@ -24,8 +28,6 @@ const ShoppingCartPage = () => {
     cartTotal,
     totalItems,
   } = useCart() as unknown as CartProps;
-
-
 
   if (isEmpty) {
     return (
@@ -59,7 +61,7 @@ const ShoppingCartPage = () => {
               </thead>
               <tbody className="t-body">
                 {items.map((item:any, i:any) => (
-                  <tr>
+                  <tr key={i}>
                     <th>{i + 1}</th>
                     <td className="align-middle">
                       <img
@@ -92,7 +94,7 @@ const ShoppingCartPage = () => {
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity - 1)
                         }
-                        className="decrement btn btn-danger mx-2"
+                        className="decrement btn btn-danger mx-2 rounded-pill"
                       >
                         -
                       </button>
@@ -101,7 +103,7 @@ const ShoppingCartPage = () => {
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity + 1)
                         }
-                        className="increment btn btn-danger mx-2"
+                        className="increment btn btn-danger mx-2 rounded-pill"
                       >
                         +
                       </button>
@@ -124,7 +126,7 @@ const ShoppingCartPage = () => {
                 ))}
               </tbody>
             </table>
-            <Link to={`/selling`} className="w-100 btn btn-outline-danger p-3">Buy now</Link>
+            <Link onClick={isLogged} to="" className="w-100 btn btn-outline-danger p-3">Buy now</Link>
           </div>
         </div>
       </div>

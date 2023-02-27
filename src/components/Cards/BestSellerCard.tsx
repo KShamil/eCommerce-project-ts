@@ -8,15 +8,16 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 interface BestSellerCardType {
+    id:string,
     img: string;
     title: string;
-    price: number;
-    rating: number;
+    price: string;
+    rating: string;
     addProduct?: any;
     addWishlist?: any;
 }
 
-const BestSellerCard:React.FC<BestSellerCardType> = ({img,title,price,rating,addProduct,addWishlist}) => {
+const BestSellerCard:React.FC<BestSellerCardType> = ({id,img,title,price,rating,addProduct,addWishlist}) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
   const notify = () => toast("Cart added!");
@@ -53,13 +54,13 @@ const BestSellerCard:React.FC<BestSellerCardType> = ({img,title,price,rating,add
                 pauseOnHover
                 theme="dark"
               />
-          <a href="#!" tabIndex={-1}>
+          <Link to={`/${id}`} tabIndex={-1}>
             <img
               src={img}
               alt="Grocery Ecommerce Template"
               className="mb-3 img-fluid p-3"
             />
-          </a>
+          </Link>
           <div className="product-action-btn">
             <a
               href="#!"

@@ -19,7 +19,7 @@ const notify = () => toast("Cart added!");
       <button
         onClick={handleAddedToCart}
         type="button"
-        className="btn btn-success btn-lg px-4 me-md-2"
+        className="btn btn-danger btn-lg px-4 me-md-2"
       >
         Add to Cart
       </button>

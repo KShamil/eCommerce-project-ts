@@ -84,7 +84,7 @@ const Footer:React.FC = () => {
                   <i className="fa-solid fa-location-dot fs-4"></i> Our stores are on the map
                 </Link>
               </span>
-              <p className="mt-3"><i className="fa-solid fa-phone-volume"></i> 012-680-17-47</p>
+              <p className="mt-3"><i className="fa-solid fa-phone-volume"></i> 055-680-17-47</p>
               </div>
               <form>
                 <h5 className="subscribe_title">Subscribe to our newsletter</h5>

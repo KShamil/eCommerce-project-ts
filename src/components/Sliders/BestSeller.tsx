@@ -34,7 +34,7 @@ const BestSeller = () => {
           slidesToShow: 4,
           slidesToScroll: 4,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -191,9 +191,9 @@ const BestSeller = () => {
         </div>
         <div className="best-seller-list mt-2">
           <Slider {...settings}>
-            {filteredData.map((item, i) => (
+            {filteredData.map((item) => (
               <BestSellerCard
-                key={i}
+                id={item.id}
                 img={item.photo}
                 title={item.title}
                 price={item.price}

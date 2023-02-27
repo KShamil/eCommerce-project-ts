@@ -12,8 +12,8 @@ interface CardType {
     id: string;
     img: string;
     title: string;
-    price: number;
-    rating: number;
+    price: string;
+    rating: string;
     addProduct?: any;
     addWishlist?: any;
 }

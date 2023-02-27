@@ -94,7 +94,7 @@ const Header = (props:any) => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to="/services"
+                    to="/service"
                     style={({ isActive }) => {
                       return {
                         color: isActive ? "red" : "",
@@ -128,7 +128,7 @@ const Header = (props:any) => {
               </div>
               <div className="d-flex me-2">
                 <Link
-                  to="/authentication"
+                  to="/signin"
                   className="text-decoration-none text-danger"
                   type="submit"
                 >
@@ -212,6 +212,7 @@ const Header = (props:any) => {
                   placeholder="Search"
                   aria-label="Search"
                 />
+                {/* <button onClick={props.searchValue} className="btn btn-success rounded-pill mx-2">Search</button> */}
               </form>
               <ul className="navbar-nav">
                 <li className="nav-item">

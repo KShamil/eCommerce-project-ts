@@ -15,9 +15,12 @@
     "@mui/material": "^5.11.10",
     "@mui/styled-engine-sc": "^5.11.9",
     "bootstrap": "^5.2.3",
+    "firebase": "^9.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-floating-whatsapp": "^5.0.8",
     "react-router-dom": "^6.8.1",
+    "react-simple-scroll-up": "^0.2.3",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
     "react-use-cart": "^1.13.0",
@@ -28,6 +31,7 @@
     "uuid4": "^2.0.3"
   },
   "devDependencies": {
+    "@types/long": "^5.0.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@types/react-slick": "^0.23.10",

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import products from "../data/productsData";
+import { ProductContext } from "../context/ProductContext";
 import { Pagination } from "@mui/material";
 import FilterProductsCard from "../components/Cards/FilterProductsCard";
 import { useEffect } from "react";
@@ -9,11 +9,11 @@ const ProductsFilterPage = (props:any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  const [products] = useContext(ProductContext);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
-  const [minPrice, setMinPrice] = useState<number>(0);
-  const [maxPrice, setMaxPrice] = useState<number>(10000);
+  const [minPrice, setMinPrice] = useState<number | string>(0);
+  const [maxPrice, setMaxPrice] = useState<number | string>(10000);
   const handleCategorySelect = (category: string | null) => {
     setSelectedCategory(category);
   };
@@ -23,11 +23,11 @@ const ProductsFilterPage = (props:any) => {
   };
 
   const handleMinPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMinPrice(Number(event.target.value));
+    setMinPrice(String(event.target.value));
   };
 
   const handleMaxPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxPrice(Number(event.target.value));
+    setMaxPrice(String(event.target.value));
   };
   const filteredItems = products.filter((item) => {
     const matchCategory = !selectedCategory || item.category === selectedCategory;
@@ -103,9 +103,9 @@ const ProductsFilterPage = (props:any) => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="" className="nav-link">
+                    <Link onClick={() => handleCategorySelect("macbook")} to="" className="nav-link">
                       <i className="fa-solid fa-laptop mx-1"></i>
-                      Mackbook
+                      MacBook
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -170,14 +170,14 @@ const ProductsFilterPage = (props:any) => {
                   <li className="nav-item">
                     <span className="fw-bold">Price:</span>
                     <div className="form-group d-flex flex-column mt-1">
-                      <label htmlFor="">{`Min ${minPrice}`}</label>
+                      {/* <label htmlFor="">{`Min ${minPrice}`}</label>
                       <input
                         type="range"
                         className=""
                         placeholder="Min"
                         value={minPrice}
                         onChange={handleMinPriceChange}
-                      />
+                      /> */}
                       <label htmlFor="">{`Max ${maxPrice}`}</label>
                       <input
                         type="range"
