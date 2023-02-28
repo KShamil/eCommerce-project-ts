@@ -50,9 +50,9 @@ const SpecialOffersPage = (props:any) => {
         <div className="mt-5">
           <div className="table-responsive">
             <table className="table bg-body">
-              <thead className="table-primary">
-                <tr>
-                </tr>
+              <thead className="table-danger">
+              <tr>
+              </tr>
               </thead>
               <tbody>
                 {currentData
@@ -61,7 +61,7 @@ const SpecialOffersPage = (props:any) => {
                   )
                   .map((item) => (
                     <tr key={item.id}>
-                      <td className="align-middle">
+                      <th className="align-middle">
                         <Link to="">
                           <img
                             src={item.photo}
@@ -74,7 +74,7 @@ const SpecialOffersPage = (props:any) => {
                             alt="error"
                           />
                         </Link>
-                      </td>
+                      </th>
                       <td className="align-start">
                         <div>
                           <h5 className="fs-6 mb-0">

@@ -1,0 +1,25 @@
+{
+    "changeNavLanguage": {
+        "navlink1":"Ana Səhifə",
+        "navlink2":"Korporativ satişlar",
+        "navlink3":"Mağazalar",
+        "navlink4":"Servislər",
+        "navlink5":"Tez-tez verilən suallar"
+    },
+    "changeTitleLanguahe":{
+        "title1":"Məhsullarımız",
+        "title2":"Satış lideri",
+        "title3":"Xüsusi Təkliflər",
+        "title4":"Həftənin təklifləri"
+    },
+    "changeBtnLanguage":{
+        "loadmorebtn":"Daha çox yüklə",
+        "showmorebtn":"Bütün təklifləri gör"
+    },
+    "changeMainCardBtnLanguage": {
+        "addbtn":"Səbətə at"
+    },
+    "changeSliderCardLanguage": {
+        "addtocart":"Səbətə at"
+    }
+}

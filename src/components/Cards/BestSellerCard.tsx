@@ -6,13 +6,16 @@ import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import '../../config/i18n';
+import { useTranslation } from "react-i18next";
+
 
 interface BestSellerCardType {
     id:string,
     img: string;
     title: string;
     price: string;
-    rating: string;
+    rating: number;
     addProduct?: any;
     addWishlist?: any;
 }
@@ -23,6 +26,7 @@ const BestSellerCard:React.FC<BestSellerCardType> = ({id,img,title,price,rating,
   const notify = () => toast("Cart added!");
   const notifyWishlist = () => toast("Wishlist added!");
   const [addedToWishlist, setAddedToWishlist] = useState(false);
+  const { t, i18n } = useTranslation();
 
   let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
 
@@ -127,8 +131,8 @@ const BestSellerCard:React.FC<BestSellerCardType> = ({id,img,title,price,rating,
         </div>
         <div>
           <div className="d-grid mt-4">
-            <button onClick={handleAddToCart} className="btn btn-danger rounded-pill" tabIndex={-1}>
-              Add to Cart
+            <button onClick={handleAddToCart} className="btn btn-primary rounded-pill" tabIndex={-1}>
+             {t("changeSliderCardLanguage.addtocart")}
             </button>
             <ToastContainer
                 position="top-right"

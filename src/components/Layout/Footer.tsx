@@ -116,17 +116,17 @@ const Footer:React.FC = () => {
             <ul className="list-unstyled d-flex">
               <li className="ms-4">
                 <Link to="" className="link-dark fs-3">
-                <i className="fa-brands fa-twitter"></i>
+                <i style={{color:"#1DA1F2"}} className="fa-brands fa-twitter"></i>
                 </Link>
               </li> 
               <li className="ms-4">
                 <Link to="" className="link-dark fs-3">
-                <i className="fa-brands fa-instagram"></i>
+                <i style={{color:"#d6249f"}} className="fa-brands fa-instagram"></i>
                 </Link>
               </li>
               <li className="ms-4">
                 <Link to="" className="link-dark fs-3">
-                <i className="fa-brands fa-facebook"></i>
+                <i style={{color:"#4867AA"}} className="fa-brands fa-facebook"></i>
                 </Link>
               </li>
             </ul>

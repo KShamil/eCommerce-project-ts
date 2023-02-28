@@ -25,9 +25,11 @@ import Dashboard from "../pages/Dashboard";
 import AddProductPage from "../pages/AddProductPage";
 import EditProductPage from "../pages/EditProductPage";
 import { ScrollToTop } from "react-simple-scroll-up";
+import UserPage from "../pages/UserPage";
 // import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const AppRouter = () => {
+  
   const [search, setSearch] = useState("");
 
   const handleSearch = (e: any) => {
@@ -42,16 +44,10 @@ const AppRouter = () => {
             <Header searchValue={handleSearch} />
             <Routes>
               <Route path="/" element={<Home search={search} />}></Route>
-              <Route
-                path="/corporative"
-                element={<CorporativeSalesPage />}
-              ></Route>
+              <Route path="/corporative" element={<CorporativeSalesPage />}></Route>
               <Route path="/:id" element={<DetailsPage />}></Route>
               <Route path="/faqs" element={<Faqs />}></Route>
-              <Route
-                path="/filterpage"
-                element={<ProductsFilterPage search={search} />}
-              ></Route>
+              <Route path="/filterpage" element={<ProductsFilterPage search={search} />}></Route>
               <Route path="/reset" element={<ResetPasswordPage />}></Route>
               <Route path="/selling/:id" element={<SellingPage />}></Route>
               <Route path="/service" element={<Services />}></Route>
@@ -59,17 +55,15 @@ const AppRouter = () => {
               <Route path="/shops" element={<ShopsPage />}></Route>
               <Route path="/signin" element={<SignIn />}></Route>
               <Route path="/signup" element={<SignUpPage />}></Route>
-              <Route
-                path="/specialoffers"
-                element={<SpecialOffersPage search={search} />}
-              ></Route>
+              <Route path="/specialoffers" element={<SpecialOffersPage search={search} />}></Route>
               <Route path="/wishlist" element={<WishlistPage />}></Route>
               <Route path="/dashboard" element={<Dashboard />}></Route>
               <Route path="/addproduct" element={<AddProductPage />}></Route>
               <Route path="/editproduct/:id" element={<EditProductPage />}></Route>
+              <Route path="/userpage" element={<UserPage />}></Route>
               <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
-            <Footer />
+            <Footer/>
             <ScrollToTop
               bgColor="red"
               offsetTop={500}

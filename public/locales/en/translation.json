@@ -1,0 +1,25 @@
+{
+    "changeNavLanguage": {
+        "navlink1":"Home",
+        "navlink2":"Corporate Sales",
+        "navlink3":"Shops",
+        "navlink4":"Services",
+        "navlink5":"FAQs"
+    },
+    "changeTitleLanguage":{
+        "title1":"Our Products",
+        "title2":"Best Sellers",
+        "title3":"Special Offers",
+        "title4":"HOffer of the Week"
+    },
+    "changeBtnLanguage":{
+        "loadmorebtn":"Load More",
+        "showmorebtn":"Show More"
+    },
+    "changeMainCardBtnLanguage": {
+        "addbtn":"Add"
+    },
+    "changeSliderCardLanguage": {
+        "addtocart":"Add to Cart"
+    }
+}

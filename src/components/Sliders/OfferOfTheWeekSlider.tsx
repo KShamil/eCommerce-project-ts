@@ -1,12 +1,16 @@
-import React from "react";
+import React,{useContext} from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import products from "../../data/productsData";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import SaleCard from "../Cards/SaleCard";
+import { ProductContext } from "../../context/ProductContext";
+import '../../config/i18n';
+import { useTranslation } from "react-i18next";
 
 const OfferOfTheWeekSlider = () => {
+  const [products] = useContext(ProductContext);
+  const { t, i18n } = useTranslation();
   const settings = {
     dots: false,
     infinite: true,
@@ -67,7 +71,7 @@ const OfferOfTheWeekSlider = () => {
           to="/specialoffers"
           className="btn btn-outline-danger rounded-0 w-100 d-flex justify-content-center align-items-center p-3 fw-bold"
         >
-          Show More
+          {t("changeBtnLanguage.showmorebtn")}
         </Link>
       </div>
     </>

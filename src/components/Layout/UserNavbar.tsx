@@ -1,37 +1,32 @@
+import React,{FC} from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import azFlag from "../../assets/img/language-btn-img/azerbaijan-flag-round-icon.webp";
-import engFlag from "../../assets/img/language-btn-img/england-flag.png";
+import ruFlag from "../../assets/img/language-btn-img/russia-flag-round-icon.webp";
 import { useCart } from "react-use-cart";
 import { useWishlist } from "react-use-wishlist";
 import { Badge } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
-import { useTranslation } from "react-i18next";
-import '../../config/i18n';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
-const Header = (props: any) => {
-  const { totalItems } = useCart();
-  const { totalWishlistItems } = useWishlist();
-  const [mode, setMode] = useState<string>(
-    localStorage.getItem("mode") || "light-mode"
-  );
+const UserNavbar = (props:any) => {
+    const { totalItems } = useCart();
+    const { totalWishlistItems } = useWishlist();
+    const [mode, setMode] = useState<string>(
+        localStorage.getItem("mode") || "light-mode"
+      );
+    
+      useEffect(() => {
+        localStorage.setItem("mode", mode);
+        document.body.className = mode;
+      }, [mode]);
+    
+      const toggleMode = () => {
+        const newMode: string = mode === "light-mode" ? "dark-mode" : "light-mode";
+        setMode(newMode);
+      };
 
-  useEffect(() => {
-    localStorage.setItem("mode", mode);
-    document.body.className = mode;
-  }, [mode]);
-
-  const toggleMode = () => {
-    const newMode: string = mode === "light-mode" ? "dark-mode" : "light-mode";
-    setMode(newMode);
-  };
-
-  const { t, i18n } = useTranslation();
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
   return (
     <>
       <header className="header fixed-top">
@@ -67,7 +62,7 @@ const Header = (props: any) => {
                     className="nav-link"
                     aria-current="page"
                   >
-                    {t("changeNavLanguage.navlink1")}
+                    Home
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -80,7 +75,7 @@ const Header = (props: any) => {
                     }}
                     className="nav-link"
                   >
-                    {t("changeNavLanguage.navlink2")}
+                    Corporate Sales
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -92,8 +87,9 @@ const Header = (props: any) => {
                       };
                     }}
                     className="nav-link"
+                
                   >
-                    {t("changeNavLanguage.navlink3")}
+                    Shops
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -105,8 +101,9 @@ const Header = (props: any) => {
                       };
                     }}
                     className="nav-link"
+                
                   >
-                    {t("changeNavLanguage.navlink4")}
+                    Services
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -118,8 +115,9 @@ const Header = (props: any) => {
                     }}
                     to="/faqs"
                     className="nav-link"
+            
                   >
-                    {t("changeNavLanguage.navlink5")}
+                    FAQs
                   </NavLink>
                 </li>
               </ul>
@@ -131,15 +129,24 @@ const Header = (props: any) => {
               <div className="d-flex me-2">
                 <Link
                   to="/signin"
-                  className="text-decoration-none text-danger"
+                  className="text-decoration-none text-danger d-flex justify-content-center align-items-center mx-2"
                   type="submit"
                 >
-                  <i className="fa-regular fa-user fs-4"></i>
+                  {/* <i className="fa-regular fa-user fs-4"></i> */}
+                  <div className="user d-flex justify-content-center align-items-center flex-column">
+                  <span className="fw-bold">Shamil Qurbanov</span>
+                  <span><Link className="text-decoration-none text-danger fw-bold" to="/">Log Out</Link></span>
+                  </div>
                 </Link>
               </div>
               <div className="d-flex me-2 my-2">
                 <Link to="#" className="mode-btn-container" type="submit">
                   <i onClick={toggleMode} className="mode-btn"></i>
+                </Link>
+              </div>
+              <div className="d-flex me-2 my-2">
+                <Link to="/dashboard" className="btn btn-danger" type="submit">
+                  Dashboard
                 </Link>
               </div>
             </div>
@@ -223,44 +230,28 @@ const Header = (props: any) => {
                     aria-current="page"
                     to="/wishlist"
                   >
-                    <FavoriteIcon />
+                    <FavoriteIcon/>
                     <p className="totalItem text-danger fw-bold">
-                      <Badge
-                        badgeContent={totalWishlistItems}
-                        color="secondary"
-                      ></Badge>
+                    <Badge badgeContent={totalWishlistItems} color="secondary"></Badge>
                     </p>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/shopping" className="nav-link fs-5">
-                    <ShoppingCartCheckoutIcon />
+                    <ShoppingCartCheckoutIcon/>
                     <p className="totalItem text-danger fw-bold">
-                      <Badge
-                        badgeContent={totalItems}
-                        color="secondary"
-                      ></Badge>
+                      <Badge badgeContent={totalItems} color="secondary"></Badge>
                     </p>
                   </Link>
                 </li>
                 <li className="flag nav-item">
-                  <i
-                    onClick={() => {
-                      handleChangeLanguage("az");
-                    }}
-                    className="nav-link fs-5 btn-az"
-                  >
+                  <i className="nav-link fs-5 btn-az">
                     <img src={azFlag} alt="" />
                   </i>
                 </li>
                 <li className="flag nav-item">
-                  <i
-                    onClick={() => {
-                      handleChangeLanguage("en");
-                    }}
-                    className="nav-link fs-5 btn-eng"
-                  >
-                    <img src={engFlag} alt="" />
+                  <i className="nav-link fs-5 btn-eng">
+                    <img src={ruFlag} alt="" />
                   </i>
                 </li>
               </ul>
@@ -272,4 +263,4 @@ const Header = (props: any) => {
   );
 };
 
-export default Header;
+export default UserNavbar;

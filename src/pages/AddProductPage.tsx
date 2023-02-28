@@ -18,7 +18,7 @@ useEffect(() => {
   const [title, setTitle] = useState<string>("");
   const [price, setPrice] = useState<string>("");
   const [salePrice, setSalePrice] = useState<string>("");
-  const [rating, setRating] = useState<string>("");
+  const [rating, setRating] = useState<number | undefined>();
   const [category, setCategory] = useState<string>("");
   const [color, setColor] = useState<string>("");
   const navigate = useNavigate();
@@ -47,8 +47,8 @@ useEffect(() => {
     setSalePrice(e.target.value);
   };
   const updateRating = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRating(e.target.value);
-  };
+    setRating(parseInt(e.target.value));
+  }
   const updateCategory = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCategory(e.target.value);
   };
@@ -68,7 +68,7 @@ useEffect(() => {
       title: title,
       price: price,
       salePrice: salePrice,
-      rating: rating,
+      rating: rating || 0,
       category: category,
       color: color,
     };

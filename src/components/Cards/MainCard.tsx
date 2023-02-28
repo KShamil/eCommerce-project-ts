@@ -7,13 +7,15 @@ import { useWishlist } from "react-use-wishlist";
 import { Rating } from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import '../../config/i18n';
+import { useTranslation } from "react-i18next";
 
 interface CardType {
     id: string;
     img: string;
     title: string;
     price: string;
-    rating: string;
+    rating: number;
     addProduct?: any;
     addWishlist?: any;
 }
@@ -24,6 +26,7 @@ const MainCard:React.FC<CardType> = ({ id, img, title, price, rating, addProduct
   const notify = () => toast("Cart added!");
   const notifyWishlist = () => toast("Wishlist added!");
   const [addedToWishlist, setAddedToWishlist] = useState(false);
+  const { t, i18n } = useTranslation();
 
   let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
 
@@ -123,7 +126,7 @@ const MainCard:React.FC<CardType> = ({ id, img, title, price, rating, addProduct
               <span style={{ fontFamily: "'Cinzel', serif" }} className="text-danger fw-bold">{price} azn</span>{" "}
             </div>
             <div>
-              <button onClick={handleAddToCart} className="btn btn-danger btn-sm text-white">
+              <button onClick={handleAddToCart} className="btn btn-primary btn-sm text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={16}
@@ -139,7 +142,7 @@ const MainCard:React.FC<CardType> = ({ id, img, title, price, rating, addProduct
                   <line x1={12} y1={5} x2={12} y2={19} />
                   <line x1={5} y1={12} x2={19} y2={12} />
                 </svg>{" "}
-                Add
+                {t("changeMainCardBtnLanguage.addbtn")}
               </button>
               <ToastContainer
                 position="top-right"

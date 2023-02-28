@@ -77,7 +77,7 @@ export interface ProductType {
     title: string;
     price: string;
     salePrice:string;
-    rating: string;
+    rating: number;
     characteristics?: string;
     category: string;
     color:string;
@@ -93,7 +93,7 @@ const products:ProductType[] = [
         title:"iPhone 13 128 GB Blue",
         price:"1899",
         salePrice:"",
-        rating:"4.8",
+        rating:4.8,
         characteristics:"",
         category:"iphone",
         color:""
@@ -107,7 +107,7 @@ const products:ProductType[] = [
         title:"iPhone 13 512 GB Starlight",
         price:"2699",
         salePrice:"",
-        rating:"4.7",
+        rating:4.5,
         category:"iphone",
         color:""
         
@@ -121,7 +121,7 @@ const products:ProductType[] = [
         title:"iPhone 13 512 GB Midnight",
         price:"2699",
         salePrice:"",
-        rating:"4.8",
+        rating:4.4,
         category:"iphone",
         color:""
     },
@@ -134,7 +134,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Pro 1 TB Silver",
         price:"4619",
         salePrice:"",
-        rating:"4.9",
+        rating:4.1,
         category:"iphone",
         color:""
     },
@@ -147,7 +147,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Pro 1 TB Gold",
         price:"4619",
         salePrice:"",
-        rating:"4.9",
+        rating:4.0,
         category:"iphone",
         color:""
     },
@@ -160,7 +160,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Pro 1 TB Space Black",
         price:"4619",
         salePrice:"",
-        rating:"4.9",
+        rating:3.8,
         category:"iphone",
         color:""
     },
@@ -173,7 +173,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Plus 512 GB Starlight",
         price:"3539",
         salePrice:"",
-        rating:"4.6",
+        rating:4.6,
         category:"iphone",
         color:""
     },
@@ -186,7 +186,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Plus 512 GB Purple",
         price:"3539",
         salePrice:"",
-        rating:"4.5",
+        rating:4.9,
         category:"iphone",
         color:""
     },
@@ -199,7 +199,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Plus 512 GB Midnight",
         price:"3539",
         salePrice:"",
-        rating:"4.8",
+        rating:4.2,
         category:"iphone",
         color:""
     },
@@ -212,7 +212,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Plus 512 GB Blue",
         price:"3539",
         salePrice:"",
-        rating:"4.8",
+        rating:3.3,
         category:"iphone",
         color:""
     },
@@ -225,7 +225,7 @@ const products:ProductType[] = [
         title:"iPhone 14 Plus 512 GB (Product) Red",
         price:"3539",
         salePrice:"",
-        rating:"4.9",
+        rating:4.1,
         category:"iphone",
         color:"red"
     },
@@ -238,7 +238,7 @@ const products:ProductType[] = [
         title:"iPhone SE Gen.3 256 GB Red",
         price:"1699",
         salePrice:"",
-        rating:"4.5",
+        rating:4.4,
         category:"iphone",
         color:"red"
     },
@@ -251,7 +251,7 @@ const products:ProductType[] = [
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Pink",
         price:"1979",
         salePrice:"",
-        rating:"4.8",
+        rating:4.7,
         category:"ipad",
         color:""
     },
@@ -264,7 +264,7 @@ const products:ProductType[] = [
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Yellow",
         price:"1979",
         salePrice:"",
-        rating:"4.6",
+        rating:4.5,
         category:"ipad",
         color:""
     },
@@ -277,7 +277,7 @@ const products:ProductType[] = [
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Blue",
         price:"1979",
         salePrice:"",
-        rating:"4.9",
+        rating:4.6,
         category:"ipad",
         color:""
     },
@@ -290,7 +290,72 @@ const products:ProductType[] = [
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
         price:"1979",
         salePrice:"",
-        rating:"4.5",
+        rating:4.8,
+        category:"ipad",
+        color:""
+    },
+    {   
+        id:uuidv4(),
+        photo:ipad10inchSilver,
+        photo2:ipad10inchSilver2,
+        photo3:ipad10inchSilver3,
+        photo4:ipad10inchSilver4,
+        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
+        price:"1979",
+        salePrice:"",
+        rating:4.8,
+        category:"ipad",
+        color:""
+    },
+    {   
+        id:uuidv4(),
+        photo:ipad10inchSilver,
+        photo2:ipad10inchSilver2,
+        photo3:ipad10inchSilver3,
+        photo4:ipad10inchSilver4,
+        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
+        price:"1979",
+        salePrice:"",
+        rating:4.8,
+        category:"ipad",
+        color:""
+    },
+    {   
+        id:uuidv4(),
+        photo:ipad10inchSilver,
+        photo2:ipad10inchSilver2,
+        photo3:ipad10inchSilver3,
+        photo4:ipad10inchSilver4,
+        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
+        price:"1979",
+        salePrice:"",
+        rating:4.8,
+        category:"ipad",
+        color:""
+    },
+    {   
+        id:uuidv4(),
+        photo:ipad10inchSilver,
+        photo2:ipad10inchSilver2,
+        photo3:ipad10inchSilver3,
+        photo4:ipad10inchSilver4,
+        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
+        price:"1979",
+        salePrice:"",
+        rating:4.8,
+        category:"ipad",
+        color:""
+    },
+    {   
+        id:uuidv4(),
+        photo:ipad10inchSilver,
+        photo2:ipad10inchSilver2,
+        photo3:ipad10inchSilver3,
+        photo4:ipad10inchSilver4,
+        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
+        price:"1979",
+        salePrice:"",
+        rating:4.8,
         category:"ipad",
         color:""
     },
@@ -303,7 +368,7 @@ const products:ProductType[] = [
         title:"Apple Watch 7 41 mm Starlight MKMY3RB/A",
         price:"949",
         salePrice:"",
-        rating:"4.6",
+        rating:4.5,
         category:"watch",
         color:""
     },
@@ -316,7 +381,7 @@ const products:ProductType[] = [
         title:"Apple Watch 7 41 mm Starlight MKMY3RB/A",
         price:"949",
         salePrice:"",
-        rating:"4.6",
+        rating:4.6,
         category:"watch",
         color:""
     },
@@ -329,7 +394,7 @@ const products:ProductType[] = [
         title:"Apple Watch 7 41 mm Starlight MKMY3RB/A",
         price:"949",
         salePrice:"",
-        rating:"4.6",
+        rating:4.3,
         category:"watch",
         color:""
     },
@@ -342,7 +407,7 @@ const products:ProductType[] = [
         title:"Apple Watch 7 45 mm Blue MKN83RB/A",
         price:"999",
         salePrice:"",
-        rating:"4.7",
+        rating:4.7,
         category:"watch",
         color:""
     },
@@ -355,7 +420,7 @@ const products:ProductType[] = [
         title:"Apple Watch 7 45 mm Midnight MKN53RB/A",
         price:"999",
         salePrice:"",
-        rating:"4.6",
+        rating:4.9,
         category:"watch",
         color:""
     },
@@ -368,7 +433,7 @@ const products:ProductType[] = [
         title:"Apple watch 7 45 mm Starlight MKN63RB/A",
         price:"999",
         salePrice:"",
-        rating:"4.8",
+        rating:4.2,
         category:"watch",
         color:""
     },
@@ -381,7 +446,7 @@ const products:ProductType[] = [
         title:"Apple Watch SE 40 mm Gold",
         price:"699",
         salePrice:"",
-        rating:"4.6",
+        rating:4.3,
         category:"watch",
         color:""
     },
@@ -394,7 +459,7 @@ const products:ProductType[] = [
         title:"Apple Watch SE 44 mm Space Grey",
         price:"799",
         salePrice:"",
-        rating:"4.9",
+        rating:4.5,
         category:"watch",
         color:""
     },
@@ -407,7 +472,7 @@ const products:ProductType[] = [
         title:"Apple MacBook Pro 16 MNWC3RU/A Silver",
         price:"6799",
         salePrice:"6049",
-        rating:"4.9",
+        rating:4.7,
         category:"macbook",
         color:""
     },
@@ -420,7 +485,7 @@ const products:ProductType[] = [
         title:"Apple MacBook Pro 16 MNWE3RU/A Silver",
         price:"9499",
         salePrice:"8449",
-        rating:"4.7",
+        rating:4.8,
         category:"macbook",
         color:""
     },
@@ -433,7 +498,7 @@ const products:ProductType[] = [
         title:"Apple MacBook Pro 16 MNW93RU/A Space Gray",
         price:"7299",
         salePrice:"6529",
-        rating:"4.9",
+        rating:4.5,
         category:"macbook",
         color:""
     },
@@ -446,7 +511,7 @@ const products:ProductType[] = [
         title:"Apple MacBook Pro 16 MNW83RU/A Space Gray",
         price:"6799",
         salePrice:"6049",
-        rating:"4.9",
+        rating:4.3,
         category:"macbook",
         color:""
     },
@@ -459,7 +524,7 @@ const products:ProductType[] = [
         title:"Apple MacBook Air 13 ZKZ15S000NB Space Gray",
         price:"3249",
         salePrice:"",
-        rating:"4.9",
+        rating:4.4,
         category:"macbook",
         color:""
     },
@@ -472,7 +537,7 @@ const products:ProductType[] = [
         title:"Apple MacBook Pro 13 MNEQ3RU/A Silver",
         price:"3999",
         salePrice:"",
-        rating:"4.9",
+        rating:4.9,
         category:"macbook",
         color:""
     },

@@ -14,7 +14,7 @@ interface FilterProductsCardType {
     img: string;
     title: string;
     price: string;
-    rating: string;
+    rating: number;
     addProduct?: any;
     addWishlist?: any;
 }
@@ -124,7 +124,7 @@ const FilterProductsCard:React.FC<FilterProductsCardType> = ({ id, img, title, p
               <span style={{ fontFamily: "'Cinzel', serif" }} className="text-danger fw-bold">{price} azn</span>{" "}
             </div>
             <div>
-              <button onClick={handleAddToCart} className="btn btn-danger btn-sm text-white">
+              <button onClick={handleAddToCart} className="btn btn-primary btn-sm text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={16}

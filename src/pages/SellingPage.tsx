@@ -1,15 +1,27 @@
 import { useParams } from "react-router-dom";
-import products from "../data/productsData";
+// import products from "../data/productsData";
 import { useEffect } from "react";
+import { useCart } from "react-use-cart";
 
 const SellingPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  interface CheckoutProps {
+    items: any;
+  }
+  const { 
+    items,
+  } = useCart() as unknown as CheckoutProps;
+  
+  
+  
+  
   interface MyRouteParams extends Record<string, string | undefined> {}
 
   const { id } = useParams<MyRouteParams>();
-  const items = products.find((p) => p.id === id);
+  const CheckoutItems = items.find((p:any) => p.id === id);
   return (
     <>
       <div className="checkout-from p-3" style={{ background: "#F9FBFC" }}>
@@ -31,9 +43,9 @@ const SellingPage = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><img src={items?.photo} alt="error" width={70} /></td>
-                      <td className="">{items?.title}</td>
-                      <td className="text-danger fw-bold">{items?.price}</td>
+                      <td><img src={CheckoutItems?.photo} alt="error" width={70} /></td>
+                      <td className="">{CheckoutItems?.title}</td>
+                      <td className="text-danger fw-bold">{CheckoutItems?.price}</td>
                     </tr>
                   </tbody>
                 </table>

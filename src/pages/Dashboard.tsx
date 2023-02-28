@@ -46,13 +46,13 @@ const Dashboard = () => {
                 <td>{item.title}</td>
                 <td>{item.price}</td>
                 <td className="actions">
-                  <Link to={`/editproduct/${item.id}`} className="btn btn-primary mb-2 w-50">
+                  <Link to={`/editproduct/${item.id}`} className="btn btn-primary mb-2 w-100">
                     Edit
                   </Link>
                   <br />
                   <button
                     onClick={() => handleDeleteProduct(item.id)}
-                    className="btn btn-danger w-50 d-flex justify-content-center"
+                    className="btn btn-danger w-100 d-flex justify-content-center"
                   >
                     Remove
                   </button>

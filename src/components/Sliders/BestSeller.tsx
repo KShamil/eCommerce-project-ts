@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-// import bestSeller from "../data/saleData";
-import products from "../../data/productsData";
+import { ProductContext } from "../../context/ProductContext";
 import BestSellerCard from "../Cards/BestSellerCard";
+import '../../config/i18n';
+import { useTranslation } from "react-i18next";
 
 const BestSeller = () => {
     
+    const [products] = useContext(ProductContext)
     const [activeCategory, setActiveCategory] = useState<string>('all');
+    const { t, i18n } = useTranslation();
     
     function handleFilter(category: string) {
         setActiveCategory(category);
@@ -74,7 +77,7 @@ const BestSeller = () => {
                   <li className="nav-item " role="presentation">
                     <Link to=""
                       onClick={() => handleFilter("iphone")}
-                      className="nav-link active"
+                      className="nav-link active fw-bold"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-fruitsandveg"
                       role="tab"
@@ -86,7 +89,7 @@ const BestSeller = () => {
                   <li className="nav-item " role="presentation">
                     <Link to=""
                       onClick={() => handleFilter("ipad")}
-                      className="nav-link "
+                      className="nav-link fw-bold"
                       id="nav-snackMunchies-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-snackMunchies"
@@ -99,7 +102,7 @@ const BestSeller = () => {
                   </li>
                   <li className="nav-item " role="presentation">
                     <Link to=""
-                      className="nav-link"
+                      className="nav-link fw-bold"
                       id="nav-bakery-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-bakery"
@@ -114,7 +117,7 @@ const BestSeller = () => {
                   <li className="nav-item " role="presentation">
                     <Link to=""
                       onClick={() => handleFilter("macbook")}
-                      className="nav-link"
+                      className="nav-link fw-bold"
                       id="nav-tea-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-tea"
@@ -129,7 +132,7 @@ const BestSeller = () => {
                   <li className="nav-item" role="presentation">
                     <Link to=""
                       onClick={() => handleFilter("watch")}
-                      className="nav-link"
+                      className="nav-link fw-bold"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-drinks"
                       role="tab"
@@ -142,7 +145,8 @@ const BestSeller = () => {
                   <li className="nav-item" role="presentation">
                     <Link
                       to=""
-                      className="nav-link"
+                      onClick={() => handleFilter("airpods")}
+                      className="nav-link fw-bold"
                       id="nav-drinks-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-drinks"
@@ -157,7 +161,8 @@ const BestSeller = () => {
                   <li className="nav-item" role="presentation">
                     <Link
                       to=""
-                      className="nav-link"
+                      onClick={() => handleFilter("tv")}
+                      className="nav-link fw-bold"
                       id="nav-drinks-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-drinks"
@@ -172,7 +177,8 @@ const BestSeller = () => {
                   <li className="nav-item" role="presentation">
                     <Link
                       to=""
-                      className="nav-link"
+                      onClick={() => handleFilter("accessories")}
+                      className="nav-link fw-bold"
                       id="nav-drinks-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#nav-drinks"
@@ -207,7 +213,7 @@ const BestSeller = () => {
             to="/filterpage"
             className="btn btn-outline-danger rounded-0 w-100 d-flex justify-content-center align-items-center p-3 fw-bold"
           >
-            Show More
+            {t("changeBtnLanguage.showmorebtn")}
           </Link>
         </div>
       </div>

@@ -1,16 +1,36 @@
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-
+import { useEffect,useState } from "react";
 
 const ShoppingCartPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const isLogged = () => {
-    alert('please log in')
-  }
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAuthorized, setIsAuthorized] = useState(false);
+
+  useEffect(() => {
+    const isUserLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isUserLoggedIn) {
+      setIsLoggedIn(true);
+    }
+    const isUserAuthorized = localStorage.getItem("isAuthorized");
+    if (isUserAuthorized) {
+      setIsAuthorized(true);
+    }
+  }, []);
+
+  const handleBuyNow = () => {
+    if (!isLoggedIn) {
+      alert("Please log in to continue.");
+    } else if (!isAuthorized) {
+      window.location.href = "/signin";
+    } else {
+      alert("Thank you for your purchase!");
+    }
+  };
+
 
   interface CartProps {
     isEmpty: boolean;
@@ -126,7 +146,9 @@ const ShoppingCartPage = () => {
                 ))}
               </tbody>
             </table>
-            <Link onClick={isLogged} to="" className="w-100 btn btn-outline-danger p-3">Buy now</Link>
+            <div className="buy-box">
+              <button onClick={handleBuyNow} className="btn btn-danger w-100 p-3">Buy now</button>
+            </div>
           </div>
         </div>
       </div>

@@ -8,26 +8,24 @@ import BestSeller from "../components/Sliders/BestSeller";
 import OfferOfTheWeekSlider from "../components/Sliders/OfferOfTheWeekSlider";
 import { useEffect } from "react";
 import AppleStoreTv from "../components/TV/AppleStoreTv";
-import '../config/i18n';
-import { useTranslation } from "react-i18next";
+import UserNavbar from "../components/Layout/UserNavbar";
 
 
-const Home = (props:any) => {
+
+const UserPage = (props:any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const [products] = useContext(ProductContext);
   const [displayedProducts, setDisplayedProducts] = useState<number>(5);
-  const { t, i18n } = useTranslation();
 
   const LoadMoreProducts = (): void => {
     setDisplayedProducts(displayedProducts + 5);
   };
 
-  
-
   return (
     <>
+    <UserNavbar/> 
       <Slider />
       <Banner />
       <section className="products container">
@@ -59,7 +57,7 @@ const Home = (props:any) => {
                 onClick={LoadMoreProducts}
                 className="btn btn-outline-danger rounded-0 p-3 fw-bold w-50"
               >
-                {t("changeBtnLanguage.loadmorebtn")}
+                Load More
               </button>
               </div>
             )}
@@ -74,4 +72,4 @@ const Home = (props:any) => {
   );
 };
 
-export default Home;
+export default UserPage;
