@@ -63,9 +63,9 @@ const BestSeller = () => {
         <div className="col-12 mt-5">
           <div className="mb-6 d-xl-flex justify-content-between align-items-center">
             <div className="mb-5 mb-xl-0">
-              <h3 className="mb-0 fw-bold" style={{ fontFamily: "Cinzel" }}>
-                Best Sellers
-              </h3>
+              <h1 className="mb-0 fw-bold">
+                {t("changeTitleLanguage.title2")}
+              </h1>
             </div>
             <div>
               <nav>

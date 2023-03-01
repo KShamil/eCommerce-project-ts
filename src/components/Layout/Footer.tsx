@@ -102,7 +102,7 @@ const Footer:React.FC = () => {
                     placeholder="Email address"
                   />
                   <button
-                    className="subscribe_btn btn btn-danger"
+                    className="subscribe_btn btn btn-primary"
                     type="button"
                   >
                     Subscribe

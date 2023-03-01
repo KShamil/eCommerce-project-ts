@@ -7,24 +7,26 @@ import { useWishlist } from "react-use-wishlist";
 import { Rating } from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import '../../config/i18n';
+import { useTranslation } from "react-i18next";
 
-
-interface FilterProductsCardType {
+interface FilterProductsCardProps {
     id: string;
     img: string;
     title: string;
-    price: string;
-    rating: number;
+    price: number | string;
+    rating: number | string;
     addProduct?: any;
     addWishlist?: any;
 }
 
-const FilterProductsCard:React.FC<FilterProductsCardType> = ({ id, img, title, price, rating, addProduct, addWishlist }) => {
+const FilterProductsCard:React.FC<FilterProductsCardProps> = ({ id, img, title, price, rating, addProduct, addWishlist }) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
   const notify = () => toast("Cart added!");
   const notifyWishlist = () => toast("Wishlist added!");
   const [addedToWishlist, setAddedToWishlist] = useState(false);
+  const { t, i18n } = useTranslation();
 
   let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
 
@@ -140,7 +142,7 @@ const FilterProductsCard:React.FC<FilterProductsCardType> = ({ id, img, title, p
                   <line x1={12} y1={5} x2={12} y2={19} />
                   <line x1={5} y1={12} x2={19} y2={12} />
                 </svg>{" "}
-                Add
+                {t("changeMainCardBtnLanguage.addbtn")}
               </button>
               <ToastContainer
                 position="top-right"

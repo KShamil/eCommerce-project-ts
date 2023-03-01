@@ -19,11 +19,11 @@ const EditProductPage: React.FC = () => {
   const [photo3, setPhoto3] = useState<string>(editProduct?.photo3 || "");
   const [photo4, setPhoto4] = useState<string>(editProduct?.photo4 || "");
   const [title, setTitle] = useState<string>(editProduct?.title || "");
-  const [price, setPrice] = useState<string>(editProduct?.price || "");
-  const [salePrice, setSalePrice] = useState<string>(
+  const [price, setPrice] = useState<number | string>(editProduct?.price || "");
+  const [salePrice, setSalePrice] = useState<number | string>(
     editProduct?.salePrice || ""
   );
-  const [rating, setRating] = useState<string>(editProduct?.rating || "");
+  const [rating, setRating] = useState<number | string>(editProduct?.rating || "");
   const [category, setCategory] = useState<string>(editProduct?.category || "");
   const [color, setColor] = useState<string>(editProduct?.color || "");
   const navigate = useNavigate();

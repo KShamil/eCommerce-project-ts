@@ -15,9 +15,9 @@ interface SaleCardType {
     id:string,
     img: string;
     title: string;
-    price: string;
-    salePrice:string;
-    rating: number;
+    price:number | string;
+    salePrice:number | string;
+    rating: number | string;
     addProduct?: any;
     addWishlist?: any;
 }
@@ -142,7 +142,7 @@ const SaleCard:React.FC<SaleCardType> = ({ id,img, title, price, rating, salePri
         </div>
         <div>
           <div className="d-grid mt-4">
-            <button onClick={handleAddToCart} className="btn btn-primary rounded-pill" tabIndex={-1}>
+            <button onClick={handleAddToCart} className="btn btn-primary rounded-3 fw-bold" tabIndex={-1}>
               {t("changeSliderCardLanguage.addtocart")}
             </button>
             <ToastContainer

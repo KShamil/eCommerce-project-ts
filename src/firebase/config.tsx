@@ -1,8 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 
-export const firebasecConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyBnkWI6DdIHa8-A9NDdjJ3EhFb84KS40Q8",
   authDomain: "applestore-ecommerce-project.firebaseapp.com",
   databaseURL: "https://applestore-ecommerce-project-default-rtdb.firebaseio.com",
@@ -13,7 +13,6 @@ export const firebasecConfig = {
 };
 
 
-const app = initializeApp(firebasecConfig);
-export const db = getFirestore(app)
+const firebaseApp: firebase.app.App = firebase.initializeApp(firebaseConfig);
 
-export default app;
+export const db: firebase.firestore.Firestore = firebaseApp.firestore();

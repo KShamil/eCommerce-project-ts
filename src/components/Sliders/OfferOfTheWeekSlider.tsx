@@ -50,9 +50,9 @@ const OfferOfTheWeekSlider = () => {
   return (
     <>
       <div className="special-offers container mt-5">
-        <h3 className="title fw-bold" style={{ fontFamily: "Cinzel" }}>
-          Offer of the Week
-        </h3>
+        <h1 className="title fw-bold">
+        {t("changeTitleLanguage.title4")}
+        </h1>
         <Slider {...settings}>
           {products.map((item) => (
             <SaleCard

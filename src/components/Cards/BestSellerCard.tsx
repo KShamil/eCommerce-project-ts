@@ -10,17 +10,17 @@ import '../../config/i18n';
 import { useTranslation } from "react-i18next";
 
 
-interface BestSellerCardType {
+interface BestSellerCardProps {
     id:string,
     img: string;
     title: string;
-    price: string;
-    rating: number;
+    price:number | string;
+    rating: number | string;
     addProduct?: any;
     addWishlist?: any;
 }
 
-const BestSellerCard:React.FC<BestSellerCardType> = ({id,img,title,price,rating,addProduct,addWishlist}) => {
+const BestSellerCard:React.FC<BestSellerCardProps> = ({id,img,title,price,rating,addProduct,addWishlist}) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
   const notify = () => toast("Cart added!");
@@ -131,7 +131,7 @@ const BestSellerCard:React.FC<BestSellerCardType> = ({id,img,title,price,rating,
         </div>
         <div>
           <div className="d-grid mt-4">
-            <button onClick={handleAddToCart} className="btn btn-primary rounded-pill" tabIndex={-1}>
+            <button onClick={handleAddToCart} className="btn btn-primary rounded-3 fw-bold" tabIndex={-1}>
              {t("changeSliderCardLanguage.addtocart")}
             </button>
             <ToastContainer

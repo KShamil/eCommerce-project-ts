@@ -10,6 +10,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { useTranslation } from "react-i18next";
 import '../../config/i18n';
+import MyDialog from "../Dialog/Dialog";
 
 const Header = (props: any) => {
   const { totalItems } = useCart();
@@ -60,7 +61,7 @@ const Header = (props: any) => {
                   <NavLink
                     style={({ isActive }) => {
                       return {
-                        color: isActive ? "red" : "",
+                        color: isActive ? "blue" : "",
                       };
                     }}
                     to="/"
@@ -75,7 +76,7 @@ const Header = (props: any) => {
                     to="/corporative"
                     style={({ isActive }) => {
                       return {
-                        color: isActive ? "red" : "",
+                        color: isActive ? "blue" : "",
                       };
                     }}
                     className="nav-link"
@@ -88,7 +89,7 @@ const Header = (props: any) => {
                     to="/shops"
                     style={({ isActive }) => {
                       return {
-                        color: isActive ? "red" : "",
+                        color: isActive ? "blue" : "",
                       };
                     }}
                     className="nav-link"
@@ -101,7 +102,7 @@ const Header = (props: any) => {
                     to="/service"
                     style={({ isActive }) => {
                       return {
-                        color: isActive ? "red" : "",
+                        color: isActive ? "blue" : "",
                       };
                     }}
                     className="nav-link"
@@ -113,7 +114,7 @@ const Header = (props: any) => {
                   <NavLink
                     style={({ isActive }) => {
                       return {
-                        color: isActive ? "red" : "",
+                        color: isActive ? "blue" : "",
                       };
                     }}
                     to="/faqs"
@@ -152,7 +153,8 @@ const Header = (props: any) => {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ">
-                <li className="nav-item dropdown btn btn-danger">
+                <MyDialog/>
+                {/* <li className="nav-item dropdown btn btn-danger">
                   <Link
                     to=""
                     className="nav-link fs-6 text-white"
@@ -204,7 +206,7 @@ const Header = (props: any) => {
                       </Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
               </ul>
               <form className="d-flex mx-auto col-6" role="search">
                 <input

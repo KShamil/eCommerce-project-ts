@@ -9,6 +9,7 @@ const ShoppingCartPage = () => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAuthorized, setIsAuthorized] = useState(false);
+  
 
   useEffect(() => {
     const isUserLoggedIn = localStorage.getItem("isLoggedIn");

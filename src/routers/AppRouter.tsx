@@ -65,7 +65,7 @@ const AppRouter = () => {
             </Routes>
             <Footer/>
             <ScrollToTop
-              bgColor="red"
+              bgColor="blue"
               offsetTop={500}
             />
             {/* <FloatingWhatsApp

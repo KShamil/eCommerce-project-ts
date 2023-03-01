@@ -5,7 +5,7 @@ import { Pagination } from "@mui/material";
 import FilterProductsCard from "../components/Cards/FilterProductsCard";
 import { useEffect } from "react";
 
-const ProductsFilterPage = (props:any) => {
+const ProductsFilterPage = (props: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,12 +29,18 @@ const ProductsFilterPage = (props:any) => {
   const handleMaxPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMaxPrice(String(event.target.value));
   };
+
+  const handleResetFilters = () => {
+    setSelectedCategory(null);
+    setSelectedColor(null);
+    setMinPrice(0);
+    setMaxPrice(10000);
+  };
   const filteredItems = products.filter((item) => {
     const matchCategory = !selectedCategory || item.category === selectedCategory;
     const matchColor = !selectedColor || item.color === selectedColor;
-    const matchMinPrice = !minPrice || item.price >= minPrice;
     const matchMaxPrice = !maxPrice || item.price <= maxPrice;
-    return matchCategory && matchColor && matchMinPrice && matchMaxPrice;
+    return matchCategory && matchColor && matchMaxPrice;
   });
 
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -45,7 +51,10 @@ const ProductsFilterPage = (props:any) => {
   const endIndex = startIndex + itemsPerPage;
   const currentData = filteredItems.slice(startIndex, endIndex);
 
-  const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+  const handlePageChange = (
+    _event: React.ChangeEvent<unknown>,
+    value: number
+  ) => {
     setCurrentPage(value);
   };
 
@@ -56,7 +65,7 @@ const ProductsFilterPage = (props:any) => {
           <div className="row">
             <nav
               id="sidebarMenu"
-              className="col-md-3 col-lg-2 d-md-block bg-light sidebar"
+              className="col-md-3 col-lg-2 d-md-block bg-secondary sidebar"
               style={{}}
             >
               <div className="position-sticky pt-3 sidebar-sticky">
@@ -64,11 +73,10 @@ const ProductsFilterPage = (props:any) => {
                   <span className="fw-bold">Categories:</span>
                   <li className="nav-item mt-2">
                     <Link
-                    to=""
+                      to=""
                       onClick={() => handleCategorySelect(null)}
                       className="nav-link active"
                       aria-current="page"
-                    
                     >
                       <i className="fa-brands fa-apple mx-1"></i>
                       All
@@ -76,11 +84,10 @@ const ProductsFilterPage = (props:any) => {
                   </li>
                   <li className="nav-item">
                     <Link
-                    to=""
+                      to=""
                       onClick={() => handleCategorySelect("iphone")}
                       className="nav-link active"
                       aria-current="page"
-                
                     >
                       <i className="fa-solid fa-mobile-screen-button mx-1"></i>
                       iphone
@@ -88,7 +95,7 @@ const ProductsFilterPage = (props:any) => {
                   </li>
                   <li className="nav-item">
                     <Link
-                        to=""
+                      to=""
                       onClick={() => handleCategorySelect("ipad")}
                       className="nav-link"
                     >
@@ -103,14 +110,18 @@ const ProductsFilterPage = (props:any) => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link onClick={() => handleCategorySelect("macbook")} to="" className="nav-link">
+                    <Link
+                      onClick={() => handleCategorySelect("macbook")}
+                      to=""
+                      className="nav-link"
+                    >
                       <i className="fa-solid fa-laptop mx-1"></i>
                       MacBook
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link
-                    to=""
+                      to=""
                       onClick={() => handleCategorySelect("watch")}
                       className="nav-link"
                     >
@@ -125,59 +136,65 @@ const ProductsFilterPage = (props:any) => {
                     </Link>
                   </li>
                 </ul>
-                <ul className="bottom-nav nav flex-column mt-3">
-                  <li className="nav-item">
+                <div className="mt-3">
+                  <div className="nav-item">
                     <span className="fw-bold">Color:</span>
-                    <div className="colors d-flex">
-                      <Link
-                        to=""
+                    <div className="colors d-flex gap-2 mt-3">
+                      <i
+                        style={{ color: "white", cursor: "pointer" }}
                         onClick={() => handleColorSelect("red")}
                         className="nav-link active"
                         aria-current="page"
                       >
-                        <i className="fa-solid fa-circle text-danger fs-4"></i>
-                      </Link>
-                      <Link
-                        to=""
+                        <i className="fa-solid fa-circle fs-4"></i>
+                      </i>
+                      <i
+                        style={{ color: "black", cursor: "pointer" }}
                         onClick={() => handleColorSelect(null)}
                         className="nav-link active"
                         aria-current="page"
                       >
-                        <i className="fa-solid fa-circle text-success fs-4"></i>
-                      </Link>
-                      <Link
-                        to=""
+                        <i className="fa-solid fa-circle fs-4"></i>
+                      </i>
+                      <i
+                        style={{ color: "blue", cursor: "pointer" }}
                         onClick={() => handleColorSelect(null)}
                         className="nav-link active"
                         aria-current="page"
-                
                       >
-                        <i className="fa-solid fa-circle text-warning fs-4"></i>
-                      </Link>
-                      <Link
-                        to=""
+                        <i className="fa-solid fa-circle fs-4"></i>
+                      </i>
+                      <i
+                        style={{ color: "purple", cursor: "pointer" }}
                         onClick={() => handleColorSelect(null)}
-                        className="btn btn-danger"
+                        className="nav-link active"
                         aria-current="page"
-                
                       >
-                        Reset
-                      </Link>
+                        <i className="fa-solid fa-circle fs-4"></i>
+                      </i>
+                      <i
+                        style={{ color: "red", cursor: "pointer" }}
+                        onClick={() => handleColorSelect("red")}
+                        className="nav-link active"
+                        aria-current="page"
+                      >
+                        <i className="fa-solid fa-circle fs-4"></i>
+                      </i>
+                      <i
+                        style={{ color: "green", cursor: "pointer" }}
+                        onClick={() => handleColorSelect(null)}
+                        className="nav-link active"
+                        aria-current="page"
+                      >
+                        <i className="fa-solid fa-circle fs-4"></i>
+                      </i>
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
                 <div className="bottom-nav nav flex-column mt-3">
                   <li className="nav-item">
                     <span className="fw-bold">Price:</span>
                     <div className="form-group d-flex flex-column mt-1">
-                      {/* <label htmlFor="">{`Min ${minPrice}`}</label>
-                      <input
-                        type="range"
-                        className=""
-                        placeholder="Min"
-                        value={minPrice}
-                        onChange={handleMinPriceChange}
-                      /> */}
                       <label htmlFor="">{`Max ${maxPrice}`}</label>
                       <input
                         type="range"
@@ -191,14 +208,19 @@ const ProductsFilterPage = (props:any) => {
                     </div>
                   </li>
                 </div>
+                <button
+                  onClick={handleResetFilters}
+                  className="btn btn-danger mt-3 w-50"
+                  aria-current="page"
+                >
+                  Reset
+                </button>
               </div>
             </nav>
             <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
               <div className="chartjs-size-monitor">
-                <div className="chartjs-size-monitor-expand">
-                </div>
-                <div className="chartjs-size-monitor-shrink">
-                </div>
+                <div className="chartjs-size-monitor-expand"></div>
+                <div className="chartjs-size-monitor-shrink"></div>
               </div>
               <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 className="h1" style={{ fontFamily: "Cinzel" }}>

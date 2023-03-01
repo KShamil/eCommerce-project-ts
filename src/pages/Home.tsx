@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import AppleStoreTv from "../components/TV/AppleStoreTv";
 import '../config/i18n';
 import { useTranslation } from "react-i18next";
+import PartnersSlider from "../components/Sliders/PartnersSlider";
 
 
 const Home = (props:any) => {
@@ -32,7 +33,7 @@ const Home = (props:any) => {
       <Banner />
       <section className="products container">
         <div className="products-blog w-100">
-          <h3 className="title fw-bold mt-5">Our Products</h3>
+          <h1 className="title fw-bold mt-5">{t("changeTitleLanguage.title1")}</h1>
           <div className="products-list mt-3">
             <div className="product-items mt-2">
               {products
@@ -70,6 +71,7 @@ const Home = (props:any) => {
       <SpecialOffersSlider/>
       <OfferOfTheWeekSlider/>
       <AppleStoreTv/>
+      <PartnersSlider/>
     </>
   );
 };

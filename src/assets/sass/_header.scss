@@ -1,6 +1,6 @@
 .light-mode {
     .header {
-        background: #FBB682;
+        background: #ECF2FF;
         margin-bottom: 150px;
 
         .navbar {
@@ -79,7 +79,8 @@
 
 .dark-mode {
     .header {
-        background-image: linear-gradient(to bottom, #171c1a, rgb(102, 75, 103));
+        // background-image: linear-gradient(to bottom, #171c1a, rgb(102, 75, 103));
+        background: black;
 
         .navbar {
             .navbar-brand {
