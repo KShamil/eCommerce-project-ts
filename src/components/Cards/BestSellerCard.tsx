@@ -11,13 +11,13 @@ import { useTranslation } from "react-i18next";
 
 
 interface BestSellerCardProps {
-    id:string,
-    img: string;
-    title: string;
-    price:number | string;
-    rating: number | string;
-    addProduct?: any;
-    addWishlist?: any;
+  id: string;
+  img: string;
+  title: string;
+  price: number | string;
+  rating?: number;
+  addProduct?: any;
+  addWishlist?: any;
 }
 
 const BestSellerCard:React.FC<BestSellerCardProps> = ({id,img,title,price,rating,addProduct,addWishlist}) => {

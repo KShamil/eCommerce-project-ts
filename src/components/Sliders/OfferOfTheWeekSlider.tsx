@@ -62,7 +62,7 @@ const OfferOfTheWeekSlider = () => {
               title={item.title}
               price={item.price}
               salePrice={item.salePrice}
-              rating={item.rating}
+              rating={Number(item.rating)}
               addProduct={item}
               addWishlist={item}
             />

@@ -17,7 +17,7 @@ interface SaleCardType {
     title: string;
     price:number | string;
     salePrice:number | string;
-    rating: number | string;
+    rating?: number;
     addProduct?: any;
     addWishlist?: any;
 }
