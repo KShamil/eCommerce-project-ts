@@ -47,8 +47,10 @@ const PartnersSlider = () => {
         </div>
         <div className="content border border-3 border-primary rounded-3 p-5 bg-body">
         <Slider {...settings}>
-        {partners.map((item) => (
-          <PartnersCard img={item.img} />
+        {partners.map((item,i) => (
+          <PartnersCard 
+          key={i}
+          img={item.img} />
         ))}
       </Slider>
         </div>

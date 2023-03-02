@@ -3,21 +3,23 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import userData from "../data/userData";
 import { useState } from "react";
-import signIn from '../assets/img/sign-in-img/sign-in.png';
+import signIn from "../assets/img/sign-in-img/sign-in.png";
 import { useEffect } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/config";
 // import SignInSide from "../components/Sign-in";
 
-const SignIn = () => {
+const SignIn = ({ onUserLogin }: { onUserLogin: (name: string) => void }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [name, setName] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [text, setText] = useState<string>('');
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [text, setText] = useState<string>("");
   const navigate = useNavigate();
 
-  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
   };
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
@@ -25,28 +27,22 @@ const SignIn = () => {
 
   const formSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!name || !password) {
-      setText('Fill in the input');
-    } else {
-      setText('');
-      if (userData.username === name && userData.password === password) {
-        navigate('/dashboard');
-      } else {
-        setText('Email or password is wrong');
-      }
-    }
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        // onUserLogin(user.displayName); 
+        navigate("/dashboard");
+      })
+      .catch((error) => {
+        setText("Email or password is wrong");
+      });
   };
   return (
     <>
-    <div className="container">
-    </div>
+      <div className="container"></div>
       <div className="sign-in row justify-content-center align-items-center p-5">
         <div className="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
-          <img
-            src={signIn}
-            alt="error"
-            className="img-fluid"
-          />
+          <img src={signIn} alt="error" className="img-fluid" />
         </div>
         <div className="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
           <div className="mb-lg-9 mb-5">
@@ -54,11 +50,12 @@ const SignIn = () => {
             <p className="mt-2">Welcome back!</p>
           </div>
           <form onSubmit={formSubmit}>
-          <span className="text-danger mt-2">{text}</span>
+            <span className="text-danger mt-2">{text}</span>
             <div className="row g-3 mt-2">
               <div className="col-12">
-                <input onChange={handleNameChange}
-                  type="text"
+                <input
+                  onChange={handleEmailChange}
+                  type="email"
                   className="form-control"
                   id="inputEmail4"
                   placeholder="Email"
@@ -67,7 +64,8 @@ const SignIn = () => {
               </div>
               <div className="col-12">
                 <div className="password-field position-relative">
-                  <input onChange={handlePasswordChange}
+                  <input
+                    onChange={handlePasswordChange}
                     type="password"
                     id="fakePassword"
                     placeholder="Password"
@@ -96,7 +94,9 @@ const SignIn = () => {
                 </div>
                 <div>
                   Forgot password?
-                  <Link to="/reset" className="text-success mx-1">Reset It</Link>
+                  <Link to="/reset" className="text-success mx-1">
+                    Reset It
+                  </Link>
                 </div>
               </div>
               <div className="col-12 d-grid">
@@ -106,7 +106,10 @@ const SignIn = () => {
               </div>
               <div>
                 Don’t have an account?
-                <Link to="/signup" className="text-success mx-1"> Sign Up</Link>
+                <Link to="/signup" className="text-success mx-1">
+                  {" "}
+                  Sign Up
+                </Link>
               </div>
             </div>
           </form>

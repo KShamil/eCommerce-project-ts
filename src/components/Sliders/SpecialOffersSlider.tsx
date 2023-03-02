@@ -53,8 +53,9 @@ const SpecialOffersSlider = () => {
         {t("changeTitleLanguage.title3")}
       </h1>
       <Slider {...settings}>
-        {products.map((item) => (
+        {products.map((item,i) => (
           <SaleCard
+            key={i}
             id={item.id}
             img={item.photo}
             title={item.title}

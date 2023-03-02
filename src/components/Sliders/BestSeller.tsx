@@ -197,8 +197,9 @@ const BestSeller = () => {
         </div>
         <div className="best-seller-list mt-2">
           <Slider {...settings}>
-            {filteredData.map((item) => (
+            {filteredData.map((item,i) => (
               <BestSellerCard
+                key={i}
                 id={item.id}
                 img={item.photo}
                 title={item.title}

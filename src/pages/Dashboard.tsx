@@ -1,6 +1,8 @@
 import React, { useContext,useEffect,useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import { Link } from "react-router-dom";
+import {ProductType} from "../data/productsData";
+import { Pagination } from "@mui/material";
 
 
 const Dashboard = () => {
@@ -9,6 +11,22 @@ const Dashboard = () => {
       }, []);
 
   const [products, setProducts] = useContext(ProductContext);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage: number = 5;
+
+  const totalPages: number = Math.ceil(
+    Object.keys(products).length / itemsPerPage
+  );
+  const startIndex: number = (currentPage - 1) * itemsPerPage;
+  const endIndex: number = startIndex + itemsPerPage;
+  const currentData: ProductType[] = Object.values(products).slice(
+    startIndex,
+    endIndex
+  );
+
+  const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setCurrentPage(value);
+  };
   const handleDeleteProduct = (id: any) => {
     setProducts(products.filter((products) => products.id !== id));
   };
@@ -30,9 +48,9 @@ const Dashboard = () => {
             </tr>
           </thead>
           <tbody>
-            {products.map((item, i) => (
+            {currentData.map((item, i) => (
               <tr key={i}>
-                <th scope="row">
+                <th scope="row w-25">
                   <img
                     style={{
                       width: "100%",
@@ -43,16 +61,17 @@ const Dashboard = () => {
                     alt="error"
                   />
                 </th>
-                <td>{item.title}</td>
-                <td>{item.price}</td>
+                <td className="w-50">{item.title}</td>
+                <td className="w-25">{item.price}</td>
                 <td className="actions">
-                  <Link to={`/editproduct/${item.id}`} className="btn btn-primary mb-2 w-100">
+                  <Link style={{width:"100px"}} to={`/editproduct/${item.id}`} className="btn btn-primary mb-2">
                     Edit
                   </Link>
                   <br />
                   <button
+                    style={{width:"100px"}}
                     onClick={() => handleDeleteProduct(item.id)}
-                    className="btn btn-danger w-100 d-flex justify-content-center"
+                    className="btn btn-danger d-flex justify-content-center"
                   >
                     Remove
                   </button>
@@ -61,6 +80,16 @@ const Dashboard = () => {
             ))}
           </tbody>
         </table>
+        <div className="pagination d-flex justify-content-center">
+        <Pagination
+          style={{background:"white"}}
+          count={totalPages}
+          page={currentPage}
+          onChange={handlePageChange}
+          variant="outlined"
+          color={"primary"}
+        />
+        </div>
       </div>
     </>
   );

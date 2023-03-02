@@ -3,30 +3,8 @@ import { Link } from 'react-router-dom'
 import { useEffect,useState } from 'react'
 
 const CorporativeSalesPage = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-  const [scrollPosition, setScrollPosition] = useState<number>(0);
   useEffect(() => {
-    const storedPosition = localStorage.getItem("scrollPosition");
-    if (storedPosition) {
-      setScrollPosition(parseInt(storedPosition));
-    } else {
-      setScrollPosition(0);
-    }
-  }, []);
-  useEffect(() => {
-    window.scrollTo(0, scrollPosition);
-  }, [scrollPosition]);
-  const handleScroll = () => {
-    localStorage.setItem("scrollPosition", window.pageYOffset.toString());
-    setScrollPosition(window.pageYOffset);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.scrollTo(0, 0);
   }, []);
   return (
     <div className='corporative-sales-page p-5'>

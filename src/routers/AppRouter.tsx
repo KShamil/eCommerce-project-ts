@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { CartProvider } from "react-use-cart";
 import { WishlistProvider } from "react-use-wishlist";
@@ -31,17 +31,35 @@ import UserPage from "../pages/UserPage";
 const AppRouter = () => {
   
   const [search, setSearch] = useState("");
+  const [userName, setUserName] = useState<string>("");
+
+  const handleUserLogin = (name: string) => {
+    setUserName(name);
+  };
 
   const handleSearch = (e: any) => {
     setSearch(e.target.value);
   };
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <div className=""><img style={{width:"100%",height:"500px"}}  src="https://miro.medium.com/v2/resize:fit:640/0*cWpsf9D3g346Va20.gif" alt="" /></div>;
+  }
 
   return (
     <BrowserRouter>
       <ProductProvider>
         <CartProvider>
           <WishlistProvider>
-            <Header searchValue={handleSearch} />
+            <Header userName={userName} searchValue={handleSearch} />
             <Routes>
               <Route path="/" element={<Home search={search} />}></Route>
               <Route path="/corporative" element={<CorporativeSalesPage />}></Route>
@@ -53,7 +71,7 @@ const AppRouter = () => {
               <Route path="/service" element={<Services />}></Route>
               <Route path="/shopping" element={<ShoppingCartPage />}></Route>
               <Route path="/shops" element={<ShopsPage />}></Route>
-              <Route path="/signin" element={<SignIn />}></Route>
+              <Route path="/signin" element={<SignIn onUserLogin={handleUserLogin} />}></Route>
               <Route path="/signup" element={<SignUpPage />}></Route>
               <Route path="/specialoffers" element={<SpecialOffersPage search={search} />}></Route>
               <Route path="/wishlist" element={<WishlistPage />}></Route>

@@ -61,7 +61,7 @@ const SpecialOffersPage = (props:any) => {
                   )
                   .map((item) => (
                     <tr key={item.id}>
-                      <th className="align-middle">
+                      <th className="align-middle w-25">
                         <Link to="">
                           <img
                             src={item.photo}
@@ -75,8 +75,8 @@ const SpecialOffersPage = (props:any) => {
                           />
                         </Link>
                       </th>
-                      <td className="align-start">
-                        <div>
+                      <th className="align-start w-50">
+                        <div className="">
                           <h5 className="fs-6 mb-0">
                             <Link to="" className="title text-inherit">
                               {item.title}
@@ -84,8 +84,8 @@ const SpecialOffersPage = (props:any) => {
                           </h5>
                           <p className="badge bg-success mt-3">In Stock</p>
                         </div>
-                      </td>
-                      <td className="align-middle">
+                      </th>
+                      <th className="align-middle">
                         <p className="text-decoration-line-through text-muted fw-bold">
                           {item.salePrice} azn
                         </p>
@@ -96,7 +96,7 @@ const SpecialOffersPage = (props:any) => {
                           <AddWishlistButton addWishlist={item} />
                           <AddProductButton addProduct={item} />
                         </div>
-                      </td>
+                      </th>
                     </tr>
                   ))}
               </tbody>

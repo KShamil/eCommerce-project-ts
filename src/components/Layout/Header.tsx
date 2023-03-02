@@ -12,13 +12,12 @@ import { useTranslation } from "react-i18next";
 import '../../config/i18n';
 import MyDialog from "../Dialog/Dialog";
 
-const Header = (props: any) => {
+const Header = ({ userName, searchValue }: { userName: string, searchValue: any }) => {
   const { totalItems } = useCart();
   const { totalWishlistItems } = useWishlist();
   const [mode, setMode] = useState<string>(
     localStorage.getItem("mode") || "light-mode"
   );
-
   useEffect(() => {
     localStorage.setItem("mode", mode);
     document.body.className = mode;
@@ -39,7 +38,7 @@ const Header = (props: any) => {
         <nav className="navbar navbar-expand-lg">
           <div className="container">
             <Link to="" className="navbar-brand fw-bold">
-              <i className="fa-brands fa-apple mx-1 fs-1"></i>AppleStore
+              <i className="fa-brands fa-apple"></i>
             </Link>
             <button
               className="navbar-toggler bg-body"
@@ -135,7 +134,12 @@ const Header = (props: any) => {
                   className="text-decoration-none text-danger"
                   type="submit"
                 >
-                  <i className="fa-regular fa-user fs-4"></i>
+                  {userName ? (<div className="user d-flex flex-column justify-content-center align-items-center">
+                    <span><i className="fa-regular fa-user fs-4"></i></span>
+                  </div>) : (<div className="user d-flex flex-column justify-content-center align-items-center">
+                    <span><i className="fa-regular fa-user fs-4"></i></span>
+                    <span>{userName}</span>
+                  </div>)}
                 </Link>
               </div>
               <div className="d-flex me-2 my-2">
@@ -154,69 +158,15 @@ const Header = (props: any) => {
             >
               <ul className="navbar-nav ">
                 <MyDialog/>
-                {/* <li className="nav-item dropdown btn btn-danger">
-                  <Link
-                    to=""
-                    className="nav-link fs-6 text-white"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    All Categories
-                  </Link>
-
-                  <ul className="dropdown-menu dropdown-menu my-2">
-                    <li>
-                      <Link to="" className="dropdown-item">
-                        Mac
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="" className="dropdown-item">
-                        iPad
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to=""
-                        onClick={() => props.handleCategorySelect("iphone")}
-                        className="dropdown-item"
-                      >
-                        iPhone
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="" className="dropdown-item">
-                        Watch
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="" className="dropdown-item">
-                        AirPods
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="" className="dropdown-item">
-                        TV & Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="" className="dropdown-item">
-                        Accessories
-                      </Link>
-                    </li>
-                  </ul>
-                </li> */}
               </ul>
               <form className="d-flex mx-auto col-6" role="search">
                 <input
-                  onChange={props.searchValue}
-                  className="form-control p-2 rounded-5"
+                  onChange={searchValue}
+                  className="form-control p-2 rounded-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
-                {/* <button onClick={props.searchValue} className="btn btn-success rounded-pill mx-2">Search</button> */}
               </form>
               <ul className="navbar-nav">
                 <li className="nav-item">

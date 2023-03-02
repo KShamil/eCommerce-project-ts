@@ -71,7 +71,7 @@ const ShoppingCartPage = () => {
         <div>
           <div className="cartlist table-responsive">
             <table className="table table-with-checkbox bg-body">
-              <thead className="table-danger">
+              <thead className="table-primary">
                 <tr>
                   <th>ID</th>
                   <th />

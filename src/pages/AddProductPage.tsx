@@ -74,7 +74,7 @@ useEffect(() => {
     };
 
     setProducts((prevProducts: ProductType[]) => [...prevProducts, newProduct]);
-    navigate("/");
+    navigate("/dashboard");
   };
   return (
     <>
