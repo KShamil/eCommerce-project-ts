@@ -238,7 +238,7 @@ const ProductsFilterPage = (props: any) => {
                       img={item.photo}
                       title={item.title}
                       price={item.price}
-                      rating={item.rating}
+                      rating={Number(item.rating)}
                       addProduct={item}
                       addWishlist={item}
                     />
