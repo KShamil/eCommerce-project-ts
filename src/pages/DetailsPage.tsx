@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import DetailsAddProductButton from "../components/Buttons/DetailsAddProductButton";
-import products, { ProductType } from "../data/productsData";
-import { useEffect } from "react";
+import { ProductContext } from "../context/ProductContext";
+import { useContext, useEffect } from "react";
 
 const DetailsPage = () => {
   useEffect(() => {
@@ -9,6 +9,7 @@ const DetailsPage = () => {
   }, []);
   interface MyRouteParams extends Record<string, string | undefined> {}
 
+  const [products] = useContext(ProductContext);
   const { id } = useParams<MyRouteParams>();
   const detailsItems = products.find((p) => p.id === id);
   return (

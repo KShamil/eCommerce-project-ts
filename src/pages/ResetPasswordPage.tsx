@@ -34,12 +34,12 @@ const ResetPasswordPage = () => {
                 </div>
                 <div className="col-12 d-grid gap-2">
                   {" "}
-                  <button type="submit" className="btn btn-success">
+                  <button type="submit" className="btn btn-primary">
                     Reset Password
                   </button>
                   <Link
-                    to="/authentication"
-                    className="btn btn-outline-primary"
+                    to="/signin"
+                    className="btn btn-outline-info"
                   >
                     Back
                   </Link>
