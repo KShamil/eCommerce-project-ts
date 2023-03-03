@@ -128,16 +128,16 @@ const Header = ({ userName, searchValue }: { userName: string, searchValue: any 
                   <i className="fa-solid fa-phone-volume fs-3"></i> *1747
                 </span>
               </div>
-              <div className="d-flex me-2">
+              <div className="user-link d-flex me-2">
                 <Link
                   to="/signin"
-                  className="text-decoration-none text-danger"
+                  className="text-decoration-none"
                   type="submit"
                 >
                   {userName ? (<div className="user d-flex flex-column justify-content-center align-items-center">
-                    <span><i className="fa-regular fa-user fs-4"></i></span>
+                    <span><i className="fa-regular fa-user"></i></span>
                   </div>) : (<div className="user d-flex flex-column justify-content-center align-items-center">
-                    <span><i className="fa-regular fa-user fs-4"></i></span>
+                    <span><i className="fa-regular fa-user"></i></span>
                     <span>{userName}</span>
                   </div>)}
                 </Link>

@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState,useContext,useMemo,useCallback } from "react";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,20 +7,22 @@ import { ProductContext } from "../../context/ProductContext";
 import BestSellerCard from "../Cards/BestSellerCard";
 import '../../config/i18n';
 import { useTranslation } from "react-i18next";
+import _ from "lodash";
 
 const BestSeller = () => {
     
-    const [products] = useContext(ProductContext)
-    const [activeCategory, setActiveCategory] = useState<string>('all');
-    const { t, i18n } = useTranslation();
-    
-    function handleFilter(category: string) {
-        setActiveCategory(category);
-    }
-    let filteredData = products;
-    if (activeCategory !== 'all') {
-        filteredData = products.filter((item) => item.category === activeCategory);
-    }
+  const [products] = useContext(ProductContext);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const { t, i18n } = useTranslation();
+
+  const handleFilter = useCallback((category:string) => {
+    setActiveCategory(category);
+  }, []);
+
+  const filteredData = useMemo(() => activeCategory !== 'all' ? products.filter((item) => item.category === activeCategory) : products, [activeCategory, products]);
+
+  const randomizedProducts = useMemo(() => _.shuffle(filteredData), [filteredData]);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -102,6 +104,7 @@ const BestSeller = () => {
                   </li>
                   <li className="nav-item " role="presentation">
                     <Link to=""
+                      onClick={() => handleFilter("imac")}
                       className="nav-link fw-bold"
                       id="nav-bakery-tab"
                       data-bs-toggle="tab"
@@ -197,7 +200,7 @@ const BestSeller = () => {
         </div>
         <div className="best-seller-list mt-2">
           <Slider {...settings}>
-            {filteredData.map((item,i) => (
+            {randomizedProducts.map((item,i) => (
               <BestSellerCard
                 key={i}
                 id={item.id}

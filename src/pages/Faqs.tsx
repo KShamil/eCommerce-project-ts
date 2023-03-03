@@ -21,7 +21,7 @@ const Faqs = () => {
           </div>
         </div>
         <h1 className="faqs_title text-start mt-5">Frequently asked questions</h1>
-        <div className="faqs_content mt-2">
+        <div className="faqs_content">
           <Accordion />
         </div>
       </div>

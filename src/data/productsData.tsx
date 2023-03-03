@@ -1,72 +1,4 @@
 import {v4 as uuidv4} from 'uuid';
-import iphone13blue from '../assets/img/iphone-img/iphone13blue.png';
-import iphone13blue2 from '../assets/img/iphone-img/iphone13blue2.webp';
-import iphone13blue3 from '../assets/img/iphone-img/iphone13blue3.webp';
-import iphone13blue4 from '../assets/img/iphone-img/iphone13blue4.webp';
-import iphone13starlight from '../assets/img/iphone-img/iphone13starlight.webp';
-import iphone13starlight2 from '../assets/img/iphone-img/iphone13starlight2.webp';
-import iphone13starlight3 from '../assets/img/iphone-img/iphone13starlight3.webp';
-import iphone13midnight from '../assets/img/iphone-img/iphone13midnight.webp';
-import iphone13midnight2 from '../assets/img/iphone-img/iphone13midnight2.webp';
-import iphone13midnight3 from '../assets/img/iphone-img/iphone13midnight3.webp';
-import iphone14proSilver from '../assets/img/iphone-img/iphone14proSilver.png';
-import iphone14proSilver2 from '../assets/img/iphone-img/iphone14proSilver2.webp';
-import iphone14proSilver3 from '../assets/img/iphone-img/iphone14proSilver3.webp';
-import iphone14proSilver4 from '../assets/img/iphone-img/iphone14proSilver4.webp';
-import iphone14proGold from '../assets/img/iphone-img/iphone14proGold.png';
-import iphone14proGold2 from '../assets/img/iphone-img/iphone14proGold2.webp';
-import iphone14proGold3 from '../assets/img/iphone-img/iphone14proGold3.webp';
-import iphone14proGold4 from '../assets/img/iphone-img/iphone14proGold4.webp';
-import iphone14proSpaceBlack from '../assets/img/iphone-img/iphone14proBlack.png';
-import iphone14proSpaceBlack2 from '../assets/img/iphone-img/iphone14proSpaceBlack2.webp';
-import iphone14proSpaceBlack3 from '../assets/img/iphone-img/iphone14proSpaceBlack3.webp';
-import iphone14proSpaceBlack4 from '../assets/img/iphone-img/iphone14proSpaceBlack4.webp';
-import iphone14plusStarlight from '../assets/img/iphone-img/iphone14plusStarlight.webp';
-import iphone14plusStarlight2 from '../assets/img/iphone-img/iphone14plusStarlight2.webp';
-import iphone14plusStarlight3 from '../assets/img/iphone-img/iphone14plusStarlight3.webp';
-import iphone14plusStarlight4 from '../assets/img/iphone-img/iphone14plusStarlight4.webp';
-import iphone14plusPurple from '../assets/img/iphone-img/iphone14plusPurple.webp';
-import iphone14plusPurple2 from '../assets/img/iphone-img/iphone14plusPurple2.webp';
-import iphone14plusPurple3 from '../assets/img/iphone-img/iphone14plusPurple3.webp';
-import iphone14plusPurple4 from '../assets/img/iphone-img/iphone14plusPurple4.webp';
-import iphone14plusMidnight from '../assets/img/iphone-img/iphone14plusMidnight.webp';
-import iphone14plusMidnight2 from '../assets/img/iphone-img/iphone14plusMidnight2.webp';
-import iphone14plusMidnight3 from '../assets/img/iphone-img/iphone14plusMidnight3.webp';
-import iphone14plusMidnight4 from '../assets/img/iphone-img/iphone14plusMidnight4.webp';
-import iphone14plusBlue from '../assets/img/iphone-img/iphone14plusBlue.webp';
-import iphone14plusBlue2 from '../assets/img/iphone-img/iphone14plusBlue2.webp';
-import iphone14plusBlue3 from '../assets/img/iphone-img/iphone14plusBlue3.webp';
-import iphone14plusBlue4 from '../assets/img/iphone-img/iphone14plusBlue4.webp';
-import iphone14plusRed from '../assets/img/iphone-img/iphone14plusRed.webp';
-import iphone14plusRed2 from '../assets/img/iphone-img/iphone14plusRed2.webp';
-import iphone14plusRed3 from '../assets/img/iphone-img/iphone14plusRed3.webp';
-import iphone14plusRed4 from '../assets/img/iphone-img/iphone14plusRed4.webp';
-import iphoneSe from '../assets/img/iphone-img/iphoneSe.webp';
-import iphoneSe2 from '../assets/img/iphone-img/iphoneSe2.webp';
-import iphoneSe3 from '../assets/img/iphone-img/iphoneSe3.webp';
-import iphoneSe4 from '../assets/img/iphone-img/iphoneSe4.webp';
-import ipad10inchPink from '../assets/img/ipad-img/ipad10-9-inchPink.webp';
-import ipad10inchPink2 from '../assets/img/ipad-img/ipad10-9-inchPink2.webp';
-import ipad10inchPink3 from '../assets/img/ipad-img/ipad10-9-inchPink3.webp';
-import ipad10inchPink4 from '../assets/img/ipad-img/ipad10-9-inchPink4.webp';
-import ipad10inchYellow from '../assets/img/ipad-img/ipad10-9-inchYellow.webp';
-import ipad10inchYellow2 from '../assets/img/ipad-img/ipad10-9-inchYellow2.webp';
-import ipad10inchYellow3 from '../assets/img/ipad-img/ipad10-9-inchYellow3.webp';
-import ipad10inchYellow4 from '../assets/img/ipad-img/ipad10-9-inchYellow4.webp';
-import ipad10inchBlue from '../assets/img/ipad-img/ipad10-9-inchBlue.webp';
-import ipad10inchBlue2 from '../assets/img/ipad-img/ipad10-9-inchBlue2.webp';
-import ipad10inchBlue3 from '../assets/img/ipad-img/ipad10-9-inchBlue3.webp';
-import ipad10inchBlue4 from '../assets/img/ipad-img/ipad10-9-inchBlue4.webp';
-import ipad10inchSilver from '../assets/img/ipad-img/ipad10-9-inchSilver.webp';
-import ipad10inchSilver2 from '../assets/img/ipad-img/ipad10-9-inchSilver2.webp';
-import ipad10inchSilver3 from '../assets/img/ipad-img/ipad10-9-inchSilver3.webp';
-import ipad10inchSilver4 from '../assets/img/ipad-img/ipad10-9-inchSilver4.webp';
-import watch from '../assets/img/watch-img/apple-watch-1.webp';
-import watch2 from '../assets/img/watch-img/apple-watch-2.webp';
-import watch3 from '../assets/img/watch-img/apple-watch-3.webp';
-import watch4 from '../assets/img/watch-img/apple-watch-4.webp';
-import watch5 from '../assets/img/watch-img/apple-watch-5.webp';
-import watch6 from '../assets/img/watch-img/apple-watch-6.webp';
 
 export interface ProductType {
     id: string;
@@ -78,7 +10,6 @@ export interface ProductType {
     price: number | string;
     salePrice:number | string;
     rating: number | string;
-    characteristics?: string;
     category: string;
     color:string;
 }
@@ -86,382 +17,355 @@ export interface ProductType {
 const products:ProductType[] = [
     {
         id:uuidv4(),
-        photo:iphone13blue,
-        photo2:iphone13blue2,
-        photo3:iphone13blue3,
-        photo4:iphone13blue4,
+        photo:"https://kontakt.az/wp-content/uploads/2021/09/1_304241-min_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/09/1_304241-1-min_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/09/3_304241-min_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2021/09/2_304241-min_png.webp",
         title:"iPhone 13 128 GB Blue",
-        price:1899,
-        salePrice:"",
+        price:1699,
+        salePrice:"1899",
         rating:4.8,
-        characteristics:"",
         category:"iphone",
-        color:""
+        color:"blue"
     },
     {   
         id:uuidv4(),
-        photo:iphone13starlight,
-        photo2:iphone13starlight2,
-        photo3:iphone13starlight3,
-        photo4:iphone13starlight,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Starlight-1_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Starlight-2_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Starlight-3-1_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Starlight-3-1_png.webp",
         title:"iPhone 13 512 GB Starlight",
-        price:2699,
-        salePrice:"",
+        price:2449,
+        salePrice:"2699",
         rating:4.5,
         category:"iphone",
-        color:""
+        color:"white"
         
     },
     {   
         id:uuidv4(),
-        photo:iphone13midnight,
-        photo2:iphone13midnight2,
-        photo3:iphone13midnight3,
-        photo4:iphone13midnight,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Midnight-1_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Midnight-2_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Midnight-3-1_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Midnight-3-1_png.webp",
         title:"iPhone 13 512 GB Midnight",
-        price:2699,
-        salePrice:"",
+        price:2449,
+        salePrice:"2699",
         rating:4.4,
         category:"iphone",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
-        photo:iphone14proSilver,
-        photo2:iphone14proSilver2,
-        photo3:iphone14proSilver3,
-        photo4:iphone14proSilver4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-61-1_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-62-1_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-63-1_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-64-1_png.webp",
         title:"iPhone 14 Pro 1 TB Silver",
-        price:4619,
-        salePrice:"",
+        price:4429,
+        salePrice:"4649",
         rating:4.1,
         category:"iphone",
-        color:""
+        color:"silver"
     },
     {   
         id:uuidv4(),
-        photo:iphone14proGold,
-        photo2:iphone14proGold2,
-        photo3:iphone14proGold3,
-        photo4:iphone14proGold4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-26_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-27_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-28_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-29_png.webp",
         title:"iPhone 14 Pro 1 TB Gold",
-        price:4619,
-        salePrice:"",
+        price:4429,
+        salePrice:"4649",
         rating:4.0,
         category:"iphone",
-        color:""
+        color:"gold"
     },
     {   
         id:uuidv4(),
-        photo:iphone14proSpaceBlack,
-        photo2:iphone14proSpaceBlack2,
-        photo3:iphone14proSpaceBlack3,
-        photo4:iphone14proSpaceBlack4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-75_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-76_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-77_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-78_png.webp",
         title:"iPhone 14 Pro 1 TB Space Black",
-        price:4619,
-        salePrice:"",
+        price:4429,
+        salePrice:"4649",
         rating:3.8,
         category:"iphone",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
-        photo:iphone14plusStarlight,
-        photo2:iphone14plusStarlight2,
-        photo3:iphone14plusStarlight3,
-        photo4:iphone14plusStarlight4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T173225.016_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T173302.603_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T173302.603_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T173302.603_png.webp",
         title:"iPhone 14 Plus 512 GB Starlight",
-        price:3539,
-        salePrice:"",
+        price:3379,
+        salePrice:"3499",
         rating:4.6,
         category:"iphone",
-        color:""
+        color:"white"
     },
     {   
         id:uuidv4(),
-        photo:iphone14plusPurple,
-        photo2:iphone14plusPurple2,
-        photo3:iphone14plusPurple3,
-        photo4:iphone14plusPurple4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T172312.441_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T172411.405_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T172411.405_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T172411.405_png.webp",
         title:"iPhone 14 Plus 512 GB Purple",
-        price:3539,
-        salePrice:"",
+        price:3379,
+        salePrice:"3499",
         rating:4.9,
         category:"iphone",
-        color:""
+        color:"purple"
     },
     {   
         id:uuidv4(),
-        photo:iphone14plusMidnight,
-        photo2:iphone14plusMidnight2,
-        photo3:iphone14plusMidnight3,
-        photo4:iphone14plusMidnight4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T171050.415_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T171144.418_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T171144.418_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T171144.418_png.webp",
         title:"iPhone 14 Plus 512 GB Midnight",
-        price:3539,
-        salePrice:"",
+        price:3379,
+        salePrice:"3499",
         rating:4.2,
         category:"iphone",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
-        photo:iphone14plusBlue,
-        photo2:iphone14plusBlue2,
-        photo3:iphone14plusBlue3,
-        photo4:iphone14plusBlue4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T174231.829_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T174326.824_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T174326.824_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T174326.824_png.webp",
         title:"iPhone 14 Plus 512 GB Blue",
-        price:3539,
-        salePrice:"",
+        price:3379,
+        salePrice:"3499",
         rating:3.3,
         category:"iphone",
-        color:""
+        color:"blue"
     },
     {
         id:uuidv4(),
-        photo:iphone14plusRed,
-        photo2:iphone14plusRed2,
-        photo3:iphone14plusRed3,
-        photo4:iphone14plusRed4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T165143.848_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T170344.771_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T170344.771_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T170344.771_png.webp",
         title:"iPhone 14 Plus 512 GB (Product) Red",
-        price:3539,
-        salePrice:"",
+        price:3379,
+        salePrice:"3499",
         rating:4.1,
         category:"iphone",
         color:"red"
     },
     {   
         id:uuidv4(),
-        photo:iphoneSe,
-        photo2:iphoneSe2,
-        photo3:iphoneSe3,
-        photo4:iphoneSe4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/07/iphone_se_red_1_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/07/iPhone-SE-Gen.3-256-GB-Red_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/07/iPhone-SE-Gen.3-256-GB-Red-2_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/07/iPhone-SE-Gen.3-256-GB-Red-3_png.webp",
         title:"iPhone SE Gen.3 256 GB Red",
         price:1699,
-        salePrice:"",
+        salePrice:"1799",
         rating:4.4,
         category:"iphone",
         color:"red"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchPink,
-        photo2:ipad10inchPink2,
-        photo3:ipad10inchPink3,
-        photo4:ipad10inchPink4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10.9-inch-256-GB-10-Gen-Wi-Fi-Cellular-Pink_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10.9-inch-256-GB-10-Gen-Wi-Fi-Cellular-Pink-2_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10th-Gen-1_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10th-Gen-3_png.webp",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Pink",
         price:1979,
-        salePrice:"",
+        salePrice:"2099 azn",
         rating:4.7,
         category:"ipad",
-        color:""
+        color:"pink"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchYellow,
-        photo2:ipad10inchYellow2,
-        photo3:ipad10inchYellow3,
-        photo4:ipad10inchYellow4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10.9-inch-256-GB-10-Gen-Wi-Fi-Cellular-Yellow_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10.9-inch-256-GB-10-Gen-Wi-Fi-Cellular-Yellow-2_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10th-Gen-1_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10th-Gen-3_png.webp",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Yellow",
         price:1979,
-        salePrice:"",
+        salePrice:"2099",
         rating:4.5,
         category:"ipad",
-        color:""
+        color:"yellow"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchBlue,
-        photo2:ipad10inchBlue2,
-        photo3:ipad10inchBlue3,
-        photo4:ipad10inchBlue4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10.9-inch-256-GB-10-Gen-Wi-Fi-Cellular-Blue_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10.9-inch-256-GB-10-Gen-Wi-Fi-Cellular-Blue-2_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10th-Gen-1_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10th-Gen-3_png.webp",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Blue",
         price:1979,
-        salePrice:"",
+        salePrice:"2099 azn",
         rating:4.6,
         category:"ipad",
-        color:""
+        color:"blue"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
+        photo:"https://kontakt.az/wp-content/uploads/2022/10/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-1-22_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/10/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-2-13_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/10/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-2-13_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/10/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-2-13_png.webp",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
         price:1979,
-        salePrice:"",
+        salePrice:"2099",
         rating:4.8,
         category:"ipad",
-        color:""
+        color:"silver"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
+        photo:"https://kontakt.az/wp-content/uploads/2021/11/New-Project-97_png_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/11/New-Project-2-57_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/11/New-Project-1-72_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2021/11/img_id8034576195469438489.jpg",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
-        price:1979,
-        salePrice:"",
+        price:749,
+        salePrice:"869",
         rating:4.8,
         category:"ipad",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
-        price:1979,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2022/07/ld0005936273_1_1_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/07/ld0005936271_1_1_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/07/ld0005936274_1_1_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/07/ld0005936275_1_1_png.webp",
+        title:"iPad Air 5 Wi-Fi + 4G 64GB Purple",
+        price:1859,
+        salePrice:"1969 azn",
         rating:4.8,
         category:"ipad",
-        color:""
+        color:"purple"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
-        price:1979,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2022/10/iPad-Air-5-Wi-Fi-4G-64GB-Blue_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/10/iPad-Air-5-Wi-Fi-4G-64GB-Blue-2_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/10/iPad-Air-5-Wi-Fi-4G-64GB-Blue-2_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/10/iPad-Air-5-Wi-Fi-4G-64GB-Blue-2_png.webp",
+        title:"iPad Air 5 Wi-Fi + 4G 64GB Blue",
+        price:1859,
+        salePrice:"1969 azn",
         rating:4.8,
         category:"ipad",
-        color:""
+        color:"blue"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
-        price:1979,
-        salePrice:"",
-        rating:4.8,
-        category:"ipad",
-        color:""
-    },
-    {   
-        id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
-        price:1979,
-        salePrice:"",
-        rating:4.8,
-        category:"ipad",
-        color:""
-    },
-    {   
-        id:uuidv4(),
-        photo:watch,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"Apple Watch 7 41 mm Starlight MKMY3RB/A",
-        price:949,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2020/11/MYAR2_VW_34FRwatch-40-alum-red-nc-6s_VW_34FR_WF_CO_GEO_GB.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2020/11/MYAR2_VW_PFwatch-40-alum-red-nc-6s_VW_PF_WF_CO_GEO_GB.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2020/11/6215923cv11d.jpg",
+        photo4:"https://kontakt.az/wp-content/uploads/2020/11/6215923cv12d.jpg",
+        title:"Apple Watch 6 40mm Red/ M00A3GK/A",
+        price:549,
+        salePrice:"749 azn",
         rating:4.5,
         category:"watch",
-        color:""
+        color:"red"
     },
     {   
         id:uuidv4(),
-        photo:watch2,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"Apple Watch 7 41 mm Starlight MKMY3RB/A",
-        price:949,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2020/12/1000-12-3.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2020/12/MYAU2_VW_PFwatch-40-alum-blue-nc-6s_VW_PF_WF_CO.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2020/12/81TizB9zzdL._AC_SL1500_.jpg",
+        photo4:"https://kontakt.az/wp-content/uploads/2020/12/81-yinN6YRL._AC_SL1500_.jpg",
+        title:"Apple Watch 6 40 mm Blue/ MG143GK/A",
+        price:549,
+        salePrice:"749 azn",
         rating:4.6,
         category:"watch",
-        color:""
+        color:"blue"
     },
     {   
         id:uuidv4(),
-        photo:watch3,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"Apple Watch 7 41 mm Starlight MKMY3RB/A",
-        price:949,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2020/11/New-Project-2022-08-23T113448.006_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2020/11/MKU83_VW_PFwatch-40-alum-spacegray-nc-se_VW_PF_WF_CO.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2020/11/gsi14qezmf1-min_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2020/11/apple-series-3-gps-42-mm-smartwatch-min_png.webp",
+        title:"Apple Watch SE 40 mm Space Grey",
+        price:599,
+        salePrice:"699 azn",
         rating:4.3,
         category:"watch",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
-        photo:watch4,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"Apple Watch 7 45 mm Blue MKN83RB/A",
-        price:999,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-9-3_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-10-3_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-10-3_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-10-3_png.webp",
+        title:"Apple watch 7 45 mm Starlight MKN63RB/A",
+        price:899,
+        salePrice:"999 azn",
         rating:4.7,
         category:"watch",
-        color:""
+        color:"white"
     },
     {   
         id:uuidv4(),
-        photo:watch5,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"Apple Watch 7 45 mm Midnight MKN53RB/A",
-        price:999,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-7-7_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-8-5_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-8-5_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2021/09/New-Project-8-5_png.webp",
+        title:"Apple Watch 7 41 mm Midnight MKMX3RB/A",
+        price:849,
+        salePrice:"949 azn",
         rating:4.9,
         category:"watch",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
-        photo:watch6,
-        photo2:ipad10inchSilver2,
-        photo3:ipad10inchSilver3,
-        photo4:ipad10inchSilver4,
-        title:"Apple watch 7 45 mm Starlight MKN63RB/A",
-        price:999,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2020/11/New-Project-2022-08-23T113136.819_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2020/11/New-Project-17-min_png-1.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2020/12/30052973b1-1-min_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2020/12/apple-watch-series-5-44mm-silver-stainless-steel-case-white-sport-band-1.1000x1000-min_png.webp",
+        title:"Apple Watch Se 40 Mm Silver",
+        price:599,
+        salePrice:"699 azn",
         rating:4.2,
         category:"watch",
-        color:""
+        color:"silver"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:"",
-        photo3:"",
-        photo4:"",
-        title:"Apple Watch SE 40 mm Gold",
-        price:699,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-27T151742.587_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/MQEE3_VW_PFwatch-49-titanium-ultra_VW_PF_WF_COwatch-face-49-ocean-ultra_VW_PF_WF_CO.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/MQEE3_VW_PFwatch-49-titanium-ultra_VW_PF_WF_COwatch-face-49-ocean-ultra_VW_PF_WF_CO.jpg",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/MQEE3_VW_PFwatch-49-titanium-ultra_VW_PF_WF_COwatch-face-49-ocean-ultra_VW_PF_WF_CO.jpg",
+        title:"Apple Watch Ultra 49 mm Titanium Case W/Midnight Ocean Band / MQFK3RB/A",
+        price:2199,
+        salePrice:"2499 azn",
         rating:4.3,
         category:"watch",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
-        photo:ipad10inchSilver,
-        photo2:"",
-        photo3:"",
-        photo4:"",
-        title:"Apple Watch SE 44 mm Space Grey",
-        price:799,
-        salePrice:"",
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/Apple-Watch-Ultra-49-mm-Titanium-Case-W_Yellow-Ocean-Band_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/Apple-Watch-Ultra-49-mm-Titanium-Case-W_Yellow-Ocean-Band-2_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/Apple-Watch-Ultra-49-mm-Titanium-Case-W_Yellow-Ocean-Band-3_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/Apple-Watch-Ultra-49-mm-Titanium-Case-WYellow-Ocean-Band-5_png.webp",
+        title:"Apple Watch Ultra 49 mm Titanium Case W/Yellow Ocean Band / MNHG3RB/A",
+        price:2199,
+        salePrice:"2499 azn",
         rating:4.5,
         category:"watch",
-        color:""
+        color:"yellow"
     },
     {   
         id:uuidv4(),
@@ -474,7 +378,7 @@ const products:ProductType[] = [
         salePrice:"6049",
         rating:4.7,
         category:"macbook",
-        color:""
+        color:"silver"
     },
     {   
         id:uuidv4(),
@@ -487,7 +391,7 @@ const products:ProductType[] = [
         salePrice:"8449",
         rating:4.8,
         category:"macbook",
-        color:""
+        color:"silver"
     },
     {   
         id:uuidv4(),
@@ -500,7 +404,7 @@ const products:ProductType[] = [
         salePrice:"6529",
         rating:4.5,
         category:"macbook",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
@@ -513,7 +417,7 @@ const products:ProductType[] = [
         salePrice:"6049",
         rating:4.3,
         category:"macbook",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
@@ -526,7 +430,7 @@ const products:ProductType[] = [
         salePrice:"",
         rating:4.4,
         category:"macbook",
-        color:""
+        color:"black"
     },
     {   
         id:uuidv4(),
@@ -539,7 +443,267 @@ const products:ProductType[] = [
         salePrice:"",
         rating:4.9,
         category:"macbook",
-        color:""
+        color:"silver"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-2-5.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-4-3.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        title:"Apple iMac 24 MGPC3RU/A Silver",
+        price:4199,
+        salePrice:"",
+        rating:4.9,
+        category:"imac",
+        color:"silver"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-2-5.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-9-3.jpg",
+        photo4:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-9-3.jpg",
+        title:"Apple iMac 24 MGTF3RU/A Silver",
+        price:3099,
+        salePrice:"",
+        rating:4.7,
+        category:"imac",
+        color:"silver"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/11/New-Project-2-51_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/11/New-Project-1-58_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/11/New-Project-79_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2021/11/30056617bb3-min_png.webp",
+        title:"Apple iMac 24 MGPM3RU/A Pink",
+        price:3729,
+        salePrice:"",
+        rating:4.4,
+        category:"imac",
+        color:"pink"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-17T110443.766_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-17T110401.994_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-17T110501.328_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-17T110525.197_png.webp",
+        title:"Apple Mac Mini MMFK3RU/A",
+        price:1979,
+        salePrice:"2189",
+        rating:4.1,
+        category:"imac",
+        color:"silver"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-2-5.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-4-3.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        title:"Apple iMac 24 MGPC3RU/A Silver",
+        price:4199,
+        salePrice:"",
+        rating:4.9,
+        category:"imac",
+        color:"silver"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-2-5.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-4-3.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        title:"Apple iMac 24 MGPC3RU/A Silver",
+        price:4199,
+        salePrice:"",
+        rating:4.9,
+        category:"imac",
+        color:"silver"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-2-5.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-4-3.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
+        title:"Apple iMac 24 MGPC3RU/A Silver",
+        price:4199,
+        salePrice:"",
+        rating:4.9,
+        category:"imac",
+        color:"silver"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2019/03/Kontakt-home-37_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2019/03/as-images.apple-1-1_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2019/03/Kontakt-home-36_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2019/03/Kontakt-home-35_png.webp",
+        title:"Apple Airpods 2 MV7N2RU/A",
+        price:349,
+        salePrice:"",
+        rating:4.5,
+        category:"airpods",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2019/04/MRXJ2.jpg",
+        photo2:"",
+        photo3:"",
+        photo4:"",
+        title:"Apple Airpods 2 Wireless Charging MRXJ2",
+        price:379,
+        salePrice:"439",
+        rating:4.2,
+        category:"airpods",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/09/Qulaqliq-Apple-Airpods-Pro-2nd-Generation-_-MQD83RU_A-3_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/09/Qulaqliq-Apple-Airpods-Pro-2nd-Generation-_-MQD83RU_A_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/09/Qulaqliq-Apple-Airpods-Pro-2nd-Generation-_-MQD83RU_A-5_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/09/Qulaqliq-Apple-Airpods-Pro-2nd-Generation-_-MQD83RU_A-4_png.webp",
+        title:"Apple Airpods Pro 2nd Generation / MQD83RU/A",
+        price:699,
+        salePrice:"789",
+        rating:4.7,
+        category:"airpods",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/11/50165904bb1_ccexpress_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/11/New-Project-89_png.webp",
+        photo3:"",
+        photo4:"",
+        title:"Apple AirPods Pro MLWK3RU/A",
+        price:549,
+        salePrice:"",
+        rating:4.6,
+        category:"airpods",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2021/01/201209150028622560_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2021/01/201209150028554979_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2021/01/201209150028709317_png.webp",
+        photo4:"",
+        title:"AApple Airpods Max Space Gray MGYH3RU/A",
+        price:1549,
+        salePrice:"",
+        rating:4.8,
+        category:"airpods",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-24T093002.245-1_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-24T093123.781_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-24T092231.610_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-24T092151.220_png.webp",
+        title:"Apple Airpods 3 W/Lightning Charging Case MPNY3RU/A",
+        price:479,
+        salePrice:"",
+        rating:4.7,
+        category:"airpods",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/07/K-H-2023-02-13T105259.302_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648257_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648259_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648259_png.webp",
+        title:"Apple HomePod Mini MY5G2LL/A Space Gray",
+        price:309,
+        salePrice:"349 azn",
+        rating:4.7,
+        category:"tv",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-89-24_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-87-25_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        title:"Apple TV 4K 64 GB MN873RU/A",
+        price:359,
+        salePrice:"369 azn",
+        rating:4.3,
+        category:"tv",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-89-24_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-87-25_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        title:"Apple TV 4K 64 GB MN873RU/A",
+        price:359,
+        salePrice:"369 azn",
+        rating:4.3,
+        category:"tv",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-89-24_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-87-25_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        title:"Apple TV 4K 64 GB MN873RU/A",
+        price:359,
+        salePrice:"369 azn",
+        rating:4.3,
+        category:"tv",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-89-24_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-87-25_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-90-18_png.webp",
+        title:"Apple TV 4K 64 GB MN873RU/A",
+        price:359,
+        salePrice:"369 azn",
+        rating:4.3,
+        category:"tv",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/07/K-H-2023-02-13T105259.302_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648257_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648259_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648259_png.webp",
+        title:"Apple HomePod Mini MY5G2LL/A Space Gray",
+        price:309,
+        salePrice:"349 azn",
+        rating:4.7,
+        category:"tv",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/07/K-H-2023-02-13T105259.302_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648257_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648259_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/07/1637755367_IMG_1648259_png.webp",
+        title:"Apple HomePod Mini MY5G2LL/A Space Gray",
+        price:309,
+        salePrice:"349 azn",
+        rating:4.7,
+        category:"tv",
+        color:"black"
     },
 
 ]

@@ -1,16 +1,16 @@
-import React,{useContext,useMemo} from "react";
+import React, { useContext,useMemo } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import SaleCard from "../Cards/SaleCard";
+import MainCard from "../Cards/MainCard";
 import { ProductContext } from "../../context/ProductContext";
-import '../../config/i18n';
+import "../../config/i18n";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
 
 
-const OfferOfTheWeekSlider = () => {
+const AllProductsSlider = () => {
   const [products] = useContext(ProductContext);
   const randomizedProducts = useMemo(() => _.shuffle(products), [products]);
   const { t, i18n } = useTranslation();
@@ -53,18 +53,15 @@ const OfferOfTheWeekSlider = () => {
   return (
     <>
       <div className="special-offers container mt-5">
-        <h1 className="title fw-bold">
-        {t("changeTitleLanguage.title4")}
-        </h1>
+        <h1 className="title fw-bold">{t("changeTitleLanguage.title1")}</h1>
         <Slider {...settings}>
-          {randomizedProducts.map((item,i) => (
-            <SaleCard
+          {randomizedProducts.map((item, i) => (
+            <MainCard
               key={i}
               id={item.id}
               img={item.photo}
               title={item.title}
               price={item.price}
-              salePrice={item.salePrice}
               rating={Number(item.rating)}
               addProduct={item}
               addWishlist={item}
@@ -72,7 +69,7 @@ const OfferOfTheWeekSlider = () => {
           ))}
         </Slider>
         <Link
-          to="/specialoffers"
+          to="/allproducts"
           className="btn btn-outline-danger rounded-0 w-100 d-flex justify-content-center align-items-center p-3 fw-bold"
         >
           {t("changeBtnLanguage.showmorebtn")}
@@ -82,4 +79,4 @@ const OfferOfTheWeekSlider = () => {
   );
 };
 
-export default OfferOfTheWeekSlider;
+export default AllProductsSlider;

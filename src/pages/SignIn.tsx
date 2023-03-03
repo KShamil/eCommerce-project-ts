@@ -94,19 +94,19 @@ const SignIn = ({ onUserLogin }: { onUserLogin: (name: string) => void }) => {
                 </div>
                 <div>
                   Forgot password?
-                  <Link to="/reset" className="text-success mx-1">
+                  <Link to="/reset" className="text-primary mx-1">
                     Reset It
                   </Link>
                 </div>
               </div>
               <div className="col-12 d-grid">
-                <button type="submit" className="btn btn-success">
+                <button type="submit" className="btn btn-primary">
                   Sign In
                 </button>
               </div>
               <div>
                 Don’t have an account?
-                <Link to="/signup" className="text-success mx-1">
+                <Link to="/signup" className="text-primary mx-1">
                   {" "}
                   Sign Up
                 </Link>

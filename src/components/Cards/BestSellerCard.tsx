@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useCallback} from "react";
 import { useCart } from "react-use-cart";
 import { ToastContainer, toast } from "react-toastify";
 import { Rating } from "@mui/material";
@@ -20,7 +20,7 @@ interface BestSellerCardProps {
   addWishlist?: any;
 }
 
-const BestSellerCard:React.FC<BestSellerCardProps> = ({id,img,title,price,rating,addProduct,addWishlist}) => {
+const BestSellerCard:React.FC<BestSellerCardProps> = React.memo(({id,img,title,price,rating,addProduct,addWishlist}) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
   const notify = () => toast("Cart added!");
@@ -30,15 +30,16 @@ const BestSellerCard:React.FC<BestSellerCardProps> = ({id,img,title,price,rating
 
   let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
 
-  const handleAddToWishlist = () => {
+  const handleAddToWishlist = useCallback(() => {
     setAddedToWishlist(true);
     addWishlistItem(addWishlist);
     notifyWishlist();
-  };
-  const handleAddToCart = () => {
+  }, [addWishlistItem, addWishlist]);
+
+  const handleAddToCart = useCallback(() => {
     addItem(addProduct);
     notify();
-  };
+  }, [addItem, addProduct]);
   return (
     <>
       <div className="card-body position-relative border border-muted p-3 bg-body" style={{minHeight:'448px'}}>
@@ -151,6 +152,6 @@ const BestSellerCard:React.FC<BestSellerCardProps> = ({id,img,title,price,rating
       </div>
     </>
   );
-};
+});
 
 export default BestSellerCard;

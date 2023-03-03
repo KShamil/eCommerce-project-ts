@@ -100,11 +100,11 @@ const ShoppingCartPage = () => {
                       <div>
                         <h5 className="title mb-0 fs-6">{item.title}</h5>
                         <small className="text-decoration-line-through text-muted fw-bold">
-                        {item.price} azn
+                        {item.salePrice}
                         </small>
                         <br />
                         <small className="price text-danger fw-bold mt-1">
-                          {item.salePrice} azn
+                          {item.price} azn
                         </small>
                         <p><span className="badge bg-success">In Stock</span></p>
                         

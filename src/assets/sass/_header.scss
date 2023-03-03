@@ -56,7 +56,7 @@
                     // box-shadow: 0 8px 20px rgba(38, 69, 224, 0.962), inset 0 4px 4px rgb(22, 38, 180), inset 0 4px 4px rgb(44, 84, 176);
                     transition: 0.5s;
                     cursor: pointer;
-                    background: red;
+                    background: blue;
                 }
 
             }
@@ -73,6 +73,10 @@
                     color: black;
                 }
             }
+            .user-link {
+                color:blue;
+                font-size: 26px;
+            }
         }
     }
 }
@@ -80,7 +84,7 @@
 .dark-mode {
     .header {
         // background-image: linear-gradient(to bottom, #171c1a, rgb(102, 75, 103));
-        background: black;
+        background: #202123;
 
         .navbar {
             .navbar-brand {
@@ -138,7 +142,7 @@
                     // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgb(180, 22, 22), inset 0 4px 4px rgb(176, 44, 57);
                     transition: 0.5s;
                     cursor: pointer;
-                    background: rgb(102, 75, 103);
+                    background: black;
                 }
 
             }
@@ -154,6 +158,10 @@
                     font-weight: 600;
                     color: white;
                 }
+            }
+            .user-link {
+                color:white;
+                font-size: 26px;
             }
 
         }

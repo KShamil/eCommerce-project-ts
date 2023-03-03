@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useCallback} from "react";
 import { Rating } from "@mui/material";
 import { useCart } from "react-use-cart";
 import { ToastContainer, toast } from "react-toastify";
@@ -23,7 +23,7 @@ interface SaleCardType {
 }
 
 
-const SaleCard:React.FC<SaleCardType> = ({ id,img, title, price, rating, salePrice, addProduct,addWishlist }) => {
+const SaleCard:React.FC<SaleCardType> = React.memo(({ id,img, title, price, rating, salePrice, addProduct,addWishlist }) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
   const notify = () => toast("Cart added!");
@@ -33,15 +33,16 @@ const SaleCard:React.FC<SaleCardType> = ({ id,img, title, price, rating, salePri
 
   let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
 
-  const handleAddToWishlist = () => {
+  const handleAddToWishlist = useCallback(() => {
     setAddedToWishlist(true);
     addWishlistItem(addWishlist);
     notifyWishlist();
-  };
-  const handleAddToCart = () => {
+  }, [addWishlistItem, addWishlist]);
+
+  const handleAddToCart = useCallback(() => {
     addItem(addProduct);
     notify();
-  };
+  }, [addItem, addProduct]);
   return (
     <>
       <div className="card-body position-relative border border-muted bg-body p-3" style={{minHeight:'448px'}}>
@@ -131,9 +132,9 @@ const SaleCard:React.FC<SaleCardType> = ({ id,img, title, price, rating, salePri
         </div>
         <div className="d-flex justify-content-between align-items-center mt-3">
           <div>
-            <span className="text-danger">{salePrice}</span>{" "}
+            <span className="text-danger">{price}</span>{" "}
             <span className="text-decoration-line-through text-muted">
-              {price} azn
+              {salePrice}
             </span>
           </div>
           <div>
@@ -162,6 +163,6 @@ const SaleCard:React.FC<SaleCardType> = ({ id,img, title, price, rating, salePri
       </div>
     </>
   );
-};
+});
 
 export default SaleCard;

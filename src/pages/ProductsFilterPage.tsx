@@ -104,7 +104,9 @@ const ProductsFilterPage = (props: any) => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="" className="nav-link">
+                    <Link 
+                      onClick={() => handleCategorySelect("imac")}
+                      to="" className="nav-link">
                       <i className="fa-solid fa-desktop mx-1"></i>
                       iMac
                     </Link>
@@ -130,7 +132,9 @@ const ProductsFilterPage = (props: any) => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="" className="nav-link">
+                    <Link 
+                      onClick={() => handleCategorySelect("airpods")}
+                      to="" className="nav-link">
                       <i className="fa-solid fa-headphones mx-1"></i>
                       AirPods
                     </Link>
@@ -142,7 +146,7 @@ const ProductsFilterPage = (props: any) => {
                     <div className="colors d-flex gap-2 mt-3">
                       <i
                         style={{ color: "white", cursor: "pointer" }}
-                        onClick={() => handleColorSelect("red")}
+                        onClick={() => handleColorSelect("white")}
                         className="nav-link active"
                         aria-current="page"
                       >
@@ -150,7 +154,7 @@ const ProductsFilterPage = (props: any) => {
                       </i>
                       <i
                         style={{ color: "black", cursor: "pointer" }}
-                        onClick={() => handleColorSelect(null)}
+                        onClick={() => handleColorSelect("black")}
                         className="nav-link active"
                         aria-current="page"
                       >
@@ -158,7 +162,7 @@ const ProductsFilterPage = (props: any) => {
                       </i>
                       <i
                         style={{ color: "blue", cursor: "pointer" }}
-                        onClick={() => handleColorSelect(null)}
+                        onClick={() => handleColorSelect("blue")}
                         className="nav-link active"
                         aria-current="page"
                       >
@@ -166,7 +170,7 @@ const ProductsFilterPage = (props: any) => {
                       </i>
                       <i
                         style={{ color: "purple", cursor: "pointer" }}
-                        onClick={() => handleColorSelect(null)}
+                        onClick={() => handleColorSelect("purple")}
                         className="nav-link active"
                         aria-current="page"
                       >
@@ -182,7 +186,7 @@ const ProductsFilterPage = (props: any) => {
                       </i>
                       <i
                         style={{ color: "green", cursor: "pointer" }}
-                        onClick={() => handleColorSelect(null)}
+                        onClick={() => handleColorSelect("green")}
                         className="nav-link active"
                         aria-current="page"
                       >

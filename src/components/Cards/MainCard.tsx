@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useCallback} from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import { ToastContainer, toast } from "react-toastify";
@@ -20,7 +20,7 @@ interface CardType {
     addWishlist?: any;
 }
 
-const MainCard:React.FC<CardType> = ({ id, img, title, price, rating, addProduct, addWishlist }) => {
+const MainCard:React.FC<CardType> = React.memo(({ id, img, title, price, rating, addProduct, addWishlist }) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
   const notify = () => toast("Cart added!");
@@ -30,15 +30,16 @@ const MainCard:React.FC<CardType> = ({ id, img, title, price, rating, addProduct
 
   let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
 
-  const handleAddToWishlist = () => {
+  const handleAddToWishlist = useCallback(() => {
     setAddedToWishlist(true);
     addWishlistItem(addWishlist);
     notifyWishlist();
-  };
-  const handleAddToCart = () => {
+  }, [addWishlistItem, addWishlist]);
+
+  const handleAddToCart = useCallback(() => {
     addItem(addProduct);
     notify();
-  };
+  }, [addItem, addProduct]);
 
   return (
     <>
@@ -162,6 +163,6 @@ const MainCard:React.FC<CardType> = ({ id, img, title, price, rating, addProduct
       </div>
     </>
   );
-};
+});
 
 export default MainCard;

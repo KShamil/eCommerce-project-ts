@@ -26,7 +26,7 @@ import AddProductPage from "../pages/AddProductPage";
 import EditProductPage from "../pages/EditProductPage";
 import { ScrollToTop } from "react-simple-scroll-up";
 import UserPage from "../pages/UserPage";
-// import { FloatingWhatsApp } from "react-floating-whatsapp";
+import AllProductsPage from "../pages/AllProductsPage";
 
 const AppRouter = () => {
   
@@ -50,9 +50,9 @@ const AppRouter = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) {
-    return <div className=""><img style={{width:"100%",height:"500px"}}  src="https://miro.medium.com/v2/resize:fit:640/0*cWpsf9D3g346Va20.gif" alt="" /></div>;
-  }
+  // if (isLoading) {
+  //   return <div className=""><img style={{width:"100%",height:"500px"}}  src="https://miro.medium.com/v2/resize:fit:640/0*cWpsf9D3g346Va20.gif" alt="" /></div>;
+  // }
 
   return (
     <BrowserRouter>
@@ -61,7 +61,8 @@ const AppRouter = () => {
           <WishlistProvider>
             <Header userName={userName} searchValue={handleSearch} />
             <Routes>
-              <Route path="/" element={<Home search={search} />}></Route>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/allproducts" element={<AllProductsPage search={search} />}></Route>
               <Route path="/corporative" element={<CorporativeSalesPage />}></Route>
               <Route path="/:id" element={<DetailsPage />}></Route>
               <Route path="/faqs" element={<Faqs />}></Route>
@@ -86,12 +87,6 @@ const AppRouter = () => {
               bgColor="blue"
               offsetTop={500}
             />
-            {/* <FloatingWhatsApp
-              phoneNumber="+994556801747" 
-              accountName={"Shamil"}
-              chatMessage="Hello how can we help you?"
-              notificationDelay={10}            
-              /> */}
           </WishlistProvider>
         </CartProvider>
       </ProductProvider>

@@ -41,7 +41,8 @@ const PartnersSlider = () => {
     ],
   };
   return (
-    <div className="partners-slider container mt-5">
+    <>
+      <div className="partners-slider container mt-5">
         <div className="title">
           <h1 className="fw-bold">Partners</h1>
         </div>
@@ -55,6 +56,7 @@ const PartnersSlider = () => {
       </Slider>
         </div>
     </div>
+    </>
   );
 };
 

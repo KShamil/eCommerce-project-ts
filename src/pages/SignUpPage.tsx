@@ -83,7 +83,7 @@ const SignUpPage = () => {
                 </div>
               </div>
               <div className="col-12 d-grid">
-                <button type="submit" className="btn btn-success">
+                <button type="submit" className="btn btn-primary">
                   Register
                 </button>
               </div>

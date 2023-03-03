@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import resetPass from "../assets/img/sign-in-img/reset_pass.png";
+import resetPass from "../assets/img/sign-in-img/reset-pass.avif";
 import { useEffect } from "react";
 
 const ResetPasswordPage = () => {
