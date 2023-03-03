@@ -18,7 +18,7 @@ const AddProductButton:React.FC<AddProductButtonType> = ({addProduct}) => {
     <>
       <button
         onClick={hundleAddedToCart}
-        className="add-btn btn btn-danger btn-sm"
+        className="add-btn btn btn-primary btn-sm"
       >
         Add to Cart
         <ToastContainer

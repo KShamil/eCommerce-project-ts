@@ -1,14 +1,13 @@
-import React, { useContext,useEffect,useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import { Link } from "react-router-dom";
-import {ProductType} from "../data/productsData";
+import { ProductType } from "../data/productsData";
 import { Pagination } from "@mui/material";
 
-
 const Dashboard = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [products, setProducts] = useContext(ProductContext);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -24,7 +23,10 @@ const Dashboard = () => {
     endIndex
   );
 
-  const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+  const handlePageChange = (
+    event: React.ChangeEvent<unknown>,
+    value: number
+  ) => {
     setCurrentPage(value);
   };
   const handleDeleteProduct = (id: any) => {
@@ -64,12 +66,16 @@ const Dashboard = () => {
                 <td className="w-50">{item.title}</td>
                 <td className="w-25">{item.price}</td>
                 <td className="actions">
-                  <Link style={{width:"100px"}} to={`/editproduct/${item.id}`} className="btn btn-primary mb-2">
+                  <Link
+                    style={{ width: "100px" }}
+                    to={`/editproduct/${item.id}`}
+                    className="btn btn-primary mb-2"
+                  >
                     Edit
                   </Link>
                   <br />
                   <button
-                    style={{width:"100px"}}
+                    style={{ width: "100px" }}
                     onClick={() => handleDeleteProduct(item.id)}
                     className="btn btn-danger d-flex justify-content-center"
                   >
@@ -81,14 +87,14 @@ const Dashboard = () => {
           </tbody>
         </table>
         <div className="pagination d-flex justify-content-center">
-        <Pagination
-          style={{background:"white"}}
-          count={totalPages}
-          page={currentPage}
-          onChange={handlePageChange}
-          variant="outlined"
-          color={"primary"}
-        />
+          <Pagination
+            style={{ background: "white" }}
+            count={totalPages}
+            page={currentPage}
+            onChange={handlePageChange}
+            variant="outlined"
+            color={"primary"}
+          />
         </div>
       </div>
     </>

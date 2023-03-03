@@ -1,6 +1,6 @@
 .light-mode {
     .card {
-        width: 259px;
+        max-width: 259px;
         min-height: 448px;
         cursor: pointer;
         transition: 0.5s;
@@ -50,7 +50,7 @@
 
 .dark-mode {
     .card {
-        width: 259px;
+        max-width: 259px;
         min-height: 448px;
         cursor: pointer;
         transition: 0.5s;

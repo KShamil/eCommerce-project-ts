@@ -4,6 +4,7 @@ import { ProductContext } from "../context/ProductContext";
 import { Pagination } from "@mui/material";
 import FilterProductsCard from "../components/Cards/FilterProductsCard";
 import { useEffect } from "react";
+import _ from "lodash";
 
 const ProductsFilterPage = (props: any) => {
   useEffect(() => {
@@ -12,7 +13,6 @@ const ProductsFilterPage = (props: any) => {
   const [products] = useContext(ProductContext);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
-  const [minPrice, setMinPrice] = useState<number | string>(0);
   const [maxPrice, setMaxPrice] = useState<number | string>(10000);
   const handleCategorySelect = (category: string | null) => {
     setSelectedCategory(category);
@@ -22,9 +22,6 @@ const ProductsFilterPage = (props: any) => {
     setSelectedColor(color);
   };
 
-  const handleMinPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMinPrice(String(event.target.value));
-  };
 
   const handleMaxPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMaxPrice(String(event.target.value));
@@ -33,7 +30,6 @@ const ProductsFilterPage = (props: any) => {
   const handleResetFilters = () => {
     setSelectedCategory(null);
     setSelectedColor(null);
-    setMinPrice(0);
     setMaxPrice(10000);
   };
   const filteredItems = products.filter((item) => {
@@ -50,6 +46,7 @@ const ProductsFilterPage = (props: any) => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentData = filteredItems.slice(startIndex, endIndex);
+  const randomizedProducts = _.shuffle(currentData);
 
   const handlePageChange = (
     _event: React.ChangeEvent<unknown>,
@@ -65,7 +62,7 @@ const ProductsFilterPage = (props: any) => {
           <div className="row">
             <nav
               id="sidebarMenu"
-              className="col-md-3 col-lg-2 d-md-block bg-secondary sidebar"
+              className="col-md-3 col-lg-2 d-md-block bg-body sidebar"
               style={{}}
             >
               <div className="position-sticky pt-3 sidebar-sticky">
@@ -145,7 +142,7 @@ const ProductsFilterPage = (props: any) => {
                     <span className="fw-bold">Color:</span>
                     <div className="colors d-flex gap-2 mt-3">
                       <i
-                        style={{ color: "white", cursor: "pointer" }}
+                        style={{ color: "lightgoldenrodyellow", cursor: "pointer" }}
                         onClick={() => handleColorSelect("white")}
                         className="nav-link active"
                         aria-current="page"
@@ -232,7 +229,7 @@ const ProductsFilterPage = (props: any) => {
                 </h1>
               </div>
               <div className="products-list d-flex flex-wrap">
-                {currentData
+                {randomizedProducts
                   .filter((item) =>
                     item.title.toLowerCase().includes(props.search)
                   )

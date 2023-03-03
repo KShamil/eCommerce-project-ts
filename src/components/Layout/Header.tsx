@@ -150,13 +150,13 @@ const Header = ({ userName, searchValue }: { userName: string, searchValue: any 
             </div>
           </div>
         </nav>
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg navbar-bottom">
           <div className="container">
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav ">
+              <ul className="navbar-nav location">
                 <MyDialog/>
               </ul>
               <form className="d-flex mx-auto col-6" role="search">

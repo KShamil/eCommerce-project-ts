@@ -64,9 +64,9 @@ const ShoppingCartPage = () => {
     <>
       <div className="shopping-cart col-lg-12 container mt-5">
         <div className="mb-8">
-          <h1 className="top-title mb-1"style={{fontFamily:'Cinzel'}}>My Shopping Cart</h1>
-          <p className="subtitle" style={{fontFamily:'Cinzel'}}>There are <span className="text-danger fw-bold">{totalItems}</span> products in this cartlist.</p>
-          <h4 className="text-danger"style={{fontFamily:'Cinzel'}}>Subtotal: {cartTotal} azn</h4>
+          <h1 className="top-title mb-1 fw-bold">My Shopping Cart</h1>
+          <p className="subtitle" >There are <span className="text-danger fw-bold">{totalItems}</span> products in this cartlist.</p>
+          <h4 className="text-danger">Subtotal: {cartTotal} azn</h4>
         </div>
         <div>
           <div className="cartlist table-responsive">
@@ -115,7 +115,7 @@ const ShoppingCartPage = () => {
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity - 1)
                         }
-                        className="decrement btn btn-danger mx-2 rounded-pill"
+                        className="decrement btn btn-primary mx-2"
                       >
                         -
                       </button>
@@ -124,7 +124,7 @@ const ShoppingCartPage = () => {
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity + 1)
                         }
-                        className="increment btn btn-danger mx-2 rounded-pill"
+                        className="increment btn btn-primary mx-2"
                       >
                         +
                       </button>

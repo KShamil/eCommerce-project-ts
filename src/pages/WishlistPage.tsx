@@ -31,10 +31,10 @@ const WishlistPage = () => {
     <>
       <div className="wishlist col-lg-12 container mt-5">
         <div className="mb-8">
-          <h1 className="top-title mb-1" style={{ fontFamily: "Cinzel" }}>
+          <h1 className="top-title mb-1 fw-bold">
             My Wishlist
           </h1>
-          <p className="subtitle" style={{ fontFamily: "Cinzel" }}>
+          <p className="subtitle">
             There are{" "}
             <span className="text-danger fw-bold">{totalWishlistItems}</span>{" "}
             products in this wishlist.
@@ -97,7 +97,7 @@ const WishlistPage = () => {
                         onClick={() => {
                           removeWishlistItem(item.id);
                         }}
-                        className="text-muted"
+                        className="text-danger"
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
                         aria-label="Delete"

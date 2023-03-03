@@ -242,6 +242,18 @@
                     }
                 }
             }
+            .navbar-bottom {
+                .location {
+                    display: none;
+                }
+            }
+        }
+    }
+    .dark-mode {
+        .navbar-bottom {
+            .location {
+                display: none;
+            }
         }
     }
 
