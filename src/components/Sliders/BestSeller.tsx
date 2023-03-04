@@ -1,13 +1,12 @@
 import React, { useState,useContext,useMemo,useCallback } from "react";
 import { Link } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { ProductContext } from "../../context/ProductContext";
 import BestSellerCard from "../Cards/BestSellerCard";
 import '../../config/i18n';
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const BestSeller = () => {
     
@@ -23,42 +22,25 @@ const BestSeller = () => {
 
   const randomizedProducts = useMemo(() => _.shuffle(filteredData), [filteredData]);
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-    ],
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
   };
+  
   return (
     <>
       <div className="best-sellers container">
@@ -199,7 +181,14 @@ const BestSeller = () => {
           </div>
         </div>
         <div className="best-seller-list mt-2">
-          <Slider {...settings}>
+          <Carousel
+            responsive={responsive}
+            ssr={true}
+            infinite={true}
+            autoPlay={false}
+            autoPlaySpeed={2000}
+            customTransition="all 1s"
+          >
             {randomizedProducts.map((item,i) => (
               <BestSellerCard
                 key={i}
@@ -212,7 +201,7 @@ const BestSeller = () => {
                 addWishlist={item}
               />
             ))}
-          </Slider>
+          </Carousel>
           <Link
             to="/filterpage"
             className="btn btn-outline-danger rounded-0 w-100 d-flex justify-content-center align-items-center p-3 fw-bold"

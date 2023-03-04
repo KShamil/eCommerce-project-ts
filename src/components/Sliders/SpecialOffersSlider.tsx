@@ -1,59 +1,49 @@
 import React, { useContext, useMemo } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import SaleCard from "../Cards/SaleCard";
 import { ProductContext } from "../../context/ProductContext";
 import "../../config/i18n";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const SpecialOffersSlider = () => {
   const [products] = useContext(ProductContext);
   const randomizedProducts = useMemo(() => _.shuffle(products), [products]);
   const { t, i18n } = useTranslation();
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 4,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-    ],
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
   };
   return (
     <>
       <div className="special-offers container mt-5">
         <h1 className="title fw-bold">{t("changeTitleLanguage.title3")}</h1>
-        <Slider {...settings}>
+        <Carousel
+           responsive={responsive}
+           ssr={true} 
+           infinite={true}
+           autoPlay={true}
+           autoPlaySpeed={1500}
+           customTransition="all 1s"
+           removeArrowOnDeviceType={["desktop","tablet", "mobile"]}
+        >
           {randomizedProducts.map((item, i) => (
             <SaleCard
               key={i}
@@ -67,7 +57,7 @@ const SpecialOffersSlider = () => {
               addWishlist={item}
             />
           ))}
-        </Slider>
+        </Carousel>
         <Link
           to="/specialoffers"
           className="btn btn-outline-danger rounded-0 w-100 d-flex justify-content-center align-items-center p-3 fw-bold"

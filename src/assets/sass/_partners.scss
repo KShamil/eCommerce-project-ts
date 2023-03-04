@@ -1,9 +1,23 @@
+.light-mode {
+    .partners-slider {
+        .content {
+            border:2px solid black;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
 .dark-mode {
     .partners-slider {
         .title {
             h1 {
                 color: white;
             }
+        }
+        .content {
+            border-radius: 10px;
         }
     }
 }

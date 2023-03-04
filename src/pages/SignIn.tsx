@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import userData from "../data/userData";
 import { useState } from "react";
-import signIn from "../assets/img/sign-in-img/sign-in.png";
+import signIn from "../assets/img/sign-in-img/sign-in.jpg";
 import { useEffect } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";

@@ -32,11 +32,8 @@ const SpecialOffersPage = (props:any) => {
   };
   return (
     <>
-      <div className="wishlist col-lg-12 container mt-5">
+      <div className="special-offers-page col-lg-12 container mt-5">
         <div className="mb-8">
-          {/* <h1 className="top-title mb-1" style={{ fontFamily: "Cinzel" }}>
-            Special Offers
-          </h1> */}
           <div className="top-link d-flex justify-content-start align-items-center gap-3">
             <div className="title-link">
               <Link to="/" className="link text-decoration-none">
@@ -78,7 +75,7 @@ const SpecialOffersPage = (props:any) => {
                       <th className="align-start w-50">
                         <div className="">
                           <h5 className="fs-6 mb-0">
-                            <Link to="" className="title text-inherit">
+                            <Link to="" className="title text-decoration-none text-dark">
                               {item.title}
                             </Link>
                           </h5>
@@ -87,7 +84,7 @@ const SpecialOffersPage = (props:any) => {
                       </th>
                       <th className="align-middle">
                         <p className="text-decoration-line-through text-muted fw-bold">
-                          {item.salePrice} azn
+                          {item.salePrice}
                         </p>
                         <p className="price text-danger fw-bold">
                           {item.price} azn

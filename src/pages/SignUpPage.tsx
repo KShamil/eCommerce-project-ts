@@ -1,4 +1,4 @@
-import signUp from "../assets/img/sign-in-img/sign-up.png";
+import signUp from "../assets/img/sign-in-img/sign-up.avif";
 import { useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";

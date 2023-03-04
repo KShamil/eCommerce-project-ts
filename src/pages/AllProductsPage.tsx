@@ -50,7 +50,7 @@ const AllProductsPage = (props: any) => {
               <div className="load-more-btn d-flex justify-content-center align-items-center mt-2">
                 <button
                   onClick={LoadMoreProducts}
-                  className="btn btn-outline-danger rounded-2 p-3 fw-bold w-50"
+                  className="btn btn-outline-danger rounded-2 p-3 fw-bold"
                 >
                   {t("changeBtnLanguage.loadmorebtn")}
                 </button>

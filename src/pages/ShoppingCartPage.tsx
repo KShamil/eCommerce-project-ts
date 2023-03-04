@@ -1,37 +1,14 @@
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
-import { useEffect,useState } from "react";
+import { useEffect,useState,useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
 
-const ShoppingCartPage = () => {
+const ShoppingCartPage = ({id}: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isAuthorized, setIsAuthorized] = useState(false);
-  
-
-  useEffect(() => {
-    const isUserLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isUserLoggedIn) {
-      setIsLoggedIn(true);
-    }
-    const isUserAuthorized = localStorage.getItem("isAuthorized");
-    if (isUserAuthorized) {
-      setIsAuthorized(true);
-    }
-  }, []);
-
-  const handleBuyNow = () => {
-    if (!isLoggedIn) {
-      alert("Please log in to continue.");
-    } else if (!isAuthorized) {
-      window.location.href = "/signin";
-    } else {
-      alert("Thank you for your purchase!");
-    }
-  };
-
+  const [products] = useContext(ProductContext);
 
   interface CartProps {
     isEmpty: boolean;
@@ -49,6 +26,11 @@ const ShoppingCartPage = () => {
     cartTotal,
     totalItems,
   } = useCart() as unknown as CartProps;
+
+  const handleCheckout = () => {
+    isEmpty;
+    alert("Thank you for your purchase!");
+  };
 
   if (isEmpty) {
     return (
@@ -148,7 +130,9 @@ const ShoppingCartPage = () => {
               </tbody>
             </table>
             <div className="buy-box">
-              <button onClick={handleBuyNow} className="btn btn-danger w-100 p-3">Buy now</button>
+              <button onClick={()=>{items.forEach((item:any) => removeItem(item.id));
+                                    alert('Your purchase was successful!');
+              }} className="btn btn-danger w-100 p-3">Buy now</button>
             </div>
           </div>
         </div>

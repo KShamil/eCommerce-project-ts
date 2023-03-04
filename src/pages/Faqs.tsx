@@ -11,7 +11,7 @@ const Faqs = () => {
       <div className="faqs-page container p-5">
         <div className="title-link d-flex justify-content-start align-items-center gap-3">
           <div className="link-container">
-            <Link to="/" className="link text-decoration-none text-secondary">
+            <Link to="/" className="link text-decoration-none">
               Home
             </Link>{" "}
             <i className="fa-solid fa-angle-right"></i>
@@ -20,7 +20,7 @@ const Faqs = () => {
             <h5 className="title my-1">FAQs</h5>
           </div>
         </div>
-        <h1 className="faqs_title text-start mt-5">
+        <h1 className="faqs_title text-start mt-3 fw-bold">
           Frequently asked questions
         </h1>
         <div className="faqs_content">

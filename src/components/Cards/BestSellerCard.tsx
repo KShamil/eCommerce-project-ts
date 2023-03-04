@@ -1,6 +1,5 @@
 import React,{useState,useCallback} from "react";
 import { useCart } from "react-use-cart";
-import { ToastContainer, toast } from "react-toastify";
 import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
@@ -23,8 +22,6 @@ interface BestSellerCardProps {
 const BestSellerCard:React.FC<BestSellerCardProps> = React.memo(({id,img,title,price,rating,addProduct,addWishlist}) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
-  const notify = () => toast("Cart added!");
-  const notifyWishlist = () => toast("Wishlist added!");
   const [addedToWishlist, setAddedToWishlist] = useState(false);
   const { t, i18n } = useTranslation();
 
@@ -33,12 +30,10 @@ const BestSellerCard:React.FC<BestSellerCardProps> = React.memo(({id,img,title,p
   const handleAddToWishlist = useCallback(() => {
     setAddedToWishlist(true);
     addWishlistItem(addWishlist);
-    notifyWishlist();
   }, [addWishlistItem, addWishlist]);
 
   const handleAddToCart = useCallback(() => {
     addItem(addProduct);
-    notify();
   }, [addItem, addProduct]);
   return (
     <>
@@ -47,18 +42,6 @@ const BestSellerCard:React.FC<BestSellerCardProps> = React.memo(({id,img,title,p
         <Link to="" onClick={handleAddToWishlist} className=" position-absolute top-0 end-0 fs-5 text-danger">
                {icon}
             </Link>
-            <ToastContainer
-                position="top-right"
-                autoClose={1000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-              />
           <Link to={`/${id}`} tabIndex={-1}>
             <img
               src={img}
@@ -135,18 +118,6 @@ const BestSellerCard:React.FC<BestSellerCardProps> = React.memo(({id,img,title,p
             <button onClick={handleAddToCart} className="btn btn-primary rounded-3 fw-bold" tabIndex={-1}>
              {t("changeSliderCardLanguage.addtocart")}
             </button>
-            <ToastContainer
-                position="top-right"
-                autoClose={1000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-              />
           </div>
         </div>
       </div>

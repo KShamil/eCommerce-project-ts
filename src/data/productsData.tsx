@@ -23,7 +23,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2021/09/2_304241-min_png.webp",
         title:"iPhone 13 128 GB Blue",
         price:1699,
-        salePrice:"1899",
+        salePrice:"1899 azn",
         rating:4.8,
         category:"iphone",
         color:"blue"
@@ -36,7 +36,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Starlight-3-1_png.webp",
         title:"iPhone 13 512 GB Starlight",
         price:2449,
-        salePrice:"2699",
+        salePrice:"2699 azn",
         rating:4.5,
         category:"iphone",
         color:"white"
@@ -50,7 +50,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/iPhone-13-Midnight-3-1_png.webp",
         title:"iPhone 13 512 GB Midnight",
         price:2449,
-        salePrice:"2699",
+        salePrice:"2699 azn",
         rating:4.4,
         category:"iphone",
         color:"black"
@@ -63,7 +63,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-64-1_png.webp",
         title:"iPhone 14 Pro 1 TB Silver",
         price:4429,
-        salePrice:"4649",
+        salePrice:"4649 azn",
         rating:4.1,
         category:"iphone",
         color:"silver"
@@ -76,7 +76,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-29_png.webp",
         title:"iPhone 14 Pro 1 TB Gold",
         price:4429,
-        salePrice:"4649",
+        salePrice:"4649 azn",
         rating:4.0,
         category:"iphone",
         color:"gold"
@@ -89,7 +89,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-78_png.webp",
         title:"iPhone 14 Pro 1 TB Space Black",
         price:4429,
-        salePrice:"4649",
+        salePrice:"4649 azn",
         rating:3.8,
         category:"iphone",
         color:"black"
@@ -102,7 +102,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T173302.603_png.webp",
         title:"iPhone 14 Plus 512 GB Starlight",
         price:3379,
-        salePrice:"3499",
+        salePrice:"3499 azn",
         rating:4.6,
         category:"iphone",
         color:"white"
@@ -115,7 +115,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T172411.405_png.webp",
         title:"iPhone 14 Plus 512 GB Purple",
         price:3379,
-        salePrice:"3499",
+        salePrice:"3499 azn",
         rating:4.9,
         category:"iphone",
         color:"purple"
@@ -128,7 +128,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T171144.418_png.webp",
         title:"iPhone 14 Plus 512 GB Midnight",
         price:3379,
-        salePrice:"3499",
+        salePrice:"3499 azn",
         rating:4.2,
         category:"iphone",
         color:"black"
@@ -141,7 +141,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T174326.824_png.webp",
         title:"iPhone 14 Plus 512 GB Blue",
         price:3379,
-        salePrice:"3499",
+        salePrice:"3499 azn",
         rating:3.3,
         category:"iphone",
         color:"blue"
@@ -154,7 +154,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/New-Project-2022-09-09T170344.771_png.webp",
         title:"iPhone 14 Plus 512 GB (Product) Red",
         price:3379,
-        salePrice:"3499",
+        salePrice:"3499 azn",
         rating:4.1,
         category:"iphone",
         color:"red"
@@ -167,7 +167,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/07/iPhone-SE-Gen.3-256-GB-Red-3_png.webp",
         title:"iPhone SE Gen.3 256 GB Red",
         price:1699,
-        salePrice:"1799",
+        salePrice:"1799 azn",
         rating:4.4,
         category:"iphone",
         color:"red"
@@ -193,7 +193,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/10/iPad-10th-Gen-3_png.webp",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Yellow",
         price:1979,
-        salePrice:"2099",
+        salePrice:"2099 azn",
         rating:4.5,
         category:"ipad",
         color:"yellow"
@@ -219,7 +219,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/10/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-2-13_png.webp",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
         price:1979,
-        salePrice:"2099",
+        salePrice:"2099 azn",
         rating:4.8,
         category:"ipad",
         color:"silver"
@@ -232,7 +232,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2021/11/img_id8034576195469438489.jpg",
         title:"iPad 10.9-inch 256 GB (10 Gen) Wi-Fi + Cellular Silver",
         price:749,
-        salePrice:"869",
+        salePrice:"869 azn",
         rating:4.8,
         category:"ipad",
         color:"black"
@@ -375,7 +375,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-17T102042.502_png.webp",
         title:"Apple MacBook Pro 16 MNWC3RU/A Silver",
         price:6799,
-        salePrice:"6049",
+        salePrice:"6049 azn",
         rating:4.7,
         category:"macbook",
         color:"silver"
@@ -388,7 +388,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-17T102025.304_png.webp",
         title:"Apple MacBook Pro 16 MNWE3RU/A Silver",
         price:9499,
-        salePrice:"8449",
+        salePrice:"8449 azn",
         rating:4.8,
         category:"macbook",
         color:"silver"
@@ -401,7 +401,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-2023-01-30T121830.253_png.webp",
         title:"Apple MacBook Pro 16 MNW93RU/A Space Gray",
         price:7299,
-        salePrice:"6529",
+        salePrice:"6529 azn",
         rating:4.5,
         category:"macbook",
         color:"black"
@@ -414,7 +414,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2023/01/New-Project-2023-01-30T120911.618_png.webp",
         title:"Apple MacBook Pro 16 MNW83RU/A Space Gray",
         price:6799,
-        salePrice:"6049",
+        salePrice:"6049 azn",
         rating:4.3,
         category:"macbook",
         color:"black"
@@ -427,7 +427,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/10/Apple-MacBook-Air-13-ZKZ15S000NB-Space-Gray-4_png.webp",
         title:"Apple MacBook Air 13 ZKZ15S000NB Space Gray",
         price:3249,
-        salePrice:"",
+        salePrice:"3549 azn",
         rating:4.4,
         category:"macbook",
         color:"black"
@@ -440,7 +440,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/Apple-MacBook-Pro-13_-MNEQ3RU_A-Silver-4_png.webp",
         title:"Apple MacBook Pro 13 MNEQ3RU/A Silver",
         price:3999,
-        salePrice:"",
+        salePrice:"4299 azn",
         rating:4.9,
         category:"macbook",
         color:"silver"
@@ -453,7 +453,7 @@ const products:ProductType[] = [
         photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
         title:"Apple iMac 24 MGPC3RU/A Silver",
         price:4199,
-        salePrice:"",
+        salePrice:"4499 azn",
         rating:4.9,
         category:"imac",
         color:"silver"
@@ -466,7 +466,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2021/06/New-Project-9-3.jpg",
         title:"Apple iMac 24 MGTF3RU/A Silver",
         price:3099,
-        salePrice:"",
+        salePrice:"4099 azn",
         rating:4.7,
         category:"imac",
         color:"silver"
@@ -479,7 +479,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2021/11/30056617bb3-min_png.webp",
         title:"Apple iMac 24 MGPM3RU/A Pink",
         price:3729,
-        salePrice:"",
+        salePrice:"4099 azn",
         rating:4.4,
         category:"imac",
         color:"pink"
@@ -492,7 +492,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-17T110525.197_png.webp",
         title:"Apple Mac Mini MMFK3RU/A",
         price:1979,
-        salePrice:"2189",
+        salePrice:"2189 azn",
         rating:4.1,
         category:"imac",
         color:"silver"
@@ -505,7 +505,7 @@ const products:ProductType[] = [
         photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
         title:"Apple iMac 24 MGPC3RU/A Silver",
         price:4199,
-        salePrice:"",
+        salePrice:"4499 azn",
         rating:4.9,
         category:"imac",
         color:"silver"
@@ -518,7 +518,7 @@ const products:ProductType[] = [
         photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
         title:"Apple iMac 24 MGPC3RU/A Silver",
         price:4199,
-        salePrice:"",
+        salePrice:"4499 azn",
         rating:4.9,
         category:"imac",
         color:"silver"
@@ -531,7 +531,7 @@ const products:ProductType[] = [
         photo4:"hhttps://kontakt.az/wp-content/uploads/2021/06/iMac_24_2021_Silver_02-480x480-1.jpg",
         title:"Apple iMac 24 MGPC3RU/A Silver",
         price:4199,
-        salePrice:"",
+        salePrice:"4499 azn",
         rating:4.9,
         category:"imac",
         color:"silver"
@@ -544,7 +544,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2019/03/Kontakt-home-35_png.webp",
         title:"Apple Airpods 2 MV7N2RU/A",
         price:349,
-        salePrice:"",
+        salePrice:"359 azn",
         rating:4.5,
         category:"airpods",
         color:"white"
@@ -557,7 +557,7 @@ const products:ProductType[] = [
         photo4:"",
         title:"Apple Airpods 2 Wireless Charging MRXJ2",
         price:379,
-        salePrice:"439",
+        salePrice:"439 azn",
         rating:4.2,
         category:"airpods",
         color:"white"
@@ -570,7 +570,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2022/09/Qulaqliq-Apple-Airpods-Pro-2nd-Generation-_-MQD83RU_A-4_png.webp",
         title:"Apple Airpods Pro 2nd Generation / MQD83RU/A",
         price:699,
-        salePrice:"789",
+        salePrice:"789 azn",
         rating:4.7,
         category:"airpods",
         color:"white"
@@ -583,7 +583,7 @@ const products:ProductType[] = [
         photo4:"",
         title:"Apple AirPods Pro MLWK3RU/A",
         price:549,
-        salePrice:"",
+        salePrice:"649 azn",
         rating:4.6,
         category:"airpods",
         color:"white"
@@ -596,7 +596,7 @@ const products:ProductType[] = [
         photo4:"",
         title:"AApple Airpods Max Space Gray MGYH3RU/A",
         price:1549,
-        salePrice:"",
+        salePrice:"1649 azn",
         rating:4.8,
         category:"airpods",
         color:"black"
@@ -609,7 +609,7 @@ const products:ProductType[] = [
         photo4:"https://kontakt.az/wp-content/uploads/2023/02/New-Project-2023-02-24T092151.220_png.webp",
         title:"Apple Airpods 3 W/Lightning Charging Case MPNY3RU/A",
         price:479,
-        salePrice:"",
+        salePrice:"679 azn",
         rating:4.7,
         category:"airpods",
         color:"white"
@@ -705,6 +705,85 @@ const products:ProductType[] = [
         category:"tv",
         color:"black"
     },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/11/MQE53ref_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/11/MQE53ref_AV1_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/11/MQE53ref_AV2_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/11/MQE53ref_AV3_png.webp",
+        title:"Apple 49 mm Starlight Alpine Loop Small / MQE53ZM/A",
+        price:249,
+        salePrice:"259 azn",
+        rating:4.5,
+        category:"accessories",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/11/MQDY3ref_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/11/MQDY3ref_AV1_GEO_GB_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/11/MQDY3ref_AV2_GEO_GB_png.webp",
+        photo4:"ttps://kontakt.az/wp-content/uploads/2022/11/MQDY3ref_AV3_png.webp",
+        title:"Apple 49 mm Orange Alpine Loop Small / MQDY3ZM/A",
+        price:249,
+        salePrice:"259 azn",
+        rating:4.6,
+        category:"accessories",
+        color:"red"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/11/as-images2.apple__png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/11/as-images.apple__png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/11/as-images.apple3__png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/11/as-images.apple4__png.webp",
+        title:"Apple 49 mm Midnight Ocean Band Extension / MQEF3ZM/A",
+        price:129,
+        salePrice:"139 azn",
+        rating:4,
+        category:"accessories",
+        color:"black"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2022/08/New-Project-2022-08-26T150844.265_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2022/08/MNWP3_AV1_GEO_EMEA.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2022/08/MNWP3_AV2_GEO_EMEA.jpg",
+        photo4:"https://kontakt.az/wp-content/uploads/2022/08/MNWP3_AV2_GEO_EMEA.jpg",
+        title:"Adapter Apple 35W Dual USB-C MNWP3ZM/A",
+        price:169,
+        salePrice:"179 azn",
+        rating:4,
+        category:"accessories",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2020/11/1000-2-7.jpg",
+        photo2:"https://kontakt.az/wp-content/uploads/2020/11/mhje3zma-03_big.jpg",
+        photo3:"https://kontakt.az/wp-content/uploads/2020/11/mhje3zma-03_big.jpg",
+        photo4:"https://kontakt.az/wp-content/uploads/2020/11/mhje3zma-03_big.jpg",
+        title:"Apple 20W Usb-C Adapter Mhje3Zm/A",
+        price:59,
+        salePrice:"69 azn",
+        rating:4.1,
+        category:"accessories",
+        color:"white"
+    },
+    {   
+        id:uuidv4(),
+        photo:"https://kontakt.az/wp-content/uploads/2020/11/as-images.apple1_-2_png.webp",
+        photo2:"https://kontakt.az/wp-content/uploads/2020/11/as-images.apple_-7_png.webp",
+        photo3:"https://kontakt.az/wp-content/uploads/2020/11/as-images.appleb_png.webp",
+        photo4:"https://kontakt.az/wp-content/uploads/2020/11/as-images.applec_png.webp",
+        title:"Apple Magsafe Charger Mhxh3Zm/A",
+        price:99,
+        salePrice:"119 azn",
+        rating:4.7,
+        category:"accessories",
+        color:"black"
+    },
+
 
 ]
 

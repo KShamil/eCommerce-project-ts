@@ -11,6 +11,7 @@ import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import { useTranslation } from "react-i18next";
 import '../../config/i18n';
 import MyDialog from "../Dialog/Dialog";
+import { getAuth, onAuthStateChanged } from "firebase/auth"
 
 const Header = ({ userName, searchValue }: { userName: string, searchValue: any }) => {
   const { totalItems } = useCart();
@@ -32,6 +33,19 @@ const Header = ({ userName, searchValue }: { userName: string, searchValue: any 
   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
   };
+
+  const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
   return (
     <>
       <header className="header fixed-top">

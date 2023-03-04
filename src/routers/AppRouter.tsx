@@ -64,11 +64,10 @@ const AppRouter = () => {
               <Route path="/" element={<Home />}></Route>
               <Route path="/allproducts" element={<AllProductsPage search={search} />}></Route>
               <Route path="/corporative" element={<CorporativeSalesPage />}></Route>
-              <Route path="/:id" element={<DetailsPage />}></Route>
               <Route path="/faqs" element={<Faqs />}></Route>
               <Route path="/filterpage" element={<ProductsFilterPage search={search} />}></Route>
               <Route path="/reset" element={<ResetPasswordPage />}></Route>
-              <Route path="/selling/:id" element={<SellingPage />}></Route>
+              <Route path="/selling" element={<SellingPage />}></Route>
               <Route path="/service" element={<Services />}></Route>
               <Route path="/shopping" element={<ShoppingCartPage />}></Route>
               <Route path="/shops" element={<ShopsPage />}></Route>
@@ -80,6 +79,7 @@ const AppRouter = () => {
               <Route path="/addproduct" element={<AddProductPage />}></Route>
               <Route path="/editproduct/:id" element={<EditProductPage />}></Route>
               <Route path="/userpage" element={<UserPage />}></Route>
+              <Route path="/:id" element={<DetailsPage />}></Route>
               <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>
             <Footer/>

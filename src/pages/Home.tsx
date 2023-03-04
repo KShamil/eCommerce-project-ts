@@ -7,6 +7,8 @@ import AppleStoreTv from "../components/TV/AppleStoreTv";
 import PartnersSlider from "../components/Sliders/PartnersSlider";
 import AllProductsSlider from "../components/Sliders/AllProductsSlider";
 
+
+
 const Home = () => {
   return (
     <>

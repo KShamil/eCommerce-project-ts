@@ -1,27 +1,19 @@
 import { useParams } from "react-router-dom";
-// import products from "../data/productsData";
-import { useEffect } from "react";
-import { useCart } from "react-use-cart";
+import { ProductContext } from "../context/ProductContext";
+import { useEffect,useContext } from "react";
+
 
 const SellingPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  interface CheckoutProps {
-    items: any;
-  }
-  const { 
-    items,
-  } = useCart() as unknown as CheckoutProps;
-  
-  
-  
-  
   interface MyRouteParams extends Record<string, string | undefined> {}
 
+  const [products] = useContext(ProductContext);
   const { id } = useParams<MyRouteParams>();
-  const CheckoutItems = items.find((p:any) => p.id === id);
+  const CheckoutItems = products.find((p:any) => p.id === id);
+
   return (
     <>
       <div className="checkout-from p-3" style={{ background: "#F9FBFC" }}>

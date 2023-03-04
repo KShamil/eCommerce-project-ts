@@ -1,7 +1,36 @@
+.light-mode {
+    .special-offers-page {
+        .top-link {
+            .title-link {
+                .link {
+                    color:grey;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
 .dark-mode {
     .special-offers {
         .title {
             color:white;
+        }
+    }
+    .special-offers-page {
+        .top-link {
+            .title-link {
+                .link {
+                    color: white;
+                    font-size: 18px;
+                }
+                i {
+                    color:white;
+                }
+            }
+            .title {
+                color: white;
+            }
         }
     }
 }

@@ -1,15 +1,36 @@
 .light-mode {
-    .faqs_title {
-        font-family: 'Cinzel', serif;
-        font-weight: 600;
-        color: black;
+    .title-link {
+        .link-container {
+            .link {
+                color:grey;
+            }
+            
+        }
+        .title-container {
+            .title {
+                color:black;
+            }
+        }
     }
 }
 
 .dark-mode {
+    .title-link {
+        .link-container {
+            .link {
+                color:white;
+            }
+            i {
+                color: white;
+            }
+        }
+        .title-container {
+            .title {
+                color:white;
+            }
+        }
+    }
     .faqs_title {
-        font-family: 'Cinzel', serif;
-        font-weight: 600;
-        color: white;
+        color:white;
     }
 }

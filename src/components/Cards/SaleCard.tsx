@@ -1,7 +1,6 @@
 import React,{useState,useCallback} from "react";
 import { Rating } from "@mui/material";
 import { useCart } from "react-use-cart";
-import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -26,8 +25,6 @@ interface SaleCardType {
 const SaleCard:React.FC<SaleCardType> = React.memo(({ id,img, title, price, rating, salePrice, addProduct,addWishlist }) => {
   const { addItem } = useCart();
   const { addWishlistItem } = useWishlist();
-  const notify = () => toast("Cart added!");
-  const notifyWishlist = () => toast("Wishlist added!");
   const [addedToWishlist, setAddedToWishlist] = useState(false);
   const { t, i18n } = useTranslation();
 
@@ -36,12 +33,10 @@ const SaleCard:React.FC<SaleCardType> = React.memo(({ id,img, title, price, rati
   const handleAddToWishlist = useCallback(() => {
     setAddedToWishlist(true);
     addWishlistItem(addWishlist);
-    notifyWishlist();
   }, [addWishlistItem, addWishlist]);
 
   const handleAddToCart = useCallback(() => {
     addItem(addProduct);
-    notify();
   }, [addItem, addProduct]);
   return (
     <>
@@ -50,18 +45,7 @@ const SaleCard:React.FC<SaleCardType> = React.memo(({ id,img, title, price, rati
         <Link to="" onClick={handleAddToWishlist} className=" position-absolute top-0 end-0 fs-5 text-danger">
                {icon}
             </Link>
-            <ToastContainer
-                position="top-right"
-                autoClose={1000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-              />
+           
           <div className=" position-absolute top-0 start-0">
             <span className="badge bg-danger text-white">Sale</span>
           </div>
@@ -132,8 +116,8 @@ const SaleCard:React.FC<SaleCardType> = React.memo(({ id,img, title, price, rati
         </div>
         <div className="d-flex justify-content-between align-items-center mt-3">
           <div>
-            <span className="text-danger">{price}</span>{" "}
-            <span className="text-decoration-line-through text-muted">
+            <span className="text-danger fw-bold">{price}</span>{" "}
+            <span className="text-decoration-line-through text-muted fw-bold">
               {salePrice}
             </span>
           </div>
@@ -146,18 +130,6 @@ const SaleCard:React.FC<SaleCardType> = React.memo(({ id,img, title, price, rati
             <button onClick={handleAddToCart} className="btn btn-primary rounded-3 fw-bold" tabIndex={-1}>
               {t("changeSliderCardLanguage.addtocart")}
             </button>
-            <ToastContainer
-                position="top-right"
-                autoClose={1000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-              />
           </div>
         </div>
       </div>
