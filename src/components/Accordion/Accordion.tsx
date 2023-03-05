@@ -1,4 +1,4 @@
-const Accordion:React.FC = () => {
+const Accordion: React.FC = () => {
   return (
     <>
       <div className="faqs_accordion">

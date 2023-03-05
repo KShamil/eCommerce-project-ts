@@ -1,9 +1,9 @@
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
-import { useEffect,useState,useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 
-const ShoppingCartPage = ({id}: any) => {
+const ShoppingCartPage = ({ id }: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -47,7 +47,10 @@ const ShoppingCartPage = ({id}: any) => {
       <div className="shopping-cart col-lg-12 container mt-5">
         <div className="mb-8">
           <h1 className="top-title mb-1 fw-bold">My Shopping Cart</h1>
-          <p className="subtitle" >There are <span className="text-danger fw-bold">{totalItems}</span> products in this cartlist.</p>
+          <p className="subtitle">
+            There are <span className="text-danger fw-bold">{totalItems}</span>{" "}
+            products in this cartlist.
+          </p>
           <h4 className="text-danger">Subtotal: {cartTotal} azn</h4>
         </div>
         <div>
@@ -63,7 +66,7 @@ const ShoppingCartPage = ({id}: any) => {
                 </tr>
               </thead>
               <tbody className="t-body">
-                {items.map((item:any, i:any) => (
+                {items.map((item: any, i: any) => (
                   <tr key={i}>
                     <th>{i + 1}</th>
                     <td className="align-middle">
@@ -82,14 +85,15 @@ const ShoppingCartPage = ({id}: any) => {
                       <div>
                         <h5 className="title mb-0 fs-6">{item.title}</h5>
                         <small className="text-decoration-line-through text-muted fw-bold">
-                        {item.salePrice}
+                          {item.salePrice}
                         </small>
                         <br />
                         <small className="price text-danger fw-bold mt-1">
                           {item.price} azn
                         </small>
-                        <p><span className="badge bg-success">In Stock</span></p>
-                        
+                        <p>
+                          <span className="badge bg-success">In Stock</span>
+                        </p>
                       </div>
                     </td>
                     <td className="quantitu align-middle">
@@ -112,7 +116,8 @@ const ShoppingCartPage = ({id}: any) => {
                       </button>
                     </td>
                     <td className="align-middle ">
-                      <Link to=""
+                      <Link
+                        to=""
                         onClick={() => {
                           removeItem(item?.id);
                         }}
@@ -130,9 +135,15 @@ const ShoppingCartPage = ({id}: any) => {
               </tbody>
             </table>
             <div className="buy-box">
-              <button onClick={()=>{items.forEach((item:any) => removeItem(item.id));
-                                    alert('Your purchase was successful!');
-              }} className="btn btn-danger w-100 p-3">Buy now</button>
+              <button
+                onClick={() => {
+                  items.forEach((item: any) => removeItem(item.id));
+                  alert("Your purchase was successful!");
+                }}
+                className="btn btn-danger w-100 p-3"
+              >
+                Buy now
+              </button>
             </div>
           </div>
         </div>
@@ -142,4 +153,3 @@ const ShoppingCartPage = ({id}: any) => {
 };
 
 export default ShoppingCartPage;
-

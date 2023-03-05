@@ -37,10 +37,7 @@ const ResetPasswordPage = () => {
                   <button type="submit" className="btn btn-primary">
                     Reset Password
                   </button>
-                  <Link
-                    to="/signin"
-                    className="btn btn-outline-info"
-                  >
+                  <Link to="/signin" className="btn btn-outline-info">
                     Back
                   </Link>
                 </div>

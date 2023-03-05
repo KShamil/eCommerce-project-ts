@@ -7,9 +7,9 @@ import { v4 as uuidv4 } from "uuid";
 import { ProductType } from "../data/productsData";
 
 const AddProductPage = () => {
-useEffect(() => {
-        window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [photo, setPhoto] = useState<string>("");
   const [photo2, setPhoto2] = useState<string>("");
@@ -25,35 +25,41 @@ useEffect(() => {
 
   const [products, setProducts] = useContext(ProductContext);
 
-  const updatePhoto = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoto(e.target.value);
-  };
-  const updatePhoto2 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoto2(e.target.value);
-  };
-  const updatePhoto3 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoto3(e.target.value);
-  };
-  const updatePhoto4 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoto4(e.target.value);
-  };
-  const updateTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(e.target.value);
-  };
-  const updatePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPrice(e.target.value);
-  };
-  const updateSalePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSalePrice(e.target.value);
-  };
-  const updateRating = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRating(parseInt(e.target.value));
-  }
-  const updateCategory = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCategory(e.target.value);
-  };
-  const updateColor = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setColor(e.target.value);
+  const updateField = (field: string, value: string | number) => {
+    switch (field) {
+      case "photo":
+        setPhoto(value as string);
+        break;
+      case "photo2":
+        setPhoto2(value as string);
+        break;
+      case "photo3":
+        setPhoto3(value as string);
+        break;
+      case "photo4":
+        setPhoto4(value as string);
+        break;
+      case "title":
+        setTitle(value as string);
+        break;
+      case "price":
+        setPrice(value as string);
+        break;
+      case "salePrice":
+        setSalePrice(value as string);
+        break;
+      case "rating":
+        setRating(parseInt(value as string));
+        break;
+      case "category":
+        setCategory(value as string);
+        break;
+      case "color":
+        setColor(value as string);
+        break;
+      default:
+        break;
+    }
   };
 
   const addCard = (e: React.FormEvent<HTMLFormElement>) => {
@@ -89,7 +95,7 @@ useEffect(() => {
                 Photo
               </label>
               <input
-                onChange={updatePhoto}
+                onChange={(e) => updateField("photo", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -104,7 +110,7 @@ useEffect(() => {
                 Photo2
               </label>
               <input
-                onChange={updatePhoto2}
+                onChange={(e) => updateField("photo2", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -119,7 +125,7 @@ useEffect(() => {
                 Photo3
               </label>
               <input
-                onChange={updatePhoto3}
+                onChange={(e) => updateField("photo3", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -134,7 +140,7 @@ useEffect(() => {
                 Photo4
               </label>
               <input
-                onChange={updatePhoto4}
+                onChange={(e) => updateField("photo4", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -149,7 +155,7 @@ useEffect(() => {
                 Title
               </label>
               <input
-                onChange={updateTitle}
+                onChange={(e) => updateField("title", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputPassword1"
@@ -163,7 +169,7 @@ useEffect(() => {
                 Price
               </label>
               <input
-                onChange={updatePrice}
+                onChange={(e) => updateField("price", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputPassword1"
@@ -177,7 +183,7 @@ useEffect(() => {
                 Sale Price
               </label>
               <input
-                onChange={updateSalePrice}
+                onChange={(e) => updateField("salePrice", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -192,7 +198,7 @@ useEffect(() => {
                 Rating
               </label>
               <input
-                onChange={updateRating}
+                onChange={(e) => updateField("rating", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -207,7 +213,7 @@ useEffect(() => {
                 Category
               </label>
               <input
-                onChange={updateCategory}
+                onChange={(e) => updateField("category", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -222,7 +228,7 @@ useEffect(() => {
                 Color
               </label>
               <input
-                onChange={updateColor}
+                onChange={(e) => updateField("color", e.target.value)}
                 type="text"
                 className="form-control"
                 id="exampleInputEmail1"

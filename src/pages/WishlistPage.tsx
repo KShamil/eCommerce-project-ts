@@ -11,10 +11,10 @@ const WishlistPage = () => {
   }, []);
 
   interface WishlistProps {
-    isWishlistEmpty:boolean;
-    totalWishlistItems:number;
-    items:any;
-    removeWishlistItem:(id: number) => void;
+    isWishlistEmpty: boolean;
+    totalWishlistItems: number;
+    items: any;
+    removeWishlistItem: (id: number) => void;
   }
 
   const { isWishlistEmpty, totalWishlistItems, items, removeWishlistItem } =
@@ -31,9 +31,7 @@ const WishlistPage = () => {
     <>
       <div className="wishlist col-lg-12 container mt-5">
         <div className="mb-8">
-          <h1 className="top-title mb-1 fw-bold">
-            My Wishlist
-          </h1>
+          <h1 className="top-title mb-1 fw-bold">My Wishlist</h1>
           <p className="subtitle">
             There are{" "}
             <span className="text-danger fw-bold">{totalWishlistItems}</span>{" "}
@@ -53,7 +51,7 @@ const WishlistPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {items.map((item:any, i:any) => (
+                {items.map((item: any, i: any) => (
                   <tr>
                     <td className="align-middle"></td>
                     <td className="align-middle">
@@ -86,14 +84,12 @@ const WishlistPage = () => {
                       </div>
                     </td>
                     <td className="align-middle">
-                      <AddProductButton
-                        addProduct={item}
-                      />
+                      <AddProductButton addProduct={item} />
                     </td>
-                    
+
                     <td className="align-middle ">
                       <Link
-                      to=""
+                        to=""
                         onClick={() => {
                           removeWishlistItem(item.id);
                         }}

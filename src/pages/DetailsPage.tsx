@@ -152,8 +152,32 @@ const DetailsPage = () => {
                 <div className="mb-5">
                   <h4 className="mb-1">Product</h4>
                   <p className="mb-0">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis est maiores delectus officiis pariatur unde quam corporis voluptatem at facilis impedit maxime, beatae, accusamus porro perferendis placeat aspernatur quia soluta nemo, quisquam dolor adipisci ipsum. Vel fugiat rem error porro necessitatibus eaque aspernatur harum aperiam. Cumque ex dignissimos quae nostrum molestiae amet harum odit nam rerum voluptates nihil pariatur, veritatis a est culpa laboriosam. Aspernatur, possimus dolor vel hic aut debitis eaque amet neque inventore quibusdam accusamus perspiciatis officia veniam quo ea porro reprehenderit distinctio nihil quae culpa aperiam commodi doloribus eum atque. Blanditiis eveniet nam nemo, laboriosam mollitia quasi!
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis est maiores delectus officiis pariatur unde quam corporis voluptatem at facilis impedit maxime, beatae, accusamus porro perferendis placeat aspernatur quia soluta nemo, quisquam dolor adipisci ipsum. Vel fugiat rem error porro necessitatibus eaque aspernatur harum aperiam. Cumque ex dignissimos quae nostrum molestiae amet harum odit nam rerum voluptates nihil pariatur, veritatis a est culpa laboriosam. Aspernatur, possimus dolor vel hic aut debitis eaque amet neque inventore quibusdam accusamus perspiciatis officia veniam quo ea porro reprehenderit distinctio nihil quae culpa aperiam commodi doloribus eum atque. Blanditiis eveniet nam nemo, laboriosam mollitia quasi!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis est maiores delectus officiis pariatur unde quam
+                    corporis voluptatem at facilis impedit maxime, beatae,
+                    accusamus porro perferendis placeat aspernatur quia soluta
+                    nemo, quisquam dolor adipisci ipsum. Vel fugiat rem error
+                    porro necessitatibus eaque aspernatur harum aperiam. Cumque
+                    ex dignissimos quae nostrum molestiae amet harum odit nam
+                    rerum voluptates nihil pariatur, veritatis a est culpa
+                    laboriosam. Aspernatur, possimus dolor vel hic aut debitis
+                    eaque amet neque inventore quibusdam accusamus perspiciatis
+                    officia veniam quo ea porro reprehenderit distinctio nihil
+                    quae culpa aperiam commodi doloribus eum atque. Blanditiis
+                    eveniet nam nemo, laboriosam mollitia quasi! Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Veritatis est
+                    maiores delectus officiis pariatur unde quam corporis
+                    voluptatem at facilis impedit maxime, beatae, accusamus
+                    porro perferendis placeat aspernatur quia soluta nemo,
+                    quisquam dolor adipisci ipsum. Vel fugiat rem error porro
+                    necessitatibus eaque aspernatur harum aperiam. Cumque ex
+                    dignissimos quae nostrum molestiae amet harum odit nam rerum
+                    voluptates nihil pariatur, veritatis a est culpa laboriosam.
+                    Aspernatur, possimus dolor vel hic aut debitis eaque amet
+                    neque inventore quibusdam accusamus perspiciatis officia
+                    veniam quo ea porro reprehenderit distinctio nihil quae
+                    culpa aperiam commodi doloribus eum atque. Blanditiis
+                    eveniet nam nemo, laboriosam mollitia quasi!
                   </p>
                 </div>
                 <div className="mb-5">

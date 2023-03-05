@@ -4,16 +4,16 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 interface AddProductButtonType {
-    addProduct:any;
+  addProduct: any;
 }
 
-const AddProductButton:React.FC<AddProductButtonType> = ({addProduct}) => {
+const AddProductButton: React.FC<AddProductButtonType> = ({ addProduct }) => {
   const { addItem } = useCart();
   const notify = () => toast("Cart added!");
-  const hundleAddedToCart =()=> {
+  const hundleAddedToCart = () => {
     addItem(addProduct);
     notify();
-  }
+  };
   return (
     <>
       <button
@@ -22,19 +22,18 @@ const AddProductButton:React.FC<AddProductButtonType> = ({addProduct}) => {
       >
         Add to Cart
         <ToastContainer
-        position="top-right"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+          position="top-right"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </button>
-      
     </>
   );
 };

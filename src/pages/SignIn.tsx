@@ -30,7 +30,7 @@ const SignIn = ({ onUserLogin }: { onUserLogin: (name: string) => void }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        // onUserLogin(user.displayName); 
+        // onUserLogin(user.displayName);
         navigate("/dashboard");
       })
       .catch((error) => {

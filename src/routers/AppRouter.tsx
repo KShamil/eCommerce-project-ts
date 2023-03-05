@@ -25,7 +25,6 @@ import Dashboard from "../pages/Dashboard";
 import AddProductPage from "../pages/AddProductPage";
 import EditProductPage from "../pages/EditProductPage";
 import { ScrollToTop } from "react-simple-scroll-up";
-import UserPage from "../pages/UserPage";
 import AllProductsPage from "../pages/AllProductsPage";
 
 const AppRouter = () => {
@@ -78,7 +77,6 @@ const AppRouter = () => {
               <Route path="/dashboard" element={<Dashboard />}></Route>
               <Route path="/addproduct" element={<AddProductPage />}></Route>
               <Route path="/editproduct/:id" element={<EditProductPage />}></Route>
-              <Route path="/userpage" element={<UserPage />}></Route>
               <Route path="/:id" element={<DetailsPage />}></Route>
               <Route path="*" element={<NotFoundPage />}></Route>
             </Routes>

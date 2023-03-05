@@ -1,5 +1,5 @@
-import React, { useState,useContext } from "react";
-import {ProductType} from "../data/productsData";
+import React, { useState, useContext } from "react";
+import { ProductType } from "../data/productsData";
 import { Link } from "react-router-dom";
 import AddProductButton from "../components/Buttons/AddProductButton";
 import AddWishlistButton from "../components/Buttons/AddWishlistButton";
@@ -7,9 +7,7 @@ import { Pagination } from "@mui/material";
 import { useEffect } from "react";
 import { ProductContext } from "../context/ProductContext";
 
-
-
-const SpecialOffersPage = (props:any) => {
+const SpecialOffersPage = (props: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -27,7 +25,10 @@ const SpecialOffersPage = (props:any) => {
     endIndex
   );
 
-  const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+  const handlePageChange = (
+    event: React.ChangeEvent<unknown>,
+    value: number
+  ) => {
     setCurrentPage(value);
   };
   return (
@@ -48,8 +49,7 @@ const SpecialOffersPage = (props:any) => {
           <div className="table-responsive">
             <table className="table bg-body">
               <thead className="table-danger">
-              <tr>
-              </tr>
+                <tr></tr>
               </thead>
               <tbody>
                 {currentData
@@ -75,7 +75,10 @@ const SpecialOffersPage = (props:any) => {
                       <th className="align-start w-50">
                         <div className="">
                           <h5 className="fs-6 mb-0">
-                            <Link to="" className="title text-decoration-none text-dark">
+                            <Link
+                              to=""
+                              className="title text-decoration-none text-dark"
+                            >
                               {item.title}
                             </Link>
                           </h5>

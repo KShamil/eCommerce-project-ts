@@ -7,10 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 
 interface AddWishlistButtonType {
-    addWishlist:any
+  addWishlist: any;
 }
 
-const AddWishlistButton:React.FC<AddWishlistButtonType> = ({ addWishlist }) => {
+const AddWishlistButton: React.FC<AddWishlistButtonType> = ({
+  addWishlist,
+}) => {
   const { addWishlistItem } = useWishlist();
   const [addedToWishlist, setAddedToWishlist] = useState(false);
   const notifyWishlist = () => toast("Wishlist added!");

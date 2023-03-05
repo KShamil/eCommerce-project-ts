@@ -14,38 +14,41 @@ import MyDialog from "../Dialog/Dialog";
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 
 const Header = ({ userName, searchValue }: { userName: string, searchValue: any }) => {
-  const { totalItems } = useCart();
+  const { totalItems: cartTotalItems } = useCart();
   const { totalWishlistItems } = useWishlist();
-  const [mode, setMode] = useState<string>(
-    localStorage.getItem("mode") || "light-mode"
-  );
+
+  const { t, i18n } = useTranslation();
+
+  const [mode, setMode] = useState<string>(() => {
+    return localStorage.getItem("mode") ?? "light-mode";
+  });
+
+  const toggleMode = () => {
+    setMode((prevMode) => {
+      return prevMode === "light-mode" ? "dark-mode" : "light-mode";
+    });
+  };
+
   useEffect(() => {
     localStorage.setItem("mode", mode);
     document.body.className = mode;
   }, [mode]);
 
-  const toggleMode = () => {
-    const newMode: string = mode === "light-mode" ? "dark-mode" : "light-mode";
-    setMode(newMode);
-  };
-
-  const { t, i18n } = useTranslation();
-  const handleChangeLanguage = (lang: string) => {
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+  }, []);
+   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
   };
-
-  const auth = getAuth();
-      onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    // ...
-  } else {
-    // User is signed out
-    // ...
-  }
-});
   return (
     <>
       <header className="header fixed-top">
@@ -203,7 +206,7 @@ const Header = ({ userName, searchValue }: { userName: string, searchValue: any 
                     <ShoppingCartCheckoutIcon />
                     <p className="totalItem text-danger fw-bold">
                       <Badge
-                        badgeContent={totalItems}
+                        badgeContent={cartTotalItems}
                         color="secondary"
                       ></Badge>
                     </p>

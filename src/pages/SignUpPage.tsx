@@ -11,7 +11,7 @@ const SignUpPage = () => {
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [error,setError] = useState<string>("");
+  const [error, setError] = useState<string>("");
   const navigate = useNavigate();
 
   const handleCreateUser = (e: React.FormEvent<HTMLFormElement>) => {

@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
-import { useEffect,useContext } from "react";
-
+import { useEffect, useContext } from "react";
 
 const SellingPage = () => {
   useEffect(() => {
@@ -12,7 +11,7 @@ const SellingPage = () => {
 
   const [products] = useContext(ProductContext);
   const { id } = useParams<MyRouteParams>();
-  const CheckoutItems = products.find((p:any) => p.id === id);
+  const CheckoutItems = products.find((p: any) => p.id === id);
 
   return (
     <>
@@ -35,9 +34,17 @@ const SellingPage = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><img src={CheckoutItems?.photo} alt="error" width={70} /></td>
+                      <td>
+                        <img
+                          src={CheckoutItems?.photo}
+                          alt="error"
+                          width={70}
+                        />
+                      </td>
                       <td className="">{CheckoutItems?.title}</td>
-                      <td className="text-danger fw-bold">{CheckoutItems?.price}</td>
+                      <td className="text-danger fw-bold">
+                        {CheckoutItems?.price}
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -300,4 +307,3 @@ const SellingPage = () => {
 };
 
 export default SellingPage;
-

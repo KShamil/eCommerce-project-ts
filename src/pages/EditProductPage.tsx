@@ -111,6 +111,7 @@ const EditProductPage: React.FC = () => {
                 Photo2
               </label>
               <input
+                value={photo2}
                 onChange={handleEditPhoto2}
                 type="text"
                 className="form-control"
@@ -126,6 +127,7 @@ const EditProductPage: React.FC = () => {
                 Photo3
               </label>
               <input
+                value={photo3}
                 onChange={handleEditPhoto3}
                 type="text"
                 className="form-control"
@@ -141,6 +143,7 @@ const EditProductPage: React.FC = () => {
                 Photo4
               </label>
               <input
+                value={photo4}
                 onChange={handleEditPhoto4}
                 type="text"
                 className="form-control"
@@ -156,6 +159,7 @@ const EditProductPage: React.FC = () => {
                 Title
               </label>
               <input
+                value={title}
                 onChange={handleEditTitle}
                 type="text"
                 className="form-control"
@@ -170,6 +174,7 @@ const EditProductPage: React.FC = () => {
                 Price
               </label>
               <input
+                value={price}
                 onChange={handleEditPrice}
                 type="text"
                 className="form-control"
@@ -184,6 +189,7 @@ const EditProductPage: React.FC = () => {
                 Sale Price
               </label>
               <input
+                value={salePrice}
                 onChange={handleEditSalePrice}
                 type="text"
                 className="form-control"
@@ -199,6 +205,7 @@ const EditProductPage: React.FC = () => {
                 Rating
               </label>
               <input
+                value={rating}
                 onChange={handleEditRating}
                 type="text"
                 className="form-control"
@@ -214,6 +221,7 @@ const EditProductPage: React.FC = () => {
                 Category
               </label>
               <input
+                value={category}
                 onChange={handleEditCategory}
                 type="text"
                 className="form-control"
@@ -229,6 +237,7 @@ const EditProductPage: React.FC = () => {
                 Color
               </label>
               <input
+                value={color}
                 onChange={handleEditColor}
                 type="text"
                 className="form-control"

@@ -1,13 +1,12 @@
-import React,{useState,useCallback} from "react";
+import React, { useState, useCallback } from "react";
 import { useCart } from "react-use-cart";
 import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import '../../config/i18n';
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import "../../config/i18n";
 import { useTranslation } from "react-i18next";
-
 
 interface BestSellerCardProps {
   id: string;
@@ -19,110 +18,127 @@ interface BestSellerCardProps {
   addWishlist?: any;
 }
 
-const BestSellerCard:React.FC<BestSellerCardProps> = React.memo(({id,img,title,price,rating,addProduct,addWishlist}) => {
-  const { addItem } = useCart();
-  const { addWishlistItem } = useWishlist();
-  const [addedToWishlist, setAddedToWishlist] = useState(false);
-  const { t, i18n } = useTranslation();
+const BestSellerCard: React.FC<BestSellerCardProps> = React.memo(
+  ({ id, img, title, price, rating, addProduct, addWishlist }) => {
+    const { addItem } = useCart();
+    const { addWishlistItem } = useWishlist();
+    const [addedToWishlist, setAddedToWishlist] = useState(false);
+    const { t, i18n } = useTranslation();
 
-  let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
+    let icon = addedToWishlist ? <FavoriteIcon /> : <FavoriteBorderIcon />;
 
-  const handleAddToWishlist = useCallback(() => {
-    setAddedToWishlist(true);
-    addWishlistItem(addWishlist);
-  }, [addWishlistItem, addWishlist]);
+    const handleAddToWishlist = useCallback(() => {
+      setAddedToWishlist(true);
+      addWishlistItem(addWishlist);
+    }, [addWishlistItem, addWishlist]);
 
-  const handleAddToCart = useCallback(() => {
-    addItem(addProduct);
-  }, [addItem, addProduct]);
-  return (
-    <>
-      <div className="card-body position-relative border border-muted p-3 bg-body" style={{minHeight:'448px'}}>
-        <div className="text-center position-relative ">
-        <Link to="" onClick={handleAddToWishlist} className=" position-absolute top-0 end-0 fs-5 text-danger">
-               {icon}
-            </Link>
-          <Link to={`/${id}`} tabIndex={-1}>
-            <img
-              src={img}
-              alt="Grocery Ecommerce Template"
-              className="mb-3 img-fluid p-3"
-            />
-          </Link>
-          <div className="product-action-btn">
-            <a
-              href="#!"
-              className="btn-action mb-1"
-              data-bs-toggle="modal"
-              data-bs-target="#quickViewModal"
-              tabIndex={-1}
+    const handleAddToCart = useCallback(() => {
+      addItem(addProduct);
+    }, [addItem, addProduct]);
+    return (
+      <>
+        <div
+          className="card-body position-relative border border-muted p-3 bg-body"
+          style={{ minHeight: "448px" }}
+        >
+          <div className="text-center position-relative ">
+            <Link
+              to=""
+              onClick={handleAddToWishlist}
+              className=" position-absolute top-0 end-0 fs-5 text-danger"
             >
-              <i
-                className="bi bi-eye"
+              {icon}
+            </Link>
+            <Link to={`/${id}`} tabIndex={-1}>
+              <img
+                src={img}
+                alt="Grocery Ecommerce Template"
+                className="mb-3 img-fluid p-3"
+              />
+            </Link>
+            <div className="product-action-btn">
+              <a
+                href="#!"
+                className="btn-action mb-1"
+                data-bs-toggle="modal"
+                data-bs-target="#quickViewModal"
+                tabIndex={-1}
+              >
+                <i
+                  className="bi bi-eye"
+                  data-bs-toggle="tooltip"
+                  data-bs-html="true"
+                  aria-label="Quick View"
+                  data-bs-original-title="Quick View"
+                />
+              </a>
+              <a
+                href="#!"
+                className="btn-action mb-1"
                 data-bs-toggle="tooltip"
                 data-bs-html="true"
-                aria-label="Quick View"
-                data-bs-original-title="Quick View"
+                aria-label="Wishlist"
+                data-bs-original-title="Wishlist"
+                tabIndex={-1}
+              >
+                <i className="bi bi-heart" />
+              </a>
+              <a
+                href="#!"
+                className="btn-action"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                aria-label="Compare"
+                data-bs-original-title="Compare"
+                tabIndex={-1}
+              >
+                <i className="bi bi-arrow-left-right" />
+              </a>
+            </div>
+          </div>
+          <h2 className="fs-6">
+            <span className="text-dark fs-6" tabIndex={-1}>
+              {title.substring(0, 20)}...
+            </span>
+          </h2>
+          <div>
+            <span className="text-muted small">
+              <Rating
+                name="half-rating"
+                defaultValue={rating}
+                precision={0.5}
+                size="small"
               />
-            </a>
-            <a
-              href="#!"
-              className="btn-action mb-1"
-              data-bs-toggle="tooltip"
-              data-bs-html="true"
-              aria-label="Wishlist"
-              data-bs-original-title="Wishlist"
-              tabIndex={-1}
-            >
-              <i className="bi bi-heart" />
-            </a>
-            <a
-              href="#!"
-              className="btn-action"
-              data-bs-toggle="tooltip"
-              data-bs-html="true"
-              aria-label="Compare"
-              data-bs-original-title="Compare"
-              tabIndex={-1}
-            >
-              <i className="bi bi-arrow-left-right" />
-            </a>
+            </span>
           </div>
-        </div>
-        <h2 className="fs-6">
-          <span
-            className="text-dark fs-6"
-            tabIndex={-1}
-          >
-            {title.substring(0,20)}...
-          </span>
-        </h2>
-        <div>
-          <span className="text-muted small"><Rating
-              name="half-rating"
-              defaultValue={rating}
-              precision={0.5}
-              size="small"
-            /></span>
-        </div>
-        <div className="d-flex justify-content-between align-items-center mt-3">
-          <div>
-            <span className="text-danger fw-bold"style={{fontFamily:'Cinzel'}}>{price} azn</span>
+          <div className="d-flex justify-content-between align-items-center mt-3">
+            <div>
+              <span
+                className="text-danger fw-bold"
+                style={{ fontFamily: "Cinzel" }}
+              >
+                {price} azn
+              </span>
+            </div>
+            <div>
+              <span className="state badge bg-success">In Stock</span>
+            </div>
           </div>
           <div>
-            <span className="state badge bg-success">In Stock</span>
+            <div className="d-grid mt-4">
+              <button
+                onClick={handleAddToCart}
+                className="btn btn-primary rounded-3 fw-bold"
+                tabIndex={-1}
+              >
+                {t("changeSliderCardLanguage.addtocart")}
+              </button>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="d-grid mt-4">
-            <button onClick={handleAddToCart} className="btn btn-primary rounded-3 fw-bold" tabIndex={-1}>
-             {t("changeSliderCardLanguage.addtocart")}
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-});
+      </>
+    );
+  }
+);
 
 export default BestSellerCard;

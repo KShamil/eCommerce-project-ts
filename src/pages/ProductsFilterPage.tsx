@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useCallback, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
 import { Pagination } from "@mui/material";
@@ -11,33 +11,41 @@ const ProductsFilterPage = (props: any) => {
     window.scrollTo(0, 0);
   }, []);
   const [products] = useContext(ProductContext);
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [maxPrice, setMaxPrice] = useState<number | string>(10000);
-  const handleCategorySelect = (category: string | null) => {
+
+  const handleCategorySelect = useCallback((category: string | null) => {
     setSelectedCategory(category);
-  };
+  }, []);
 
-  const handleColorSelect = (color: string | null) => {
+  const handleColorSelect = useCallback((color: string | null) => {
     setSelectedColor(color);
-  };
+  }, []);
 
+  const handleMaxPriceChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setMaxPrice(String(event.target.value));
+    },
+    []
+  );
 
-  const handleMaxPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxPrice(String(event.target.value));
-  };
-
-  const handleResetFilters = () => {
+  const handleResetFilters = useCallback(() => {
     setSelectedCategory(null);
     setSelectedColor(null);
     setMaxPrice(10000);
-  };
-  const filteredItems = products.filter((item) => {
-    const matchCategory = !selectedCategory || item.category === selectedCategory;
-    const matchColor = !selectedColor || item.color === selectedColor;
-    const matchMaxPrice = !maxPrice || item.price <= maxPrice;
-    return matchCategory && matchColor && matchMaxPrice;
-  });
+  }, []);
+
+  const filteredItems = useMemo(() => {
+    return products.filter((item) => {
+      const matchCategory =
+        !selectedCategory || item.category === selectedCategory;
+      const matchColor = !selectedColor || item.color === selectedColor;
+      const matchMaxPrice = !maxPrice || item.price <= maxPrice;
+      return matchCategory && matchColor && matchMaxPrice;
+    });
+  }, [products, selectedCategory, selectedColor, maxPrice]);
 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 10;
@@ -45,15 +53,20 @@ const ProductsFilterPage = (props: any) => {
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentData = filteredItems.slice(startIndex, endIndex);
-  const randomizedProducts = _.shuffle(currentData);
+  const currentData = useMemo(() => {
+    return filteredItems.slice(startIndex, endIndex);
+  }, [filteredItems, startIndex, endIndex]);
 
-  const handlePageChange = (
-    _event: React.ChangeEvent<unknown>,
-    value: number
-  ) => {
-    setCurrentPage(value);
-  };
+  const randomizedProducts = useMemo(() => {
+    return _.shuffle(currentData);
+  }, [currentData]);
+
+  const handlePageChange = useCallback(
+    (_event: React.ChangeEvent<unknown>, value: number) => {
+      setCurrentPage(value);
+    },
+    []
+  );
 
   return (
     <>
@@ -101,9 +114,11 @@ const ProductsFilterPage = (props: any) => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link 
+                    <Link
                       onClick={() => handleCategorySelect("imac")}
-                      to="" className="nav-link">
+                      to=""
+                      className="nav-link"
+                    >
                       <i className="fa-solid fa-desktop mx-1"></i>
                       iMac
                     </Link>
@@ -129,9 +144,11 @@ const ProductsFilterPage = (props: any) => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link 
+                    <Link
                       onClick={() => handleCategorySelect("airpods")}
-                      to="" className="nav-link">
+                      to=""
+                      className="nav-link"
+                    >
                       <i className="fa-solid fa-headphones mx-1"></i>
                       AirPods
                     </Link>
@@ -142,7 +159,10 @@ const ProductsFilterPage = (props: any) => {
                     <span className="fw-bold">Color:</span>
                     <div className="colors d-flex gap-2 mt-3">
                       <i
-                        style={{ color: "lightgoldenrodyellow", cursor: "pointer" }}
+                        style={{
+                          color: "lightgoldenrodyellow",
+                          cursor: "pointer",
+                        }}
                         onClick={() => handleColorSelect("white")}
                         className="nav-link active"
                         aria-current="page"

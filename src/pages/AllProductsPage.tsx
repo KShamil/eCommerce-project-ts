@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useMemo } from "react";
 import { ProductContext } from "../context/ProductContext";
 import "../config/i18n";
 import { useTranslation } from "react-i18next";
@@ -13,7 +13,7 @@ const AllProductsPage = (props: any) => {
   const [displayedProducts, setDisplayedProducts] = useState<number>(5);
   const { t, i18n } = useTranslation();
 
-  const randomizedProducts = _.shuffle(products);
+  const randomizedProducts = useMemo(() => _.shuffle(products), [products]);
 
   const LoadMoreProducts = (): void => {
     setDisplayedProducts(displayedProducts + 5);

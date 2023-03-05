@@ -1,4 +1,4 @@
-import React, { useContext,useMemo } from "react";
+import React, { useContext, useMemo } from "react";
 import { Link } from "react-router-dom";
 import MainCard from "../Cards/MainCard";
 import { ProductContext } from "../../context/ProductContext";
@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 import _ from "lodash";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 
 const AllProductsSlider = () => {
   const [products] = useContext(ProductContext);
@@ -37,15 +36,15 @@ const AllProductsSlider = () => {
     <>
       <div className="special-offers container mt-5">
         <h1 className="title fw-bold">{t("changeTitleLanguage.title1")}</h1>
-        <Carousel 
-        responsive={responsive}
-        ssr={true}
-        infinite={true}
-        autoPlay={false}
-        autoPlaySpeed={2000}
-        customTransition="all 1s"
+        <Carousel
+          responsive={responsive}
+          ssr={true}
+          infinite={true}
+          autoPlay={false}
+          autoPlaySpeed={2000}
+          customTransition="all 1s"
         >
-        {randomizedProducts.map((item, i) => (
+          {randomizedProducts.map((item, i) => (
             <MainCard
               key={i}
               id={item.id}

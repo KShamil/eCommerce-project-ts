@@ -1,26 +1,34 @@
-import React, { useState,useContext,useMemo,useCallback } from "react";
+import React, { useState, useContext, useMemo, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../../context/ProductContext";
 import BestSellerCard from "../Cards/BestSellerCard";
-import '../../config/i18n';
+import "../../config/i18n";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const BestSeller = () => {
-    
   const [products] = useContext(ProductContext);
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState("all");
   const { t, i18n } = useTranslation();
 
-  const handleFilter = useCallback((category:string) => {
+  const handleFilter = useCallback((category: string) => {
     setActiveCategory(category);
   }, []);
 
-  const filteredData = useMemo(() => activeCategory !== 'all' ? products.filter((item) => item.category === activeCategory) : products, [activeCategory, products]);
+  const filteredData = useMemo(
+    () =>
+      activeCategory !== "all"
+        ? products.filter((item) => item.category === activeCategory)
+        : products,
+    [activeCategory, products]
+  );
 
-  const randomizedProducts = useMemo(() => _.shuffle(filteredData), [filteredData]);
+  const randomizedProducts = useMemo(
+    () => _.shuffle(filteredData),
+    [filteredData]
+  );
 
   const responsive = {
     superLargeDesktop: {
@@ -40,7 +48,7 @@ const BestSeller = () => {
       items: 1,
     },
   };
-  
+
   return (
     <>
       <div className="best-sellers container">
@@ -59,7 +67,8 @@ const BestSeller = () => {
                   role="tablist"
                 >
                   <li className="nav-item " role="presentation">
-                    <Link to=""
+                    <Link
+                      to=""
                       onClick={() => handleFilter("iphone")}
                       className="nav-link active fw-bold"
                       data-bs-toggle="tab"
@@ -71,7 +80,8 @@ const BestSeller = () => {
                     </Link>
                   </li>
                   <li className="nav-item " role="presentation">
-                    <Link to=""
+                    <Link
+                      to=""
                       onClick={() => handleFilter("ipad")}
                       className="nav-link fw-bold"
                       id="nav-snackMunchies-tab"
@@ -85,7 +95,8 @@ const BestSeller = () => {
                     </Link>
                   </li>
                   <li className="nav-item " role="presentation">
-                    <Link to=""
+                    <Link
+                      to=""
                       onClick={() => handleFilter("imac")}
                       className="nav-link fw-bold"
                       id="nav-bakery-tab"
@@ -100,7 +111,8 @@ const BestSeller = () => {
                     </Link>
                   </li>
                   <li className="nav-item " role="presentation">
-                    <Link to=""
+                    <Link
+                      to=""
                       onClick={() => handleFilter("macbook")}
                       className="nav-link fw-bold"
                       id="nav-tea-tab"
@@ -115,7 +127,8 @@ const BestSeller = () => {
                     </Link>
                   </li>
                   <li className="nav-item" role="presentation">
-                    <Link to=""
+                    <Link
+                      to=""
                       onClick={() => handleFilter("watch")}
                       className="nav-link fw-bold"
                       data-bs-toggle="tab"
@@ -189,7 +202,7 @@ const BestSeller = () => {
             autoPlaySpeed={2000}
             customTransition="all 1s"
           >
-            {randomizedProducts.map((item,i) => (
+            {randomizedProducts.map((item, i) => (
               <BestSellerCard
                 key={i}
                 id={item.id}

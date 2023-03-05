@@ -36,13 +36,13 @@ const SpecialOffersSlider = () => {
       <div className="special-offers container mt-5">
         <h1 className="title fw-bold">{t("changeTitleLanguage.title3")}</h1>
         <Carousel
-           responsive={responsive}
-           ssr={true} 
-           infinite={true}
-           autoPlay={true}
-           autoPlaySpeed={1500}
-           customTransition="all 1s"
-           removeArrowOnDeviceType={["desktop","tablet", "mobile"]}
+          responsive={responsive}
+          ssr={true}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={1500}
+          customTransition="all 1s"
+          removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         >
           {randomizedProducts.map((item, i) => (
             <SaleCard

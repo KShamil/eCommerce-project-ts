@@ -34,23 +34,21 @@ const PartnersSlider = () => {
           <h1 className="fw-bold">{t("changeTitleLanguage.title5")}</h1>
         </div>
         <div className="content p-5 bg-body">
-        <Carousel
-           responsive={responsive}
-           ssr={true}
-           infinite={true}
-           autoPlay={true}
-           autoPlaySpeed={2000}
-           customTransition="all 1s"
-           removeArrowOnDeviceType={["desktop","tablet", "mobile"]}
-        >
-        {partners.map((item,i) => (
-          <PartnersCard 
-          key={i}
-          img={item.img} />
-        ))}
-      </Carousel>
+          <Carousel
+            responsive={responsive}
+            ssr={true}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={2000}
+            customTransition="all 1s"
+            removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+          >
+            {partners.map((item, i) => (
+              <PartnersCard key={i} img={item.img} />
+            ))}
+          </Carousel>
         </div>
-    </div>
+      </div>
     </>
   );
 };

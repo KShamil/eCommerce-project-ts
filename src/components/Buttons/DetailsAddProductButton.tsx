@@ -4,16 +4,18 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 interface DetailsAddProductButtonType {
-    addProduct:any;
+  addProduct: any;
 }
 
-const DetailsAddProductButton:React.FC<DetailsAddProductButtonType> = ({addProduct}) => {
-const { addItem } = useCart();
-const notify = () => toast("Cart added!");
-  const handleAddedToCart =()=> {
+const DetailsAddProductButton: React.FC<DetailsAddProductButtonType> = ({
+  addProduct,
+}) => {
+  const { addItem } = useCart();
+  const notify = () => toast("Cart added!");
+  const handleAddedToCart = () => {
     addItem(addProduct);
     notify();
-  }
+  };
   return (
     <>
       <button

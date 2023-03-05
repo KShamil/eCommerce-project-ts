@@ -1,8 +1,8 @@
-import React,{useContext,useMemo} from "react";
+import React, { useContext, useMemo } from "react";
 import { Link } from "react-router-dom";
 import SaleCard from "../Cards/SaleCard";
 import { ProductContext } from "../../context/ProductContext";
-import '../../config/i18n';
+import "../../config/i18n";
 import { useTranslation } from "react-i18next";
 import _ from "lodash";
 import Carousel from "react-multi-carousel";
@@ -34,19 +34,17 @@ const OfferOfTheWeekSlider = () => {
   return (
     <>
       <div className="special-offers container mt-5">
-        <h1 className="title fw-bold">
-        {t("changeTitleLanguage.title4")}
-        </h1>
+        <h1 className="title fw-bold">{t("changeTitleLanguage.title4")}</h1>
         <Carousel
-           responsive={responsive}
-           ssr={true}
-           infinite={true}
-           autoPlay={true}
-           autoPlaySpeed={1500}
-           customTransition="all 1s"
-           removeArrowOnDeviceType={["desktop","tablet", "mobile"]}
+          responsive={responsive}
+          ssr={true}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={1500}
+          customTransition="all 1s"
+          removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         >
-          {randomizedProducts.map((item,i) => (
+          {randomizedProducts.map((item, i) => (
             <SaleCard
               key={i}
               id={item.id}
